@@ -799,8 +799,14 @@ $utilities: map-merge(
       property: z-index,
       class: z,
       values: $zindex-levels,
-    )
+    ),
     // scss-docs-end utils-zindex
+    "letter-spacing": (
+      responsive: true,
+      class: ls,
+      property: letter-spacing,
+      values: $spacers
+    ),
   ),
   $utilities
 );
