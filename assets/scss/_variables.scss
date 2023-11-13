@@ -412,9 +412,44 @@ $spacers: (
   0: 0,
   1: $spacer * .25,
   2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
+  3: $spacer * .75,
+  4: $spacer,
+  5: $spacer * 1.25,
+  6: $spacer * 1.5,
+  7: $spacer * 1.75,
+  8: $spacer * 2,
+  9: $spacer * 2.25,
+  10: $spacer * 2.5,
+  11: $spacer * 2.75,
+  12: $spacer * 3,
+  13: $spacer * 3.25,
+  14: $spacer * 3.5,
+  15: $spacer * 3.75,
+  16: $spacer * 4,
+  17: $spacer * 4.25,
+  18: $spacer * 4.5,
+  19: $spacer * 4.75,
+  20: $spacer * 5,
+  21: $spacer * 5.25,
+  22: $spacer * 5.5,
+  23: $spacer * 5.75,
+  24: $spacer * 6,
+  25: $spacer * 6.25,
+  26: $spacer * 6.5,
+  27: $spacer * 6.75,
+  28: $spacer * 7,
+  29: $spacer * 7.25,
+  30: $spacer * 7.5,
+  31: $spacer * 7.75,
+  32: $spacer * 8,
+  33: $spacer * 8.25,
+  34: $spacer * 8.5,
+  35: $spacer * 8.75,
+  36: $spacer * 9,
+  37: $spacer * 9.25,
+  38: $spacer * 9.5,
+  39: $spacer * 9.75,
+  40: $spacer * 10
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -603,7 +638,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      'Prata', 'Noto Serif TC', serif; //system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -626,8 +661,8 @@ $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;
 
-$line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+$line-height-base:            1.2; //1.5 !default;
+$line-height-sm:              1; //1.25 !default;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
@@ -640,12 +675,16 @@ $h6-font-size:                $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size
+  default: $font-size-base,
+  12: 0.75 * $font-size-base,
+  14: 0.875 * $font-size-base,
+  16: $font-size-base,
+  20: 1.25 * $font-size-base,
+  24: 1.5 * $font-size-base,
+  28: 1.75 * $font-size-base,
+  32: 2 * $font-size-base,
+  40: 2.5 * $font-size-base,
+  80: 5 * $font-size-base
 ) !default;
 // scss-docs-end font-sizes
 
