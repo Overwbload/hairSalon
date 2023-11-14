@@ -451,6 +451,12 @@ $spacers: (
   39: $spacer * 9.75,
   40: $spacer * 10
 ) !default;
+
+$tiny-spacer: calc($spacer*0.01);
+$tiny-spacers: (
+  5: $tiny-spacer * 5,
+  10: $tiny-spacer * 10
+);
 // scss-docs-end spacer-variables-maps
 
 // Position
@@ -692,7 +698,7 @@ $font-sizes: (
 $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
-$headings-font-weight:        500 !default;
+$headings-font-weight:        $font-weight-base; //500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
 // scss-docs-end headings-variables
