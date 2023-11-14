@@ -1,11 +1,12 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Prata&display=swap');
 
 // Icons
 
 // Bootstrap configuration
 @import "../../node_modules/bootstrap/scss/functions";
 @import "./variables";
+@import "./utils/colors"; // Customized Colors
 @import "../../node_modules/bootstrap/scss/variables-dark";
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -22,3 +23,4 @@
 @import "./layout/footer";
 
 // Pages
+@import "./pages/index";
