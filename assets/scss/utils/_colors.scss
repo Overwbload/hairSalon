@@ -1,0 +1,25 @@
+$black-100: #141213;
+$black-80: #525252;
+$black-60: #919191;
+$black-40: #D1D1D1;
+$black-20: #F2F2F2;
+$black-0: #FFFFFF;
+
+$primary-main: #F0E4DE;
+$primary-light: #FFF6F0;
+$secondary-main: #B9A37F;
+$secondary-light: #FDF2D8;
+
+$theme-colors-hairsalon: (
+  "black-100": $black-100,
+  "black-80": $black-80,
+  "black-60": $black-60,
+  "black-40": $black-40,
+  "black-20": $black-20,
+  "black-0": $black-0,
+  "primary-main": $primary-main,
+  "primary-light": $primary-light,
+  "secondary-main": $secondary-main,
+  "secondary-light": $secondary-light
+);
+$theme-colors: map-merge($theme-colors, $theme-colors-hairsalon);

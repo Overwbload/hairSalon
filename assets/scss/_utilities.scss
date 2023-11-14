@@ -502,7 +502,10 @@ $utilities: map-merge(
     "font-family": (
       property: font-family,
       class: font,
-      values: (monospace: var(--#{$prefix}font-monospace))
+      values: (
+        monospace: var(--#{$prefix}font-monospace),
+        noto-serif: ('Noto Serif TC', serif)
+      )
     ),
     "font-size": (
       rfs: true,
@@ -801,12 +804,20 @@ $utilities: map-merge(
       values: $zindex-levels,
     ),
     // scss-docs-end utils-zindex
+    // scss-docs-start utils-letter-spacing
     "letter-spacing": (
       responsive: true,
       class: ls,
       property: letter-spacing,
       values: $spacers
     ),
+    "letter-spacing-tiny": (
+      responsive: true,
+      class: ls-tiny,
+      property: letter-spacing,
+      values: $tiny-spacers
+    ),
+    // scss-docs-end utils-letter-spacing
   ),
   $utilities
 );
