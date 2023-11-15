@@ -4,6 +4,8 @@
 
 // Icons
 
+
+
 // Bootstrap configuration
 @import "../../node_modules/bootstrap/scss/functions";
 @import "./variables";
@@ -14,6 +16,8 @@
 @import "./utilities";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// Reset
+@import "../scss/reset";
 // Base
 @import "./base/base";
 
@@ -28,3 +32,8 @@
 
 // Pages
 @import "./pages/index";
+@import "./pages/news";
+
+
+// @include ejs專屬
+// @import 可以用在scss上

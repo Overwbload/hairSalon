@@ -1,0 +1,52 @@
+
+/*  自己的CSS 從這裡開始*/
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+body{
+    border: 1px dashed blue;
+}
+.container{    
+    width: 1296px;
+    margin: 0 auto;
+    border: 1px dashed orange;
+}
+
+.banner{
+    background:url(../images/news-banner.png);
+    background-repeat: no-repeat;  /*不重複圖片*/
+    height: 435px;;
+    margin-bottom: 0px;
+    position: relative;
+}
+.newsTitle{
+    width: 341px;
+    height: 83px;
+    margin-bottom: 80px;
+    h1{
+        font-size: 40px;
+        font-size: 400;
+        line-height: 48px;
+        letter-spacing: 5%;
+        margin-top: 80px;
+    }
+    hr{
+        border: 2px solid;
+        margin-bottom: 19px;
+        color: $black;
+    }
+}
+
+.newsCard{
+    .line1{
+        display: flex;
+    }
+    .card1{
+        
+    }
+    .card4{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
