@@ -1,6 +1,3 @@
-// // Reset
-// @import "../scss/reset";
-
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Prata&display=swap');
 @import url(https://db.onlinewebfonts.com/c/97214b891985329956fb70b2337a54d4?family=MRazor+HK+Xbold);
@@ -33,16 +30,3 @@
 // Pages
 @import "./pages/index";
 @import "./pages/news";
-
-
-// @include ejs專屬
-// @import 可以用在scss上
-
-body{
-    border: 1px dashed blue;
-}
-.container{    
-    width: 1296px;
-    margin: 0 auto;
-    border: 1px dashed orange;
-}
