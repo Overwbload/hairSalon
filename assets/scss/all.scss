@@ -1,8 +1,10 @@
+// // Reset
+// @import "../scss/reset";
+
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Prata&display=swap');
 
 // Icons
-
 
 
 // Bootstrap configuration
@@ -15,8 +17,6 @@
 @import "./utilities";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
-// Reset
-@import "../scss/reset";
 // Base
 @import "./base/base";
 
@@ -33,3 +33,12 @@
 
 // @include ejs專屬
 // @import 可以用在scss上
+
+body{
+    border: 1px dashed blue;
+}
+.container{    
+    width: 1296px;
+    margin: 0 auto;
+    border: 1px dashed orange;
+}
