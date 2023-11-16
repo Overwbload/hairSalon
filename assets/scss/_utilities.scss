@@ -171,6 +171,14 @@ $utilities: map-merge(
       ),
       values: $utilities-border-colors
     ),
+    "border-style": (
+      property: border-style,
+      class: border,
+      values: (
+        "none": none,
+        "dashed": dashed
+      )
+    ),
     "subtle-border-color": (
       property: border-color,
       class: border,
