@@ -504,7 +504,8 @@ $utilities: map-merge(
       class: font,
       values: (
         monospace: var(--#{$prefix}font-monospace),
-        noto-serif: ('Noto Serif TC', serif)
+        noto-serif: ('Noto Serif TC', serif),
+        mrazor-hk: ('MRazor HK Xbold', serif)
       )
     ),
     "font-size": (
@@ -818,6 +819,29 @@ $utilities: map-merge(
       values: $tiny-spacers
     ),
     // scss-docs-end utils-letter-spacing
+    // scss-docs-start utils-outline
+    "outline": (
+      class: outline,
+      property: outline,
+      values: (
+        null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
+        0: 0,
+      )
+    ),
+    "outline-color": (
+      property: outline-color,
+      class: outline,
+      local-vars: (
+        "border-opacity": 1
+      ),
+      values: $utilities-border-colors
+    ),
+    "outline-width": (
+      property: outline-width,
+      class: outline,
+      values: $border-widths
+    ),
+    // scss-docs-end utils-outline
   ),
   $utilities
 );
