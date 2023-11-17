@@ -19,13 +19,34 @@
 <body>
     <!-- header -->
     <%- include("./layout/header") -%>
+    
     <!-- login -->
-    <section class="login">
+    <div class="login">
         <div class="container">
-
+            <div class="signIn">
+                <h1>歡迎回來</h1>
+                <h2>持續持續為你持續為你提供持續為你提供最專業的美髮服務</h2>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <form action="">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <a href="#">忘記密碼？</a>
+                    <button>登入</button>
+                </form>    
+                <div class="goSignUp">
+                    <p>註冊/登入即代表您同意我們的網站條款</p>
+                    <p>新朋友嗎?</p><button>加入會員</button>
+                </div>
+                
+            </div>
         </div>
-    </section>
+    </div>
+    
     <!-- footer -->
     <%- include("./layout/footer") -%>
+
 </body>
 </html>
