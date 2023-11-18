@@ -1,1 +1,32 @@
+// 因為"position: fixed"不會佔用空間
+// 所以需要將header下的main元素往上推高
+.fixed-top + main {
+  margin-top: 200px;
+}
 
+// 在導覽列選單中加入分隔符號
+@include media-breakpoint-up(lg) {
+  .navbar-link-seperator {
+    .nav-item {
+      display: flex;
+      align-items: center;
+
+      &:not(:first-child)::before {
+        margin-left: 16px;
+        margin-right: 16px;
+        content: "";
+        display: block;
+        width: 15px;
+        height: 1px;
+        background-color: $black-100;
+        transform: rotate(120deg);
+      }
+      @include media-breakpoint-up(xl) {
+        &:not(:first-child)::before {
+          margin-left: 32px;
+          margin-right: 32px;
+        }
+      }
+    }
+  }
+}
