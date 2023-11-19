@@ -4,152 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News 最新消息</title>
-    
 </head>
 <body>
+<<<<<<< HEAD
+    <!-- header -->
+    <%- include('./layout/header'); -%>
+
+=======
     <%- include("./layout/header") -%>
+>>>>>>> fe79e73f559bf6f1248dd9ed6a97182b0edd6bd4
     <main>
-        <div class="banner">
+        <div class="banner mb-0">
             <div class="container">
             </div>
         </div>
-        <div class="container">
-            <div class="newsTitle" >
-                <h1>最新消息</h1>
-                <hr>
+        <div class="container border-warning border-dashed ">  <!-- 格線 完成後移除-->
+            <div class="newsTitle my-20" >
+                <h1 class="mb-4">最新消息</h1>  
+                <hr class="border-2 opacity-100 pb-5">
             </div>
+            <!-- 卡片區 分成上下兩部分 分別為part1 part2-->
             <div class="newsCard">
-                <div class="part1 row">
+                <!-- 上半部 part1 -->
+                <div class="part1 row mb-10">
+                    <!-- 1個大卡片 col占6等分 -->
                     <div class="card1 col-md-6">
-                        <div class="card border-0">
+                        <div class="card border-0">  <!-- 卡片框線設定0-->
                             <a href="#">
-                            <img src="../assets/images/Rectangle68.png" class="card-img-top img-fluid" alt="...">
-                            <div class="card-body">
-                                <p class="card-text"><small>#美髮產品</small></p>
-                                <h2 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h2>
-                                <p class="card-text"><small>By Kevin</small></p>
-                                <p class="card-text"><small>2023年11月08日</small></p>
-                            </div>
+                                <img src="../assets/images/newspage/Rectangle 68.png" class="card-img-top img-fluid" alt="..">
+                                <div class="card-body">
+                                    <p class="card-text text-black-100">#時尚流行</p>
+                                    <h2 class="card-title">2023夏季推薦染髮色系</h2>
+                                    <p class="card-text">By Kevin</p>
+                                    <p class="card-text">2023年11月08日</p>
+                                </div>
                             </a>
                         </div>
                     </div>
+                    <!-- 4個小卡片 col占6等分 -->
                     <div class="card4 col-md-6">
                         <div class="row row-cols-1 row-cols-md-2 g-4">
                             <div class="card border-0">
                                 <a href="#">
-                                <img src="../assets/images/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
+                                    <img src="../assets/images/newspage/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
                                     <div class="card-body">
-                                        <p class="card-text"><small>#美髮產品</small></p>
-                                        <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
-                                        <p class="card-text"><small>By Kevin</small></p>
-                                        <p class="card-text"><small>2023年11月08日</small></p>
+                                        <p class="card-text text-black-100">#美髮產品</p>
+                                        <h5 class="card-title">熱門美髮產品推薦：打造亮麗秀髮的秘密武器</h5>
+                                        <p class="card-text">By Kevin</p>
+                                        <p class="card-text">2023年10月30日</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="card border-0">
                                 <a href="#">
-                                <img src="../assets/images/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text"><small>#美髮產品</small></p>
-                                    <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
-                                    <p class="card-text"><small>By Kevin</small></p>
-                                    <p class="card-text"><small>2023年11月08日</small></p>
-                                </div>
+                                    <img src="../assets/images/newspage/Rectangle 70.png" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-100">#美髮故事</p>
+                                        <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
+                                        <p class="card-text">By Kevin</p>
+                                        <p class="card-text">2023年09月28日</p>
+                                    </div>
                                 </a>
                             </div>
                             <div class="card border-0">
                                 <a href="#">
-                                <img src="../assets/images/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text"><small>#美髮產品</small></p>
-                                    <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
-                                    <p class="card-text"><small>By Kevin</small></p>
-                                    <p class="card-text"><small>2023年11月08日</small></p>
-                                </div>
+                                    <img src="../assets/images/newspage/Rectangle 71.png" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-100">#美髮教程</p>
+                                        <h5 class="card-title">教你如何保持秀髮的健康與光澤</h5>
+                                        <p class="card-text">By Kevin</p>
+                                        <p class="card-text">2023年11月08日</p>
+                                    </div>
                                 </a>
                             </div>
                             <div class="card border-0">
                                 <a href="#">
-                                <img src="../assets/images/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text"><small>#美髮產品</small></p>
-                                    <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
-                                    <p class="card-text"><small>By Kevin</small></p>
-                                    <p class="card-text"><small>2023年11月08日</small></p>
-                                </div>
+                                    <img src="../assets/images/newspage/Rectangle 72.png" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-100">#美髮造型</p>
+                                        <h5 class="card-title">【造型指南】如何挑選最適合您的髮型</h5>
+                                        <p class="card-text">By Kevin</p>
+                                        <p class="card-text">2023年09月12日</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- 下半部 part2 -->
                 <div class="part2 row">
+                    <!-- 4個小卡片 占6等分 -->
                     <div class="card4 col-md-6">
                         <div class="row row-cols-1 row-cols-md-2 g-4">
                             <div class="card border-0">
                                 <a href="#">
-                                <img src="../assets/images/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
+                                    <img src="../assets/images/newspage/Rectangle 73.png" class="card-img-top img-fluid" alt="...">
                                     <div class="card-body">
-                                        <p class="card-text"><small>#美髮產品</small></p>
-                                        <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
-                                        <p class="card-text"><small>By Kevin</small></p>
-                                        <p class="card-text"><small>2023年11月08日</small></p>
+                                        <p class="card-text text-black-100">#美髮產品</p>
+                                        <h5 class="card-title">頭皮也需要去角質嗎?帶您了解頭皮護理的重要性</h5>
+                                        <p class="card-text">By Kevin</p>
+                                        <p class="card-text">2023年09月03日</p>
                                     </div>
                                 </a>
                             </div>
                             <div class="card border-0">
                                 <a href="#">
-                                <img src="../assets/images/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text"><small>#美髮產品</small></p>
-                                    <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
-                                    <p class="card-text"><small>By Kevin</small></p>
-                                    <p class="card-text"><small>2023年11月08日</small></p>
-                                </div>
+                                    <img src="../assets/images/newspage/Rectangle 74.png" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-100">#美髮造型</p>
+                                        <h5 class="card-title">12款熱門捲髮造型推薦!長髮、短髮、中長髮</h5>
+                                        <p class="card-text">By Kevin</p>
+                                        <p class="card-text">2023年08月28日</p>
+                                    </div>
                                 </a>
                             </div>
                             <div class="card border-0">
                                 <a href="#">
-                                <img src="../assets/images/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                  <p class="card-text"><small>#美髮產品</small></p>
-                                  <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
-                                  <p class="card-text"><small>By Kevin</small></p>
-                                  <p class="card-text"><small>2023年11月08日</small></p>
-                                </div>
+                                    <img src="../assets/images/newspage/Rectangle 75.png" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-100">#美髮產品</p>
+                                        <h5 class="card-title">5款頭皮保養推薦!養出強健秀髮</h5>
+                                        <p class="card-text">By Kevin</p>
+                                        <p class="card-text">2023年08月08日</p>
+                                    </div>
                                 </a>
                             </div>
                             <div class="card border-0">
                                 <a href="#">
-                                <img src="../assets/images/Rectangle 69.png" class="card-img-top img-fluid" alt="...">
-                                <div class="card-body">
-                                    <p class="card-text"><small>#美髮產品</small></p>
-                                    <h5 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h5>
-                                    <p class="card-text"><small>By Kevin</small></p>
-                                    <p class="card-text"><small>2023年11月08日</small></p>
-                                </div>
+                                    <img src="../assets/images/newspage/Rectangle 76.png" class="card-img-top img-fluid" alt="...">
+                                    <div class="card-body">
+                                        <p class="card-text text-black-100">#美髮秘訣</p>
+                                        <h5 class="card-title">別再為落髮煩惱了!3步驟有效減少落髮秘訣</h5>
+                                        <p class="card-text">By Kevin</p>
+                                        <p class="card-text">2023年07月12日</p>
+                                    </div>
                                 </a>
                             </div>
                         </div>
                     </div>
+                    <!-- 1個大卡片 占6等分 -->
                     <div class="card1 col-md-6">
-                        <div class="card border-0">
+                        <div class="card border-0">  <!-- 卡片框線設定0-->
                             <a href="#">
-                            <img src="../assets/images/Rectangle68.png" class="card-img-top img-fluid" alt="...">
-                            <div class="card-body">
-                                <p class="card-text"><small>#美髮產品</small></p>
-                                <h2 class="card-title">專訪時尚髮型設計師 | 創意與靈感的背後</h2>
-                                <p class="card-text"><small>By Kevin</small></p>
-                                <p class="card-text"><small>2023年11月08日</small></p>
-                            </div>
+                                <img src="../assets/images/newspage/Rectangle 77.png" class="card-img-top img-fluid" alt="..">
+                                <div class="card-body">
+                                    <p class="card-text text-black-100">#美髮產品</p>
+                                    <h2 class="card-title">美麗秀髮的秘密：潤髮產品的優勢與用法</h2>
+                                    <p class="card-text">By Kevin</p>
+                                    <p class="card-text">2023年07月08日</p>
+                                </div>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- 頁面選擇Nav -->
+            <div class="pageNav mt-18 mb-30">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-current="page" href="#"><i class="bi bi-chevron-left"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">3</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-
-
     </main>
+
+    <!-- footer -->
+    <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
 </body>
