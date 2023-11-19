@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊</title>
+
+    <!-- Fav Icon -->
+<link rel="icon" href="" type="image/x-icon">
+
+<!-- Facebook Metadata Start -->
+<meta property="og:title" content="Hair Moment">
+<meta property="og:description" content="HairMoments 的使命是成為顧客與髮型設計師之間的橋樑，提供方便的髮型預約體驗，同時為設計師提供更多曝光的機會。我們的平台致力於減少用戶與髮型設計師之間的溝通障礙，用戶可以輕鬆瀏覽不同髮型設計師的作品，並直接預約，無需繁瑣的溝通。">
+<meta property="og:image" content="assets/images/">
+
+</head>
+
+<body>
+    <!-- header -->
+    <!-- <%- include("./layout/header") -%> -->
+    
+    <!-- login -->
+    <main class="login">
+        <div class="container">
+            <div class="signUp">
+                <h1>加入我們 !</h1>
+                <h2>探索髮型的無限可能</h2>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <form action="">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <div class="">
+                        <input type="text" placeholder="Name">
+                        <input type="date" placeholder="生日">
+                    </div>
+                    <div class="formCheck">
+                        <input class="checkbox-input" type="checkbox" value="同意訂閱電子報">
+                        <label class="checkbox-label" for="同意訂閱電子報">同意訂閱電子報</label>
+                    </div>
+                    <button>註冊</button>
+                </form>    
+                <div class="goSignIn">
+                    <p>註冊/登入即代表您同意我們的網站條款</p>
+                    <p>新朋友嗎?</p><button>加入會員</button>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    
+    <!-- footer -->
+    <%- include("./layout/footer") -%>
+    <script type="module" src="../main.js"></script>
+</body>
+</html>

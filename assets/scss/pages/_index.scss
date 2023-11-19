@@ -1,3 +1,47 @@
-.translate-t-40 {
-  translate: 0 160px;
+.translate-t-16 {
+  translate: 0 64px;
+}
+@include media-breakpoint-up(xl) {
+  .translate-t-xl-40 {
+    translate: 0 160px;
+  }
+}
+
+.icon-scissors {
+  display: block;
+  width: 48px;
+  height: 56px;
+  background-image: url('../images/icons/scissors.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@include media-breakpoint-up(xl) {
+  .icon-scissors {
+    width: 61px;
+    height: 74px;
+  }
+} 
+
+@include media-breakpoint-up(xl) {
+  .outline-shadow {
+    padding-right: 40px;
+    padding-bottom: 40px;
+    z-index: 1;
+
+    & > div {
+      position: relative;
+    }
+    & > div::before {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 40px;
+      left: 40px;
+      outline: 2px solid black;
+    }
+  }
 }
