@@ -62,7 +62,26 @@
     a:hover{
         color:$secondary-main;
     }
-    .active{
+    .active > .page-link{
+        background-color: $black-80;
+        color:$secondary-main;
+        border-color: $black-80;
+    }
+}
+
+// newsContent.html
+.newsContentTitle{
+    h1{
+        width: 856px ;
+    }
+}
+
+.bottom{
+    a{
+        color: $black-100;
+        font-weight: $font-weight-bold;
+    }
+    a:hover{
         color:$secondary-main;
     }
 }
