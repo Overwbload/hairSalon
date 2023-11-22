@@ -456,6 +456,7 @@ $tiny-spacer: calc($spacer*0.01);
 $tiny-spacers: (
   5: $tiny-spacer * 5,
   10: $tiny-spacer * 10,
+  "12-5": $tiny-spacer * 12.5,
   15: $tiny-spacer * 15
 );
 // scss-docs-end spacer-variables-maps
