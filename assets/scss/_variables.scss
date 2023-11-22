@@ -449,7 +449,8 @@ $spacers: (
   37: $spacer * 9.25,
   38: $spacer * 9.5,
   39: $spacer * 9.75,
-  40: $spacer * 10
+  40: $spacer * 10,
+  45: $spacer * 11.25
 ) !default;
 
 $tiny-spacer: calc($spacer*0.01);
@@ -587,7 +588,7 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
+$border-radius:               0; //.375rem !default;
 $border-radius-sm:            .25rem !default;
 $border-radius-lg:            .5rem !default;
 $border-radius-xl:            1rem !default;
