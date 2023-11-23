@@ -51,14 +51,17 @@ $utilities: map-merge(
     // scss-docs-end utils-opacity
     // scss-docs-start utils-overflow
     "overflow": (
+      responsive: true,
       property: overflow,
       values: auto hidden visible scroll,
     ),
     "overflow-x": (
+      responsive: true,
       property: overflow-x,
       values: auto hidden visible scroll,
     ),
     "overflow-y": (
+      responsive: true,
       property: overflow-y,
       values: auto hidden visible scroll,
     ),
@@ -125,6 +128,7 @@ $utilities: map-merge(
       property: transform,
       class: translate-middle,
       values: (
+        0: translate(0),
         null: translate(-50%, -50%),
         x: translateX(-50%),
         y: translateY(-50%),
@@ -210,6 +214,7 @@ $utilities: map-merge(
     // Sizing utilities
     // scss-docs-start utils-sizing
     "width": (
+      responsive: true,
       property: width,
       class: w,
       values: (
@@ -228,9 +233,13 @@ $utilities: map-merge(
       values: (100: 100%)
     ),
     "viewport-width": (
+      responsive: true,
       property: width,
       class: vw,
-      values: (100: 100vw)
+      values: (
+        auto: auto,
+        100: 100vw
+      )
     ),
     "min-viewport-width": (
       property: min-width,
