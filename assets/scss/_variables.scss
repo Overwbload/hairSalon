@@ -450,7 +450,8 @@ $spacers: (
   38: $spacer * 9.5,
   39: $spacer * 9.75,
   40: $spacer * 10,
-  45: $spacer * 11.25
+  45: $spacer * 11.25,
+  60: $spacer * 15,
 ) !default;
 
 $tiny-spacer: calc($spacer*0.01);
