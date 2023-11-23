@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairSalon - search | HairStyle</title>
+</head>
+
+<body>
+    <!-- header -->
+    <%- include("./layout/header") -%>
+    <main>
+        <!-- banner -->
+        <div class="container-fluid p-0 mb-20">
+            <img src="../assets/images/search-banner.png" alt="搜尋髮型">
+        </div>
+
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-3">
+                    <h2 class="font-noto-serif fs-40">找髮型</h2>
+                    <span></span>
+                </div>
+                <div class="col-9">
+                        <form action="" class="row justify-content-endg">
+                            <div class="col-2">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>找髮型</option>
+                                    <option value="1">找店家</option>
+                                    <option value="2">找設計師</option>
+                                </select>
+                            </div>
+                            <div class="col-2">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>請選擇區域</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script type="module" src="../main.js"></script>
+</body>
+
+</html>
