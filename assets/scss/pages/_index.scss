@@ -1,12 +1,4 @@
-.translate-t-16 {
-  translate: 0 64px;
-}
-@include media-breakpoint-up(xl) {
-  .translate-t-xl-40 {
-    translate: 0 160px;
-  }
-}
-
+// 剪刀圖像
 .icon-scissors {
   display: block;
   width: 48px;
@@ -23,6 +15,98 @@
   }
 } 
 
+
+// 首頁hero-banner
+.index-img-1 {
+  background: url('../assets/images/homepage/view-1.jpg'), lightgray -17.209px -181.411px / 114.51% 190.82%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // aspect-ratio: 375/302;
+}
+@include media-breakpoint-up(md) {
+  .index-img-1 {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), url('../assets/images/homepage/view-1.jpg'), lightgray -9px -218.605px / 100.937% 161.579%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // aspect-ratio: 1920/710;
+  }
+}
+
+// 首頁第二部分圖片
+.index-img-2 {
+  background: url('../assets/images/homepage/person-1-resized.png'), lightgray -5.058px 29.61px / 111.451% 100%;
+  background-size: cover;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+  aspect-ratio: 263/228;
+  height: 228px;
+}
+@include media-breakpoint-up(md) {
+  .index-img-2 {
+    background: url('../assets/images/homepage/person-1-resized.png'), lightgray -4.428px 239px / 107.453% 78.117%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 838/890;
+    width: 838px;
+    height: auto;
+  }
+}
+
+// 首頁第三部分第一張圖片
+.index-img-3 {
+  background: url('../assets/images/homepage/person-2.jpg'), lightgray 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // aspect-ratio: 375/240;
+  height: 240px;
+}
+@include media-breakpoint-up(md) {
+  .index-img-3 {
+    background: linear-gradient(0deg, rgba(245, 229, 222, 0.20) 0%, rgba(245, 229, 222, 0.20) 100%), url('../assets/images/homepage/person-2.jpg'), lightgray 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scalex(-1);
+    aspect-ratio: 966/560;
+    height: auto;
+  }
+}
+
+// 首頁第三部分第二張圖片
+.index-img-4 {
+  background: url('../assets/images/homepage/view-2.jpg'), lightgray 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // aspect-ratio: 375/240;
+  height: 240px;
+}
+@include media-breakpoint-up(md) {
+  .index-img-4 {
+    background: linear-gradient(0deg, rgba(245, 229, 222, 0.20) 0%, rgba(245, 229, 222, 0.20) 100%), url('../assets/images/homepage/view-2.jpg'), lightgray 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 966/560;
+    height: auto;
+  }
+}
+
+// 位移元素但保持空間佔有
+.translate-t-16 {
+  translate: 0 64px;
+}
+@include media-breakpoint-up(xl) {
+  .translate-t-xl-40 {
+    translate: 0 160px;
+  }
+}
+
+// 產生方框陰影
 @include media-breakpoint-up(xl) {
   .outline-shadow {
     padding-right: 40px;
@@ -46,6 +130,8 @@
   }
 }
 
+
+// 產生圖片陰影
 .bg-shadow-bottom-right {
   position: relative;
   z-index: 0;
@@ -71,6 +157,7 @@
   }
 }
 
+// 產生圖片陰影
 .bg-shadow-bottom-left {
   position: relative;
   z-index: 0;
