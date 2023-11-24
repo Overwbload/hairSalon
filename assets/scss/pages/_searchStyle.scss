@@ -1,0 +1,50 @@
+.line {
+    height: 2px;
+    background: $black-100;
+}
+
+.hairStyle {
+    height: 416px;
+}
+
+.btn-close {
+    right: 0;
+    top: -24px;
+}
+
+.salon-logo {
+    width: 60px;
+    height: 60px;
+}
+
+.icon-heart {
+    right: 16px;
+    top: 16px;
+}
+
+.search-hairdesigner {
+    width: 196px;
+}
+
+// swiper
+.mySwiper .swiper-slide {
+    opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.mySwiper2 .swiper-slide {
+    height: 522px;
+    img {
+        object-position: center;
+    }
+}
+
+.mySwiper .swiper-slide {
+    height: 175px;
+    img {
+        object-position: center;
+    }
+}
