@@ -43,6 +43,7 @@ $utilities: map-merge(
       values: (
         0: 0,
         25: .25,
+        40: .4,
         50: .5,
         75: .75,
         100: 1,
@@ -567,6 +568,7 @@ $utilities: map-merge(
         sm: $line-height-sm,
         base: $line-height-base,
         lg: $line-height-lg,
+        md: $line-height-md,
       )
     ),
     "text-align": (
