@@ -451,6 +451,7 @@ $spacers: (
   39: $spacer * 9.75,
   40: $spacer * 10,
   45: $spacer * 11.25,
+  50: $spacer * 12.5,
   60: $spacer * 15,
   67: $spacer * 16.75,
   70: $spacer * 17.5,
@@ -771,7 +772,7 @@ $legend-font-weight:          null !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
-$list-inline-padding:         .5rem !default;
+$list-inline-padding:         0; //.5rem !default;
 
 $mark-padding:                .1875em !default;
 $mark-color:                  $body-color !default;
