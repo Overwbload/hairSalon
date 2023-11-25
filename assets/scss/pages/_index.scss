@@ -15,7 +15,6 @@
   }
 } 
 
-
 // 首頁hero-banner
 .index-img-1 {
   background: url('../assets/images/homepage/view-1.jpg'), lightgray -17.209px -181.411px / 114.51% 190.82%;
@@ -96,6 +95,28 @@
   }
 }
 
+.index-img-11 {
+  margin-left: auto;
+  margin-right: auto;
+  background: url('../assets/images/homepage/person-11-resized.png'), lightgray 50%;
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  // aspect-ratio: 351/344;
+  height: 344px;
+}
+@include media-breakpoint-up(md) {
+  .index-img-11 {
+    // background: url('../assets/images/homepage/person-11-resized.png'), lightgray 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 526/516;
+    max-height: 516px;
+    height: auto;
+  }
+}
+
 // 位移元素但保持空間佔有
 .translate-t-16 {
   translate: 0 64px;
@@ -129,7 +150,6 @@
     }
   }
 }
-
 
 // 產生圖片陰影
 .bg-shadow-bottom-right {
@@ -210,5 +230,35 @@
     img:nth-child(even) {
       aspect-ratio: 306/315;
     }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .h-md-353px {
+    height: 353px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .h-lg-465px {
+    height: 465px;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .h-xl-549px {
+    height: 549px;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .h-xxl-622px {
+    height: 622px;
+  }
+}
+
+.list-tiny-dot {
+  li {
+    padding-left: 18px;
+  }
+  li::marker {
+    content: '·';
   }
 }

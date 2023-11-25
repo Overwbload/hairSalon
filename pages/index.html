@@ -9,7 +9,7 @@
 
 <body>
   <%- include('./layout/header'); -%>
-  <main>
+  <main id="to-top">
     <div class="index-img-1">
       <div class="container">
         <div class="row d-flex justify-content-end translate-t-16 translate-t-xl-40 position-relative z-1">
@@ -240,7 +240,45 @@
         </div>
       </div>
     </div>
+    <div class="bg-black-20">
+      <div class="container">
+        <div class="position-relative z-0">
+          <div class="position-absolute z-1 w-100 h-100 pt-20 d-none d-md-block">
+            <div class="row h-100">
+              <div class="col-3"></div>
+              <div class="col-4">
+                <div class="bg-primary-main h-100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="py-50 position-relative z-2">
+            <div
+              class="row flex-column justify-content-md-center justify-content-xl-start gap-8 gap-md-0 h-md-353px h-lg-465px h-xl-549px h-xxl-622px">
+              <div class="col-12 col-md-5">
+                <h2 class="fs-28 fs-lg-40 fs-xl-48 text-md-center px-5 mb-md-12">INFORMATION</h2>
+              </div>
+              <div class="col-12 col-md-7 order-md-3">
+                <div class="py-xl-30 px-xl-12">
+                  <ul class="d-flex flex-column gap-4 gap-md-8 gap-lg-12 list-tiny-dot ps-4">
+                    <li class="d-none d-md-block fs-24 ls-tiny-15"></li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">加入會員即可領取9折優惠券。</li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">當月壽星預約結帳可享8.5折優惠。</li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">店家擁有最終修改與解釋權。</li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">不定時舉辦優惠券放送活動，數量有限，送完為止。</li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">學生燙/染優惠，將依店家公告價格為主。</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="index-img-11"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+  <%- include('./layout/footer'); -%>
   <script type="module" src="../main.js"></script>
 </body>
 
