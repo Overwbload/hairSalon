@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HairSalon - Home</title>
 </head>
+
 <body>
   <%- include('./layout/header'); -%>
-  <main>
-    <div style="background-image: url('../assets/images/homepage/view-1.jpg');" class="bg-cover">
+  <main id="to-top">
+    <div class="index-img-1">
       <div class="container">
-        <div class="row d-flex justify-content-end translate-t-16 translate-t-xl-40">
+        <div class="row d-flex justify-content-end translate-t-16 translate-t-xl-40 position-relative z-1">
           <div class="col-9 col-xl-8">
             <div class="py-10 py-xl-40 bg-primary-light d-flex justify-content-center">
               <div class="position-relative mb-4 mb-xl-0 px-xl-9 pb-4 pb-xl-0 d-flex gap-4 gap-xl-18">
                 <div class="d-flex flex-column gap-5 justify-content-between">
                   <div class="d-flex justify-content-between align-items-center">
-                    <!-- Icon Scissors -->
+                    <!-- scissors -->
                     <div class="px-xl-6">
                       <span class="icon-scissors"></span>
                     </div>
-                    <!-- Icon Black Dot -->
+                    <!-- dot -->
                     <div class="p-1 d-none d-xl-block">
                       <span class="d-block p-1 rounded-circle bg-black-100"></span>
                     </div>
                   </div>
-                  <!-- Icon Black Bar -->
+                  <!-- bar -->
                   <div class="px-2 h-100 align-self-center align-self-xl-end">
                     <span class="d-block h-100 outline outline-1 outline-black-100"></span>
                   </div>
-                  <h4 class="position-absolute position-xl-static top-100 left-0 font-mrazor-hk fs-15 ls-4 ls-xl-7 me-n7">美髮時刻</h4>
+                  <h4
+                    class="position-absolute position-xl-static top-100 left-0 font-mrazor-hk fs-15 ls-4 ls-xl-7 me-n7">
+                    美髮時刻</h4>
                 </div>
                 <div class="d-flex flex-column gap-12 gap-xl-20">
                   <div>
@@ -39,7 +43,7 @@
                   <div class="outline-shadow">
                     <div class="px-xl-10 mb-8 mb-xl-0 py-xl-12 bg-xl-black-0">
                       <div class="d-flex align-items-center gap-7">
-                        <!-- Icon Black Dot -->
+                        <!-- dot -->
                         <span class="d-none d-xl-block p-1 rounded-circle bg-black-100"></span>
                         <div>
                           <h2 class="fs-28 fs-xl-48">HairDesign</h2>
@@ -55,23 +59,227 @@
         </div>
       </div>
     </div>
-    <div class="bg-primary-main" style="height: 890px;">
+    <div class="bg-primary-main overflow-x-md-hidden mb-70 mb-md-0">
       <div class="container">
-        <div class="row d-flex justify-content-between">
-          <div class="col-1 invisible"></div>
-          <div class="col-5">
-            <div class="py-10">
-              
+        <div class="row justify-content-between align-items-center position-relative position-md-static">
+          <div class="col-12 col-md-6">
+            <div class="row justify-content-end">
+              <div class="col-12 col-md-10">
+                <!-- text content -->
+                <div class="py-30 py-md-0">
+                  <div class="d-flex flex-column gap-6 gap-md-10 gap-lg-14">
+                    <h2 class="fs-28 fs-md-24 fs-xl-40 ls-tiny-10 ls-tiny-lg-12-5 text-center text-md-start">
+                      <p class="mb-1">全台最多</p>
+                      <p>髮型設計預約服務平台</p>
+                    </h2>
+                    <p class="fs-default fs-xl-24 ls-tiny-0 ls-tiny-lg-12-5 text-center text-md-start">HairMoments
+                      的使命是成為顧客與髮型設計師之間的橋樑，提供方便的髮型預約體驗，同時為設計師提供更多曝光的機會。<br><br>我們的平台致力於減少用戶與髮型設計師之間的溝通障礙，用戶可以輕鬆瀏覽不同髮型設計師的作品，並直接預約，無需繁瑣的溝通。
+                    </p>
+                    <p class="fs-default fs-xl-24 ls-tiny-0 ls-tiny-lg-15 text-center text-md-end">Hair Moments</p>
+                  </div>
+                  <!-- dot and bar -->
+                  <div class="mt-6 ms-11 d-none d-md-block">
+                    <div class="position-absolute z-1">
+                      <div class="d-flex flex-column align-items-center gap-8">
+                        <span class="d-block p-1 bg-black-100 rounded-circle"></span>
+                        <span class="d-block py-30 outline outline-1 outline-black-100"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-1 invisible"></div>
-          <div class="col-5">
-            <div style="background-image: url('../assets/images/homepage/person-1.jpg');"></div>
+          <!-- the image of person to right -->
+          <div
+            class="col-9 col-md-5 position-absolute position-md-static top-100 start-50 translate-middle-x translate-middle-md-0 mt-n7 mt-md-0">
+            <div class="w-md-200 d-flex justify-content-center">
+              <div class="index-img-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-black-0 position-relative overflow-x-hidden overflow-x-md-visible overflow-y-hidden overflow-y-md-visible">
+      <div class="container">
+        <div class="pt-45 pt-md-60 pb-18 pb-md-19">
+          <div class="row position-md-relative">
+            <!-- the image of store view to left -->
+            <div class="col-9 px-0 px-md-3 position-absolute position-md-static top-0 start-0">
+              <div class="bg-shadow-bottom-right vw-100 vw-md-auto">
+                <div class="index-img-3"></div>
+              </div>
+            </div>
+            <!-- text content -->
+            <div class="col-12 col-md-5 position-static position-md-absolute top-0 end-0 z-1">
+              <div class="pt-md-20 pt-lg-28 pt-xxl-45">
+                <div class="d-flex flex-column align-items-start gap-4 gap-md-9">
+                  <h3 class="px-1 fs-24 fs-xl-32 ls-tiny-15 ls-tiny-xl-10 bg-black-0">找髮型設計師</h3>
+                  <h2 class="px-1 fs-28 fs-xl-40 fs-xxl-48 fw-black ls-tiny-10 ls-tiny-xl-15 bg-black-0">精心設計，完美髮型
+                  </h2>
+                  <a href="#" class="d-block px-4 px-lg-12 py-3 py-lg-4 btn btn-black-100">
+                    <span class="d-block fs-24 fs-xl-28 fw-black ls-tiny-10">搜尋人氣設計師</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- bar -->
+            <div class="col-3 position-absolute bottom-0 end-0 d-none d-lg-block">
+              <div class="mt-n16">
+                <span class="d-block outline outline-1 outline-black-100"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-black-0 position-relative overflow-x-hidden overflow-x-md-visible overflow-y-hidden overflow-y-md-visible">
+      <div class="container">
+        <div class="pt-45 pt-md-19 pb-24 pb-md-67">
+          <div class="row justify-content-start justify-content-md-end position-md-relative">
+            <!-- the image of store view to right -->
+            <div class="col-9 px-0 px-md-3 position-absolute position-md-static top-0 start-0">
+              <div class="bg-shadow-bottom-left vw-100 vw-md-auto">
+                <!-- <img src="../assets/images/homepage/view-2-resized.png" alt=""> -->
+                <div class="index-img-4"></div>
+              </div>
+            </div>
+            <!-- text content -->
+            <div class="col-12 col-md-5 position-static position-md-absolute top-0 start-0 z-1">
+              <div class="pt-md-20 pt-lg-28 pt-xxl-45">
+                <div class="d-flex flex-column align-items-start gap-4 gap-md-9">
+                  <h3 class="px-1 fs-24 fs-xl-32 ls-tiny-15 ls-tiny-xl-10 bg-black-0">找沙龍店家</h3>
+                  <h2 class="px-1 fs-28 fs-xl-40 fs-xxl-48 fw-black ls-tiny-10 ls-tiny-xl-15 bg-black-0">時尚之選，體驗卓越
+                  </h2>
+                  <a href="#" class="d-block px-4 px-lg-12 py-3 py-lg-4 btn btn-black-100">
+                    <span class="d-block fs-24 fs-xl-28 fw-black ls-tiny-10">搜尋優質店家</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- bar -->
+            <div class="col-3 position-absolute bottom-0 start-0 d-none d-lg-block">
+              <div class="mt-n16">
+                <span class="d-block outline outline-1 outline-black-100"></span>
+              </div>
+            </div>
+            <!-- dot and bar -->
+            <div class="col-1 position-absolute top-100 end-0 d-none d-md-block">
+              <div class="mt-17">
+                <div class="d-flex flex-column align-items-center gap-8">
+                  <span class="d-block p-1 bg-black-100 rounded-circle"></span>
+                  <span class="d-block py-30 outline outline-1 outline-black-100"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary-light">
+      <div class="container">
+        <div class="py-12 py-md-30">
+          <div class="d-flex flex-column gap-6 gap-md-16">
+            <div>
+              <h2 class="fs-32 fs-md-40 ls-tiny-10 ls-tiny-md-12-5 text-center mb-md-1">熱門流行趨勢</h2>
+              <h3 class="text-center">Hairstyle Trends</h3>
+            </div>
+            <div class="d-flex justify-content-center">
+              <div class="row gx-6 gy-6 pathment">
+                <div class="col-6 col-md-3">
+                  <div class="pathment-bricks">
+                    <img src="../assets/images/homepage/person-3-resized.png" alt="">
+                    <img src="../assets/images/homepage/person-4-resized.png" alt="">
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="pathment-bricks">
+                    <img src="../assets/images/homepage/person-5-resized.png" alt="">
+                    <img src="../assets/images/homepage/person-6-resized.png" alt="">
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="pathment-bricks">
+                    <img src="../assets/images/homepage/person-7-resized.png" alt="">
+                    <img src="../assets/images/homepage/person-8-resized.png" alt="">
+                  </div>
+                </div>
+                <div class="col-6 col-md-3">
+                  <div class="pathment-bricks">
+                    <img src="../assets/images/homepage/person-9-resized.png" alt="">
+                    <img src="../assets/images/homepage/person-10-resized.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3">
+                <div class="position-relative">
+                  <div class="position-absolute top-0 start-0 d-flex flex-column align-items-start gap-8 ms-10">
+                    <span class="d-none d-md-block p-1 bg-black-100 rounded-circle"></span>
+                    <span class="d-none d-md-block py-29 outline outline-1 outline-black-100"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="py-4 px-12">
+                  <div class="d-flex justify-content-center">
+                    <span class="d-block font-noto-serif fs-28 fw-black ls-tiny-12-5">...</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="pt-14">
+                  <span class="d-none d-md-block outline outline-1 outline-black-100"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-black-20">
+      <div class="container">
+        <div class="position-relative z-0">
+          <div class="position-absolute z-1 w-100 h-100 pt-20 d-none d-md-block">
+            <div class="row h-100">
+              <div class="col-3"></div>
+              <div class="col-4">
+                <div class="bg-primary-main h-100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="py-50 position-relative z-2">
+            <div
+              class="row flex-column justify-content-md-center justify-content-xl-start gap-8 gap-md-0 h-md-353px h-lg-465px h-xl-549px h-xxl-622px">
+              <div class="col-12 col-md-5">
+                <h2 class="fs-28 fs-lg-40 fs-xl-48 text-md-center px-5 mb-md-12">INFORMATION</h2>
+              </div>
+              <div class="col-12 col-md-7 order-md-3">
+                <div class="py-xl-30 px-xl-12">
+                  <ul class="d-flex flex-column gap-4 gap-md-8 gap-lg-12 list-tiny-dot ps-4">
+                    <li class="d-none d-md-block fs-24 ls-tiny-15"></li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">加入會員即可領取9折優惠券。</li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">當月壽星預約結帳可享8.5折優惠。</li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">店家擁有最終修改與解釋權。</li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">不定時舉辦優惠券放送活動，數量有限，送完為止。</li>
+                    <li class="fs-20 fs-sm-24 fs-md-20 fs-lg-24 ls-tiny-15">學生燙/染優惠，將依店家公告價格為主。</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-md-5">
+                <div class="index-img-11"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </main>
+  <%- include('./layout/footer'); -%>
   <script type="module" src="../main.js"></script>
 </body>
+
 </html>

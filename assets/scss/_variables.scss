@@ -450,13 +450,20 @@ $spacers: (
   38: $spacer * 9.5,
   39: $spacer * 9.75,
   40: $spacer * 10,
-  49: $spacer * 12.25
+  45: $spacer * 11.25,
+  49: $spacer * 12.25,
+  50: $spacer * 12.5,
+  60: $spacer * 15,
+  67: $spacer * 16.75,
+  70: $spacer * 17.5,
 ) !default;
 
 $tiny-spacer: calc($spacer*0.01);
 $tiny-spacers: (
+  0: 0,
   5: $tiny-spacer * 5,
   10: $tiny-spacer * 10,
+  "12-5": $tiny-spacer * 12.5,
   15: $tiny-spacer * 15
 );
 // scss-docs-end spacer-variables-maps
@@ -587,7 +594,7 @@ $border-color-translucent:    rgba($black, .175) !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius:               .375rem !default;
+$border-radius:               0; //.375rem !default;
 $border-radius-sm:            .25rem !default;
 $border-radius-lg:            .5rem !default;
 $border-radius-xl:            1rem !default;
@@ -672,6 +679,7 @@ $font-weight-base:            $font-weight-normal !default;
 
 $line-height-base:            1.2; //1.5 !default;
 $line-height-sm:              1; //1.25 !default;
+$line-height-md:              1.5;
 $line-height-lg:              2 !default;
 
 $h1-font-size:                $font-size-base; // $font-size-base * 2.5 !default;
@@ -765,7 +773,7 @@ $legend-font-weight:          null !default;
 
 $dt-font-weight:              $font-weight-bold !default;
 
-$list-inline-padding:         .5rem !default;
+$list-inline-padding:         0; //.5rem !default;
 
 $mark-padding:                .1875em !default;
 $mark-color:                  $body-color !default;
