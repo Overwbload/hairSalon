@@ -1,0 +1,19 @@
+.fullMask {
+    background: #f5e5de;
+}
+
+.searchDesigner {
+    li:hover .designerTitle {
+        bottom: 0;
+    }
+}
+
+.designerTitle {
+    backdrop-filter: blur(8px);
+    bottom: -100%;
+    transition: .3s ease-in-out;
+
+    img {
+        width: 32px;
+    }
+}
