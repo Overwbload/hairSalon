@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+    <title>HairSalon - search | HairDesigner</title>
+</head>
+
+<body>
+    <!-- header -->
+    <%- include("./layout/header") -%>
+    <main>
+        <!-- banner -->
+        <div class="container-fluid p-0 mb-20 position-relative">
+            <div class="w-100 opacity-40 bg-black-0 position-absolute order-1 h-100"></div>
+            <img class="w-100" src="../assets/images/searchStylepage/search-banner.png" alt="搜尋髮型">
+        </div>
+
+        <div class="container">
+            <!-- title & form -->
+            <div class="row justify-content-between mb-16">
+                <div class="col-3">
+                    <h2 class="font-noto-serif fs-40 ls-tiny-5">找設計師</h2>
+                    <span class="w-100 line d-block mt-4"></span>
+                </div>
+                <div class="col-9">
+                    <form action="" class="row justify-content-end font-noto-serif">
+                        <div class="col-3">
+                            <select class="form-select py-3 border-black-100 fs-20" aria-label="Default select example">
+                                <option selected>找設計師</option>
+                                <option value="1">找店家</option>
+                                <option value="2">找髮型</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <select class="form-select py-3 border-black-100 fs-20" aria-label="Default select example">
+                                <option selected>請選擇區域</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- search tag -->
+            <div class="row mb-10">
+                <div class="col-10">
+                    <ul class="d-flex ps-0 mb-0 gap-4 list-unstyled">
+                        <li class="fs-28 ls-tiny-5">#精選設計師</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- search 髮型結果 -->
+            <ul class="row ps-0 mb-0 list-unstyled searchSalon">
+                <li class="col-lg-4 mb-6 overflow-hidden">
+                    <a href="" class="position-relative">
+                        <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
+                        <img src="../assets/images/searchSalonpage/salon1.png" alt="">
+                        <h3 class="salonLogo d-flex align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
+                            <img class="rounded-circle" src="../assets/images/searchStylepage/salon-logo-1.jpg" alt="">
+                            <p class="text-black-0 ps-2">Time Styling</p>
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+    <%- include("./layout/footer") -%>
+
+
+    <script type="module" src="../main.js"></script>
+    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let swiper = new Swiper(".mySwiper", {
+                loop: true,
+                spaceBetween: 5,
+                slidesPerView: 3,
+                freeMode: true,
+                watchSlidesProgress: true,
+            });
+
+            let swiper2 = new Swiper(".mySwiper2", {
+                loop: true,
+                spaceBetween: 5,
+                thumbs: {
+                    swiper: swiper,
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
