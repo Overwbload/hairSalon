@@ -1,3 +1,19 @@
 .fullMask {
     background: #f5e5de;
 }
+
+.searchSalon {
+    li:hover .salonLogo {
+        bottom: 0;
+    }
+}
+
+.salonLogo {
+    backdrop-filter: blur(8px);
+    bottom: -100%;
+    transition: .3s ease-in-out;
+
+    img {
+        width: 32px;
+    }
+}
