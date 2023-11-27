@@ -17,10 +17,10 @@
 		<div class="container bg-black-20">
 			<div class="border border-warning">
 				<!-- 沙龍店家資訊 -->
-				<div class="row justify-content-between mt-15 mb-30">
-					<div class="d-flex upper col-4">
+				<div class="row mt-15 mb-30">
+					<div class="upper d-flex justify-content-between">
 						<img class="me-8" src="../assets/images/salonInfopage/salonImg.png" style="height: 120px; width: 120px;">
-						<div class="salonInfoText mt-7">
+						<div class="salonInfoText col mt-7">
 							<p class="fs-24 text-black-100 ls-tiny-5 mb-2">時光造型廊</p>
 							<p class="text-black-100 ls-tiny-5">
 								<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -31,35 +31,158 @@
 								桃園市桃園區介壽路1號
 							</p>
 						</div>
-					</div>
-					<div class="btn  col-4">
-						<button type="button" class="btn btn-outline-dark fs-24 ls-tiny-5 fw-black px-12 py-4 rounded-0">加入最愛</button><br>
-						<button type="button" class="btn btn-dark fs-24 ls-tiny-5 fw-black px-12 py-4 mt-4 rounded-0">立即預約</button>
+						<div class="btn p-0">
+							<button type="button" class="btn btn-outline-dark fs-24 ls-tiny-5 fw-black px-12 py-4 rounded-0">加入最愛</button><br>
+							<button type="button" class="btn btn-dark fs-24 ls-tiny-5 fw-black px-12 py-4 mt-4 rounded-0">立即預約</button>
+						</div>
 					</div>
 				</div>
 				<!-- 頁籤選擇部分 -->
 				<div class="pageSelect row">
 					<ul class="d-flex justify-content-center border-bottom">
-						<li class="fs-24 fw-bold ls-tiny-5 px-25" type="radio" ><a class="border-bottom border-5 pb-4 border-secondary-main" href="#">沙龍資訊</a></li>
-						<li class="fs-24 fw-bold ls-tiny-5 px-25" type="radio"><a class="" href="#">設計師總覽</a></li>
-						<li class="fs-24 fw-bold ls-tiny-5 px-25" type="radio"><a class="" href="#">服務項目</a></li>
-						<li class="fs-24 fw-bold ls-tiny-5 px-25" type="radio" ><a class="" href="#">優惠活動</a></li>
+						<li class="fs-24 lh-md fw-bold ls-tiny-5 px-25" type="radio" ><a class="pb-4 border-bottom border-5 border-secondary-main" href="#">沙龍資訊</a></li>
+						<li class="fs-24 lh-md fw-bold ls-tiny-5 px-25" type="radio"><a class="" href="#">設計師總覽</a></li>
+						<li class="fs-24 lh-md fw-bold ls-tiny-5 px-25" type="radio"><a class="" href="#">服務項目</a></li>
+						<li class="fs-24 lh-md fw-bold ls-tiny-5 px-25" type="radio" ><a class="" href="#">優惠活動</a></li>
 					</ul>
-			  </div>
+			  	</div>
 				<!-- 頁籤內容部分 -->
-				
-				<div class="row position-relative">
-					<div class="">
-						<div class="d-flex bg-primary-main justify-content-center align-items-center position-absolute mt-24 ms-48" style="height: 46px; width: 143px;">
-							<p class="fw-20 text-black-100 ls-tiny-5 fw-bold py-2 pe-12 ps-4">店家資訊</p>
+				<!-- 店家資訊 -->
+				<div class="row ">
+					<div class="d-flex bg-black-0 mt-18 mb-15 mx-auto p-0" style="height: 308px; width: 856px;">
+						<div class=" bg-primary-main align-items-center position-absolute mt-6 ms-n6 p-0" style=" width: 144px;">
+							<p class="fs-20 lh-md text-black-100 ls-tiny-5 fw-bold py-2 pe-12 ps-3">店家資訊</p>
 						</div>
-						<div class="bg-black-0 mt-18 mb-15 mx-auto" style="height: 306px; width: 856px;">
+						<div class="col-md-6 pt-24 ps-9">
+							<p class="fs-20 lh-md text-black-100 ls-tiny-5 ">
+								<svg class="me-3 " width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M5.72126 14.2154C8.68443 17.1886 12.2905 19.4788 15.2335 19.4788C16.5494 19.4788 17.7045 19.0167 18.6286 17.9922C19.171 17.3895 19.5025 16.6964 19.5025 16.0033C19.5025 15.471 19.2916 14.9486 18.7793 14.587L15.6956 12.3973C15.2034 12.0558 14.8016 11.8951 14.44 11.8951C13.9679 11.8951 13.546 12.1562 13.084 12.6183L12.3608 13.3415C12.2402 13.452 12.0996 13.5022 11.969 13.5022C11.8083 13.5022 11.6576 13.4419 11.5572 13.3817C10.9244 13.0402 9.83957 12.1161 8.8351 11.1116C7.83064 10.1071 6.89648 9.03235 6.56501 8.38949C6.50474 8.279 6.45452 8.13837 6.45452 7.97766C6.45452 7.85712 6.4947 7.7165 6.60519 7.59596L7.3284 6.86271C7.78041 6.39061 8.05162 5.97878 8.05162 5.50668C8.05162 5.13503 7.8909 4.73324 7.54939 4.2511L5.3697 1.19753C4.99805 0.675206 4.47573 0.454224 3.90318 0.454224C3.22015 0.454224 2.53711 0.755563 1.94448 1.32811C0.940011 2.2723 0.498047 3.44753 0.498047 4.74329C0.498047 7.68637 2.75809 11.2522 5.72126 14.2154Z" fill="#1C1C1E"/>
+								</svg>
+								03-3361235
+							</p>
+							<p class="fs-20 lh-md text-black-100 ls-tiny-5 pt-3">
+								<svg class="me-3 " width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M10.9897 20.9911C16.685 20.9911 21.3859 16.2902 21.3859 10.6049C21.3859 4.91964 16.6749 0.21875 10.9796 0.21875C5.29436 0.21875 0.603516 4.91964 0.603516 10.6049C0.603516 16.2902 5.30441 20.9911 10.9897 20.9911ZM5.92718 11.8705C5.47517 11.8705 5.1236 11.519 5.1236 11.067C5.1236 10.615 5.47517 10.2634 5.92718 10.2634H10.1861V4.49777C10.1861 4.04576 10.5377 3.6942 10.9796 3.6942C11.4417 3.6942 11.7932 4.04576 11.7932 4.49777V11.067C11.7932 11.519 11.4417 11.8705 10.9796 11.8705H5.92718Z" fill="#1C1C1E"/>
+								</svg>
+								10:00 - 19:30
+							</p>
+							<p class="fs-20 lh-md text-black-100 ls-tiny-5 pt-3">
+								<svg  class="me-3 " width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.88393 16.9848L13.4774 18.9887C13.6582 19.0866 13.8089 19.1619 13.9972 19.2071V6.69402L10.5017 4.58465C10.2757 4.44904 10.0647 4.35111 9.88393 4.30591V16.9848ZM4.06055 17.9942C4.06055 18.6497 4.47489 19.0113 5.07757 19.0113C5.29604 19.0113 5.52204 18.9435 5.77818 18.8079L8.77651 17.1806V4.38878C8.61077 4.45658 8.4149 4.53945 8.2115 4.65998L4.80636 6.59609C4.29408 6.88236 4.06055 7.28917 4.06055 7.86171V17.9942ZM15.0971 19.1695C15.1875 19.1469 15.2779 19.1092 15.3608 19.0489L19.1727 16.8944C19.7001 16.6005 19.9411 16.2013 19.9411 15.6287V5.54893C19.9411 4.86339 19.5193 4.52438 18.8789 4.52438C18.6454 4.52438 18.3968 4.59218 18.1331 4.73532L15.0971 6.42282V19.1695Z" fill="#1C1C1E"/>
+								</svg>
+								桃園市桃園區介壽路1號
+							</p>
+						</div>
+						<div class="col-md-6 py-6 pe-9">
+							<img src="../assets/images/salonInfopage/Rectangle 148.png">
 						</div>
 					</div>
-
 				</div>
-
-
+				<!-- 顧客評價 -->
+				<div class="row">
+					<div class="bg-black-0 mb-30 mx-auto p-0" style=" width: 856px;">
+						<div class="bg-primary-main position-absolute mt-6 ms-n6 p-0" style=" width: 144px;">
+							<p class="fs-20 lh-md text-black-100 ls-tiny-5 fw-bold py-2 pe-12 ps-3">顧客評價</p>
+						</div>
+						<div class="d-flex mt-6 me-9 justify-content-end ">
+							<button type="button" class="btn btn-dark fs-24 ls-tiny-5 fw-black px-12 py-4 rounded-0">撰寫評論</button>
+						</div>
+						<!-- 評論區 -->
+						<div class="mt-18 ms-9" style="width: 601px;">
+							<div class="d-flex justify-content-between ">
+								<div class="d-flex">
+									<img src="../assets/images/salonInfopage/Rectangle 146.png">
+									<p class=" lh-md ls-tiny-5 text-black-100 fw-medium ms-2">陳小美</p> 
+								</div>
+								<!-- 星星顯示顆數 -->
+								<div class="">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+								</div>
+							</div>
+							<p class="lh-md ls-tiny-5 text-black-100 px-1 py-3">設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推</p>
+							<div class="d-flex justify-content-between">
+								<p class="fs-14 lh-md ls-tiny-5 text-black-80">預約服務：燙髮</p>
+								<p class="fs-14 lh-md ls-tiny-5 text-black-80">2023年10月7日</p>
+							</div>
+						</div>
+						<div class="mt-6 ms-9" style="width: 601px;">
+							<div class="d-flex justify-content-between ">
+								<div class="d-flex">
+									<img src="../assets/images/salonInfopage/Rectangle 146.png">
+									<p class=" lh-md ls-tiny-5 text-black-100 fw-medium ms-2">陳小美</p> 
+								</div>
+								<!-- 星星顯示顆數 -->
+								<div class="">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+								</div>
+							</div>
+							<p class="lh-md ls-tiny-5 text-black-100 px-1 py-3">設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推</p>
+							<div class="d-flex justify-content-between">
+								<p class="fs-14 lh-md ls-tiny-5 text-black-80">預約服務：燙髮</p>
+								<p class="fs-14 lh-md ls-tiny-5 text-black-80">2023年10月7日</p>
+							</div>
+						</div>
+						<div class="mt-6 mb-19 ms-9" style="width: 601px;">
+							<div class="d-flex justify-content-between ">
+								<div class="d-flex">
+									<img src="../assets/images/salonInfopage/Rectangle 146.png">
+									<p class=" lh-md ls-tiny-5 text-black-100 fw-medium ms-2">陳小美</p> 
+								</div>
+								<!-- 星星顯示顆數 -->
+								<div class="">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.99959 11.0663L10.2796 13.453C10.7996 13.8396 11.5063 13.3196 11.3063 12.7063L10.0529 8.85298L13.2929 6.54631C13.8263 6.17298 13.5596 5.33298 12.9063 5.33298H8.93292L7.63959 1.30631C7.43959 0.69298 6.57292 0.69298 6.37292 1.30631L5.06626 5.33298H1.09292C0.43959 5.33298 0.172923 6.17298 0.706257 6.54631L3.94626 8.85298L2.69292 12.7063C2.49292 13.3196 3.19959 13.8263 3.71959 13.453L6.99959 11.0663Z" fill="#B9A37F"/>
+									</svg>
+								</div>
+							</div>
+							<p class="lh-md ls-tiny-5 text-black-100 px-1 py-3">設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推</p>
+							<div class="d-flex justify-content-between">
+								<p class="fs-14 lh-md ls-tiny-5 text-black-80">預約服務：燙髮</p>
+								<p class="fs-14 lh-md ls-tiny-5 text-black-80">2023年10月7日</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
