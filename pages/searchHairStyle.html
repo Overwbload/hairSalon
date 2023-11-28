@@ -15,51 +15,110 @@
         <!-- banner -->
         <div class="container-fluid p-0 mb-20 position-relative">
             <div class="w-100 opacity-40 bg-black-0 position-absolute order-1 h-100"></div>
-            <img class="w-100" src="../assets/images/searchStylepage/search-banner.png" alt="搜尋髮型">
+            <img class="w-100 object-fit-cover searchBanner" src="../assets/images/searchStylepage/search-banner.png" alt="搜尋髮型">
         </div>
 
         <div class="container">
             <!-- title & form -->
-            <div class="row justify-content-between mb-16">
-                <div class="col-3">
-                    <h2 class="font-noto-serif fs-40 ls-tiny-5">找髮型</h2>
-                    <span class="w-100 line d-block mt-4"></span>
+            <div class="row justify-content-md-between mb-md-16 mb-10 flex-column flex-md-row gap-6 gap-md-0">
+                <div class="col-4 col-lg-3">
+                    <h2 class="font-noto-serif fs-md-40 ls-tiny-5 fs-24">找髮型</h2>
+                    <span class="w-100 line d-block mt-md-4 mt-2"></span>
                 </div>
-                <div class="col-9">
-                    <form action="" class="row justify-content-end font-noto-serif">
-                        <div class="col-3">
-                            <select class="form-select py-3 border-black-100 fs-20" aria-label="Default select example">
-                                <option selected>找髮型</option>
-                                <option value="1">找店家</option>
-                                <option value="2">找設計師</option>
-                            </select>
+                <div class="col-md-8 col-12">
+                    <div class="row justify-content-md-end justify-content-start font-noto-serif">
+                        <div class="dropdown col-lg-4 col-6">
+                            <button type="button"
+                                class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
+                                id="searchOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,10">
+                                找髮型
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.2963 16.844C12.56 16.8365 12.786 16.7386 12.9894 16.5352L18.7224 10.6741C18.8881 10.5008 18.9785 10.2974 18.9785 10.0488C18.9785 9.54408 18.5868 9.15234 18.082 9.15234C17.841 9.15234 17.615 9.25028 17.4417 9.42355L12.2963 14.697L7.15095 9.42355C6.97768 9.25028 6.75921 9.15234 6.5106 9.15234C6.00586 9.15234 5.61412 9.54408 5.61412 10.0488C5.61412 10.2899 5.70452 10.5008 5.87026 10.6741L11.6108 16.5352C11.8066 16.7461 12.0326 16.844 12.2963 16.844Z"
+                                        fill="#1C1C1E" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="searchOffset">
+                                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">找髮型</a></li>
+                                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">找店家</a></li>
+                                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">找設計師</a></li>
+                            </ul>
                         </div>
-                        <div class="col-3">
-                            <select class="form-select py-3 border-black-100 fs-20" aria-label="Default select example">
-                                <option selected>請選擇區域</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                        <div class="dropdown col-lg-4 col-6">
+                            <button type="button"
+                                class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
+                                id="searchAreaOffset" data-bs-toggle="dropdown" aria-expanded="false"
+                                data-bs-offset="0,10" data-bs-auto-close="outside" >
+                                請選擇區域
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.2963 16.844C12.56 16.8365 12.786 16.7386 12.9894 16.5352L18.7224 10.6741C18.8881 10.5008 18.9785 10.2974 18.9785 10.0488C18.9785 9.54408 18.5868 9.15234 18.082 9.15234C17.841 9.15234 17.615 9.25028 17.4417 9.42355L12.2963 14.697L7.15095 9.42355C6.97768 9.25028 6.75921 9.15234 6.5106 9.15234C6.00586 9.15234 5.61412 9.54408 5.61412 10.0488C5.61412 10.2899 5.70452 10.5008 5.87026 10.6741L11.6108 16.5352C11.8066 16.7461 12.0326 16.844 12.2963 16.844Z"
+                                        fill="#1C1C1E" />
+                                </svg>
+                            </button>
+                            <ul class="dropdown-menu p-0" aria-labelledby="searchAreaOffset">
+                                <li>
+                                    <div class="btn-group dropend w-100">
+                                        <button type="button"
+                                            class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-2 fs-md-20 fs-16 w-100 text-start"
+                                            id="searchTaipeiOffset" data-bs-toggle="dropdown" aria-expanded="false"
+                                            data-bs-offset="0,4" data-bs-auto-close="inside">
+                                            台北市
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z" fill="#1C1C1E"/>
+                                                </svg>
+                                                
+                                        </button>
+                                        
+                                        <ul class="submenu dropdown-menu p-0" data-popper-placement="right-start" aria-labelledby="searchTaipeiOffset">
+                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">大安區</a></li>
+                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">士林區</a></li>
+                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">信義區</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="btn-group dropend w-100">
+                                        <button type="button"
+                                            class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-2 fs-md-20 fs-16 w-100 text-start"
+                                            id="searchTaoyuanOffset" data-bs-toggle="dropdown" aria-expanded="false"
+                                            data-bs-offset="0,4" data-bs-auto-close="inside">
+                                            桃園市
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z" fill="#1C1C1E"/>
+                                                </svg>
+                                                
+                                        </button>
+                                        
+                                        <ul  class="dropdown-menu p-0" data-popper-placement="right-start" aria-labelledby="searchTaoyuanOffset">
+                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">桃園區</a></li>
+                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">八德區</a></li>
+                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">中壢區</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
             <!-- search tag -->
             <div class="row mb-10">
-                <div class="col-10">
-                    <ul class="d-flex ps-0 mb-0 gap-4">
+                <div class="col-9">
+                    <ul class="d-flex ps-0 mb-0 gap-4 list-unstyled">
                         <li class="fs-28 ls-tiny-5">#女生</li>
                         <li class="fs-28 ls-tiny-5">#短髮</li>
                     </ul>
                 </div>
-                <div class="col-2">
-                    <p class="text-black-60 text-end ls-tiny-5">(設計師作品)</p>
+                <div class="col-3">
+                    <p class="text-black-60 text-end ls-tiny-5 fs-14 fs-md-16">(設計師作品)</p>
                 </div>
             </div>
             <!-- search 髮型結果 -->
-            <ul class="row ps-0 mb-0">
-                <li class="col-lg-4 mb-6">
+            <ul class="row ps-0 mb-0 list-unstyled">
+                <li class="col-6 col-md-4 mb-6">
                     <button type="button" class="hairStyle w-100 btn btn-black-0 p-0 position-relative" data-bs-toggle="modal"
                         data-bs-target="#searchStyle-short1">
                         <img class="w-100 h-100 object-fit-cover" src="../assets/images/searchStylepage/hairStyle-short-1-1.jpg" alt="短髮">
@@ -77,11 +136,11 @@
                             <div class="modal-content position-relative">
                                 <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
-                                <div class="modal-header px-8 border-black-40 border-bottom">
+                                <div class="modal-header px-4 py-3 px-lg-8 py-lg-4 border-black-40 border-bottom">
                                     <div class="modal-title d-flex justify-content-between" id="searchHairLabel-short1">
                                         <div class="d-flex gap-3 justify-content-center align-items-center">
                                             <div class="salon-logo">
-                                                <img src="../assets/images/searchStylepage/salon-logo-1.jpg"
+                                                <img src="../assets/images/searchSalonpage/salon-logo-01.png"
                                                     alt="時光造型廊 logo">
                                             </div>
                                             <div class="salon-content">
@@ -96,12 +155,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn btn-black-100 px-16 py-4 fs-20 ls-tiny-5 fw-black">立即預約</a>
+                                    <a href="#" class="btn btn-black-100 px-lg-16 py-lg-4 p-3 fs-lg-20 ls-tiny-5 fw-black">立即預約</a>
 
                                 </div>
-                                <div class="modal-body d-flex gap-6 pe-8 pt-0 ps-0 pb-0">
-                                    <div class="col-6">
-                                        <div class="swiper mySwiper2">
+                                <div class="modal-body d-flex pe-lg-8 p-0">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="swiper mySwiper-lg-1 swiper-lg-img">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="w-100 h-100 object-fit-cover"
@@ -120,7 +179,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div thumbsSlider="" class="swiper mySwiper">
+                                        <div thumbsSlider="" class="swiper mySwiper-sm-1 swiper-sm-img">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="w-100 h-100 object-fit-cover"
@@ -140,13 +199,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 d-flex gap-8 flex-column">
+                                    <div class="d-none col-6 d-lg-flex gap-8 flex-column ps-6">
                                         <div class="pt-6">
                                             <h3 class="fw-bold p-3 bg-primary-main ls-tiny-5 mb-4">作品介紹</h3>
                                             <p class="ps-3 lh-md mb-4">
                                                 為您的髮型注入新的生命和個性。選擇了柔和的巧克力棕色作為基底色，以營造出自然而豐富的底層。巧妙地融入了金棕和琥珀色的亮點，為整體造型增添了層次感和光澤。
                                             </p>
-                                            <ul class="ps-3 mb-0 d-flex gap-2">
+                                            <ul class="ps-3 mb-0 d-flex gap-2 list-unstyled">
                                                 <li>#挑染</li>
                                                 <li>#染髮</li>
                                                 <li>#燙髮</li>
@@ -171,7 +230,8 @@
                         </div>
                     </div>
                 </li>
-                <li class="col-lg-4 mb-6">
+
+                <li class="col-6 col-md-4 mb-6">
                     <button type="button" class="hairStyle w-100 btn btn-black-0 p-0 position-relative" data-bs-toggle="modal"
                         data-bs-target="#searchStyle-short1">
                         <img class="w-100 h-100 object-fit-cover" src="../assets/images/searchStylepage/hairStyle-short-1-1.jpg" alt="短髮">
@@ -189,11 +249,11 @@
                             <div class="modal-content position-relative">
                                 <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
-                                <div class="modal-header px-8 border-black-40 border-bottom">
+                                <div class="modal-header px-4 py-3 px-lg-8 py-lg-4 border-black-40 border-bottom">
                                     <div class="modal-title d-flex justify-content-between" id="searchHairLabel-short1">
                                         <div class="d-flex gap-3 justify-content-center align-items-center">
                                             <div class="salon-logo">
-                                                <img src="../assets/images/searchStylepage/salon-logo-1.jpg"
+                                                <img src="../assets/images/searchSalonpage/salon-logo-01.png"
                                                     alt="時光造型廊 logo">
                                             </div>
                                             <div class="salon-content">
@@ -208,12 +268,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn btn-black-100 px-16 py-4 fs-20 ls-tiny-5 fw-black">立即預約</a>
+                                    <a href="#" class="btn btn-black-100 px-lg-16 py-lg-4 p-3 fs-lg-20 ls-tiny-5 fw-black">立即預約</a>
 
                                 </div>
-                                <div class="modal-body d-flex gap-6 pe-8 pt-0 ps-0 pb-0">
-                                    <div class="col-6">
-                                        <div class="swiper mySwiper2">
+                                <div class="modal-body d-flex pe-lg-8 p-0">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="swiper mySwiper-lg-2 swiper-lg-img">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="w-100 h-100 object-fit-cover"
@@ -232,7 +292,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div thumbsSlider="" class="swiper mySwiper">
+                                        <div thumbsSlider="" class="swiper mySwiper-sm-2 swiper-sm-img">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="w-100 h-100 object-fit-cover"
@@ -252,13 +312,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 d-flex gap-8 flex-column">
+                                    <div class="d-none col-6 d-lg-flex gap-8 flex-column ps-6">
                                         <div class="pt-6">
                                             <h3 class="fw-bold p-3 bg-primary-main ls-tiny-5 mb-4">作品介紹</h3>
                                             <p class="ps-3 lh-md mb-4">
                                                 為您的髮型注入新的生命和個性。選擇了柔和的巧克力棕色作為基底色，以營造出自然而豐富的底層。巧妙地融入了金棕和琥珀色的亮點，為整體造型增添了層次感和光澤。
                                             </p>
-                                            <ul class="ps-3 mb-0 d-flex gap-2">
+                                            <ul class="ps-3 mb-0 d-flex gap-2 list-unstyled">
                                                 <li>#挑染</li>
                                                 <li>#染髮</li>
                                                 <li>#燙髮</li>
@@ -283,7 +343,8 @@
                         </div>
                     </div>
                 </li>
-                <li class="col-lg-4 mb-6">
+
+                <li class="col-6 col-md-4 mb-6">
                     <button type="button" class="hairStyle w-100 btn btn-black-0 p-0 position-relative" data-bs-toggle="modal"
                         data-bs-target="#searchStyle-short1">
                         <img class="w-100 h-100 object-fit-cover" src="../assets/images/searchStylepage/hairStyle-short-1-1.jpg" alt="短髮">
@@ -301,11 +362,11 @@
                             <div class="modal-content position-relative">
                                 <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
-                                <div class="modal-header px-8 border-black-40 border-bottom">
+                                <div class="modal-header px-4 py-3 px-lg-8 py-lg-4 border-black-40 border-bottom">
                                     <div class="modal-title d-flex justify-content-between" id="searchHairLabel-short1">
                                         <div class="d-flex gap-3 justify-content-center align-items-center">
                                             <div class="salon-logo">
-                                                <img src="../assets/images/searchStylepage/salon-logo-1.jpg"
+                                                <img src="../assets/images/searchSalonpage/salon-logo-01.png"
                                                     alt="時光造型廊 logo">
                                             </div>
                                             <div class="salon-content">
@@ -320,12 +381,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn btn-black-100 px-16 py-4 fs-20 ls-tiny-5 fw-black">立即預約</a>
+                                    <a href="#" class="btn btn-black-100 px-lg-16 py-lg-4 p-3 fs-lg-20 ls-tiny-5 fw-black">立即預約</a>
 
                                 </div>
-                                <div class="modal-body d-flex gap-6 pe-8 pt-0 ps-0 pb-0">
-                                    <div class="col-6">
-                                        <div class="swiper mySwiper2">
+                                <div class="modal-body d-flex pe-lg-8 p-0">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="swiper mySwiper-lg-3 swiper-lg-img">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="w-100 h-100 object-fit-cover"
@@ -344,7 +405,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div thumbsSlider="" class="swiper mySwiper">
+                                        <div thumbsSlider="" class="swiper mySwiper-sm-3 swiper-sm-img">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="w-100 h-100 object-fit-cover"
@@ -364,13 +425,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 d-flex gap-8 flex-column">
+                                    <div class="d-none col-6 d-lg-flex gap-8 flex-column ps-6">
                                         <div class="pt-6">
                                             <h3 class="fw-bold p-3 bg-primary-main ls-tiny-5 mb-4">作品介紹</h3>
                                             <p class="ps-3 lh-md mb-4">
                                                 為您的髮型注入新的生命和個性。選擇了柔和的巧克力棕色作為基底色，以營造出自然而豐富的底層。巧妙地融入了金棕和琥珀色的亮點，為整體造型增添了層次感和光澤。
                                             </p>
-                                            <ul class="ps-3 mb-0 d-flex gap-2">
+                                            <ul class="ps-3 mb-0 d-flex gap-2 list-unstyled">
                                                 <li>#挑染</li>
                                                 <li>#染髮</li>
                                                 <li>#燙髮</li>
@@ -395,7 +456,8 @@
                         </div>
                     </div>
                 </li>
-                <li class="col-lg-4 mb-6">
+
+                <li class="col-6 col-md-4 mb-6">
                     <button type="button" class="hairStyle w-100 btn btn-black-0 p-0 position-relative" data-bs-toggle="modal"
                         data-bs-target="#searchStyle-short1">
                         <img class="w-100 h-100 object-fit-cover" src="../assets/images/searchStylepage/hairStyle-short-1-1.jpg" alt="短髮">
@@ -413,11 +475,11 @@
                             <div class="modal-content position-relative">
                                 <button type="button" class="btn-close btn-close-white position-absolute" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
-                                <div class="modal-header px-8 border-black-40 border-bottom">
+                                <div class="modal-header px-4 py-3 px-lg-8 py-lg-4 border-black-40 border-bottom">
                                     <div class="modal-title d-flex justify-content-between" id="searchHairLabel-short1">
                                         <div class="d-flex gap-3 justify-content-center align-items-center">
                                             <div class="salon-logo">
-                                                <img src="../assets/images/searchStylepage/salon-logo-1.jpg"
+                                                <img src="../assets/images/searchSalonpage/salon-logo-01.png"
                                                     alt="時光造型廊 logo">
                                             </div>
                                             <div class="salon-content">
@@ -432,12 +494,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="#" class="btn btn-black-100 px-16 py-4 fs-20 ls-tiny-5 fw-black">立即預約</a>
+                                    <a href="#" class="btn btn-black-100 px-lg-16 py-lg-4 p-3 fs-lg-20 ls-tiny-5 fw-black">立即預約</a>
 
                                 </div>
-                                <div class="modal-body d-flex gap-6 pe-8 pt-0 ps-0 pb-0">
-                                    <div class="col-6">
-                                        <div class="swiper mySwiper2">
+                                <div class="modal-body d-flex pe-lg-8 p-0">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="swiper mySwiper-lg-4 swiper-lg-img">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="w-100 h-100 object-fit-cover"
@@ -456,7 +518,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div thumbsSlider="" class="swiper mySwiper">
+                                        <div thumbsSlider="" class="swiper mySwiper-sm-4 swiper-sm-img">
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <img class="w-100 h-100 object-fit-cover"
@@ -476,13 +538,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-6 d-flex gap-8 flex-column">
+                                    <div class="d-none col-6 d-lg-flex gap-8 flex-column ps-6">
                                         <div class="pt-6">
                                             <h3 class="fw-bold p-3 bg-primary-main ls-tiny-5 mb-4">作品介紹</h3>
                                             <p class="ps-3 lh-md mb-4">
                                                 為您的髮型注入新的生命和個性。選擇了柔和的巧克力棕色作為基底色，以營造出自然而豐富的底層。巧妙地融入了金棕和琥珀色的亮點，為整體造型增添了層次感和光澤。
                                             </p>
-                                            <ul class="ps-3 mb-0 d-flex gap-2">
+                                            <ul class="ps-3 mb-0 d-flex gap-2 list-unstyled">
                                                 <li>#挑染</li>
                                                 <li>#染髮</li>
                                                 <li>#燙髮</li>
@@ -507,28 +569,28 @@
                         </div>
                     </div>
                 </li>
-                
             </ul>
         </div>
 
     </main>
+    <%- include("./layout/footer") -%>
 
     
     <script type="module" src="../main.js"></script>
     <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            let swiper = new Swiper(".mySwiper", {
+            let swiper = new Swiper(".mySwiper-sm-1", {
                 loop: true,
-                spaceBetween: 5,
+                spaceBetween: 2,
                 slidesPerView: 3,
                 freeMode: true,
                 watchSlidesProgress: true,
             });
 
-            let swiper2 = new Swiper(".mySwiper2", {
+            let swiper2 = new Swiper(".mySwiper-lg-1", {
                 loop: true,
-                spaceBetween: 5,
+                spaceBetween: 0,
                 thumbs: {
                     swiper: swiper,
                 },
