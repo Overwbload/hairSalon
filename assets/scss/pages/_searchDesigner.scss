@@ -3,17 +3,35 @@
 }
 
 .searchDesigner {
-    li:hover .designerTitle {
-        bottom: 0;
+
+    li {
+        &:hover .searchInfo {
+            bottom: 0;
+        }
+
+        img {
+            height: 250px;
+            @include media-breakpoint-up(md) {
+                height: 100%;
+            }
+        }
     }
+    
 }
 
-.designerTitle {
-    backdrop-filter: blur(8px);
-    bottom: -100%;
-    transition: .3s ease-in-out;
-
-    img {
-        width: 32px;
-    }
+.dropdown-toggle::after {
+    display: none;
 }
+
+.dropend .dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    width: calc(100% - 24px);
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background: $primary-light;
+}
+
