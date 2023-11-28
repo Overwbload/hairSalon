@@ -1,0 +1,13 @@
+.btn-black-100 {
+    $color-primary: $secondary-main;
+    $color-secondary: $black-0;
+    @include button-variant(
+        $color: $color-secondary,
+        $background: $black-100,
+        $border: $color-secondary,
+        $hover-color: $color-secondary,
+        $hover-background: $color-primary,
+        $active-color: $color-primary,
+        $active-background: $color-secondary,
+    );
+}
