@@ -1,0 +1,37 @@
+.fullMask {
+    background: #f5e5de;
+}
+
+.searchDesigner {
+
+    li {
+        &:hover .searchInfo {
+            bottom: 0;
+        }
+
+        img {
+            height: 250px;
+            @include media-breakpoint-up(md) {
+                height: 100%;
+            }
+        }
+    }
+    
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropend .dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-menu {
+    width: calc(100% - 24px);
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    background: $primary-light;
+}
+
