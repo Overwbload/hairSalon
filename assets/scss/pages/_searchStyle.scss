@@ -4,7 +4,10 @@
 }
 
 .hairStyle {
-    height: 416px;
+    height: 250px;
+    @include media-breakpoint-up(lg) {
+        height: 416px;
+    }
 }
 
 .btn-close {
@@ -13,37 +16,53 @@
 }
 
 .salon-logo {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
+    @include media-breakpoint-up(md) {
+        width: 60px;
+        height: 60px;
+    }
 }
 
 .icon-heart {
-    right: 16px;
-    top: 16px;
+    right: 8px;
+    top: 8px;
+    @include media-breakpoint-up(md) {
+        right: 16px;
+        top: 16px;
+    }
 }
 
 .search-hairdesigner {
-    width: 196px;
+    @include media-breakpoint-up(lg) {
+        height: 220px;
+    }
 }
 
 // swiper
-.mySwiper .swiper-slide {
+.swiper-sm-img .swiper-slide {
     opacity: 0.4;
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.swiper-sm-img .swiper-slide-thumb-active {
     opacity: 1;
 }
 
-.mySwiper2 .swiper-slide {
-    height: 522px;
+.swiper-lg-img .swiper-slide {
+    height: 360px;
+    @include media-breakpoint-up(lg) {
+        height: 520px;
+    }
     img {
         object-position: center;
     }
 }
 
-.mySwiper .swiper-slide {
-    height: 175px;
+.swiper-sm-img .swiper-slide {
+    height: 100px;
+    @include media-breakpoint-up(lg) {
+        height: 125px;
+    }
     img {
         object-position: center;
     }
