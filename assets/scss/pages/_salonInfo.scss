@@ -1,0 +1,12 @@
+.pageSelect{
+    a{
+        color: $black-100;
+    }
+    a:hover{
+        color:$secondary-main;
+        border-bottom: 1px;
+        border-width: 5px;
+        border-bottom-style: solid;
+        padding-bottom: 16px;
+    }
+}
