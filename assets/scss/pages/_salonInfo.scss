@@ -4,13 +4,10 @@
     }
     a:hover{
         color:$secondary-main;
-        border-bottom: 1px;
+        border-bottom: 1px solid;
         border-width: 5px;
-        border-bottom-style: solid;
-        padding-bottom: 16px;
     }
 }
-
 
 .styList {
   a{
@@ -22,5 +19,5 @@
       opacity: 0.8;
     }
   }
-  
 }
+
