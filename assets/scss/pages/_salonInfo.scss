@@ -10,3 +10,17 @@
         padding-bottom: 16px;
     }
 }
+
+
+.styList {
+  a{
+    color: $black-100;
+  }
+  a:hover{
+    color:$secondary-main;
+    img{
+      opacity: 0.8;
+    }
+  }
+  
+}
