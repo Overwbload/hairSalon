@@ -7,9 +7,16 @@
     
 }
 
-.nav-pills .nav-link.active {
-    background: $black-0;
-    color: $black-100;
+.nav-pills {
+    & .nav-link.active {
+        background: $black-0;
+        color: $black-100;
+    }
+
+    & .nav-link.reserve-tab-finish {
+        color: $black-80;
+        background-color: $black-20;
+    }
 }
 
 .form-check-input {
@@ -27,10 +34,16 @@
     color: $black-100;
     line-height: 1.2;
 
+    
+
     &__header {
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         position: relative;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+        }
     }
 
     &__btn {
@@ -98,18 +111,31 @@
 
         &__table-col-header {
             text-align: center;
-            padding: 32px 0;
-            font-size: 1.25rem;
+            padding: 16px 0;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+                padding: 32px 0;
+            }
         }
 
         &__table-body {
-            font-size: 1.25rem;
+            font-size: 1rem;
             text-align: center;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+            }
         }
 
         &__table-cell {
-            padding: 16px 0;
+            padding: 12px 0;
             cursor: pointer;
+
+            @include media-breakpoint-up(md) {
+                padding: 16px 0;
+            }
 
             &_disabled {
                 color: $black-40;
@@ -120,4 +146,24 @@
             color: $secondary-main;
             }
         }
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+
+    svg {
+        width: 30px;
+        height: 30px;
+
+        @include media-breakpoint-up(md) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        width: 80px;
+        height: 80px;
+    }
 }

@@ -16,36 +16,36 @@
 
         <div class="container">
             <!-- title -->
-            <h2 class="text-center ls-tiny-5 fw-bold fs-24 fs-md-32 mt-md-12 mb-md-15">線上預約</h2>
+            <h2 class="text-center ls-tiny-5 fw-bold fs-24 fs-md-32 my-6 mt-md-12 mb-md-15">線上預約</h2>
             <!-- nav -->
-            <ul class="nav nav-pills nav-justified gap-6 border-bottom border-black-40 mb-10 mb-md-20" id="myTab"
+            <ul class="nav nav-pills nav-justified gap-3 gap-md-6 border-bottom border-black-40 mb-10 mb-md-20" id="myTab"
                 role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link py-6 active" id="serve-tab" data-bs-toggle="tab" data-bs-target="#serve"
-                        type="button" role="tab" aria-controls="serve" aria-selected="true"><span
-                            class="fs-20 fs-md-32 ls-tiny-5">01</span>
-                        <p class="fs-16 fs-md-20 mt-2 ls-tiny-5">選擇服務項目</p>
+                    <button class="nav-link py-6 active reserve-tab-finish" id="serve-tab" data-bs-toggle="tab"
+                        data-bs-target="#serve" type="button" role="tab" aria-controls="serve"
+                        aria-selected="true"><span class="fs-20 fs-md-32 ls-tiny-5">01</span>
+                        <p class="fs-14 fs-md-16 fs-md-20 mt-2 ls-tiny-5">選擇服務項目</p>
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link py-6" id="reserveDate-tab" data-bs-toggle="tab"
                         data-bs-target="#reserveDate" type="button" role="tab" aria-controls="reserveDate"
                         aria-selected="false"><span class="fs-20 fs-md-32 ls-tiny-5">02</span>
-                        <p class="fs-16 fs-md-20 mt-2 ls-tiny-5">預約日期</p>
+                        <p class="fs-14 fs-md-16 fs-md-20 mt-2 ls-tiny-5">預約日期</p>
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link py-6" id="confirm-tab" data-bs-toggle="tab" data-bs-target="#confirm"
                         type="button" role="tab" aria-controls="confirm" aria-selected="false"><span
                             class="fs-20 fs-md-32 ls-tiny-5">03</span>
-                        <p class="fs-16 fs-md-20 mt-2 ls-tiny-5">確認預約服務</p>
+                        <p class="fs-14 fs-md-16 fs-md-20 mt-2 ls-tiny-5">確認預約服務</p>
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
                     <button class="nav-link py-6" id="finish-tab" data-bs-toggle="tab" data-bs-target="#finish"
                         type="button" role="tab" aria-controls="finish" aria-selected="false"><span
                             class="fs-20 fs-md-32 ls-tiny-5">04</span>
-                        <p class="fs-16 fs-md-20 mt-2 ls-tiny-5">完成預約</p>
+                        <p class="fs-14 fs-md-16 fs-md-20 mt-2 ls-tiny-5">完成預約</p>
                     </button>
                 </li>
             </ul>
@@ -53,39 +53,43 @@
             <!-- reserve content -->
             <div class="tab-content d-flex justify-content-center" id="myTabContent">
                 <!-- 選擇服務項目 -->
-                <div class="tab-pane fade show active col-10 col-md-8" id="serve" role="tabpanel"
+                <div class="tab-pane fade show active col-10 col-md-8 mb-10 mb-md-20" id="serve" role="tabpanel"
                     aria-labelledby="serve-tab">
-                    <ul class="mb-0 list-unstyled d-flex flex-column gap-6 p-8 border border-black-100 ls-tiny-5">
+                    <ul class="mb-0 list-unstyled d-flex flex-column gap-3 gap-md-6 p-8 border border-black-100 ls-tiny-5">
                         <li class="fs-16 fs-md-24">預約店家：<p class="fw-bold d-inline-block ps-1 ps-md-3">時光造型廊</p>
                         </li>
-                        <li class="fs-16 fs-md-24 d-flex align-items-center gap-1 gap-md-3">預約設計師：
-                            <div class="form-check ps-8">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault" checked>
-                                <label class="form-check-label" for="flexRadioDefault">
-                                    不指定設計師
-                                </label>
-                            </div>
-                            <div class="d-flex align-items-center gap-3 flex-grow-1 ps-3">
+                        <li class="fs-16 fs-md-24 d-flex flex-wrap align-items-center">預約設計師：
+                            <div class="d-flex flex-wrap align-items-center gap-1 gap-md-3 flex-grow-1 mt-3 mt-md-0">
                                 <div class="form-check ps-8">
                                     <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label text-nowrap" for="flexRadioDefault1">
-                                        指定設計師
+                                        id="flexRadioDefault" checked>
+                                    <label class="form-check-label" for="flexRadioDefault">
+                                        不指定設計師
                                     </label>
                                 </div>
-                                <select class="form-select border border-black-100 fs-16 fs-md-20 p-2"
-                                    aria-label="Default select example">
-                                    <option selected>請選擇設計師</option>
-                                    <option value="1">設計師名稱1</option>
-                                    <option value="2">設計師名稱2</option>
-                                    <option value="3">設計師名稱3</option>
-                                </select>
+                                <div class="d-flex align-items-center gap-3 flex-grow-1 ps-md-3">
+                                    <div class="form-check ps-8">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label text-nowrap" for="flexRadioDefault1">
+                                            指定設計師
+                                        </label>
+                                    </div>
+                                    <select class="form-select border border-black-100 fs-16 fs-md-20 p-2"
+                                        aria-label="Default select example">
+                                        <option selected>請選擇設計師</option>
+                                        <option value="1">設計師名稱1</option>
+                                        <option value="2">設計師名稱2</option>
+                                        <option value="3">設計師名稱3</option>
+                                    </select>
+                                </div>
                             </div>
+
+
 
                         </li>
                         <li class="fs-16 fs-md-24 d-flex flex-column gap-6">預約服務：
-                            <div class="d-flex gap-4 flex-wrap">
+                            <div class="d-flex gap-2 gap-md-4 flex-wrap">
                                 <div class="form-check form-check-inline m-0 p-0">
                                     <input type="checkbox" class="btn-check" id="btn-check-1" checked
                                         autocomplete="off">
@@ -130,110 +134,231 @@
                             </div>
                         </li>
                         <div class="col-12 mt-10 mt-md-20 d-flex justify-content-end">
-                            <button type="submit" class="col-3 btn btn-black-100 py-4 px-18 fs-20 fs-md-24">確認</button>
+                            <button type="submit" class="col-4 col-md-3 btn btn-black-100 py-2 py-md-4 fs-md-24">確認</button>
                         </div>
                     </ul>
                 </div>
                 <!-- 預約日期 -->
-                <div class="tab-pane fade col-10 col-md-8 border border-black-100" id="reserveDate" role="tabpanel" aria-labelledby="reserveDate-tab">
+                <div class="tab-pane fade col-10 col-md-8 border border-black-100 mb-10 mb-md-20" id="reserveDate" role="tabpanel"
+                    aria-labelledby="reserveDate-tab">
                     <div id="calendar"></div>
                     <div class="mt-md-12 mt-6">
-                        <div class="p-8">
+                        <div class="p-8 pt-0">
                             <p class="fs-16 fs-md-24 mb-3 mb-md-6">預約時段：</p>
-                            <div class="d-flex gap-4 flex-wrap">
+                            <div class="d-flex gap-2 gap-md-4 flex-wrap">
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-1" checked
-                                        autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-1" checked autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-1">10:00</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-2" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-2" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-2">10:30</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-3" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-3" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-3">11:00</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-4" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-4" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-4">11:30</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-5" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-5" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-5">12:00</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-6" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-6" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-6">12:30</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-7" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-7" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-7">13:00</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-8" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-8" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-8">13:30</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-9" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-9" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-9">14:00</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-10" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-10" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-10">14:30</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-11" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-11" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-11">15:00</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-12" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-12" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-12">15:30</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-13" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-13" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-13">16:00</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-14" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-14" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-14">16:30</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-15" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-15" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-15">17:00</label>
                                 </div>
                                 <div class="form-check form-check-inline m-0 p-0">
-                                    <input type="radio" class="btn-check" id="btn-time-16" autocomplete="off" name="times">
+                                    <input type="radio" class="btn-check" id="btn-time-16" autocomplete="off"
+                                        name="times">
                                     <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
                                         for="btn-time-16">17:30</label>
                                 </div>
                             </div>
                             <div class="col-12 mt-10 mt-md-20 d-flex justify-content-end">
-                                <button type="button" class="col-3 btn btn-outline-black-100 me-3 me-md-6 py-4 fs-20 fs-md-24">上一步</button>
-                                <button type="submit" class="col-3 btn btn-black-100 py-4 fs-20 fs-md-24">確認</button>
+                                <button type="button"
+                                    class="col-4 col-md-3 btn btn-outline-black-100 me-3 me-md-6 py-2 py-md-4 fs-md-24">上一步</button>
+                                <button type="submit" class="col-4 col-md-3 btn btn-black-100 py-2 py-md-4 fs-md-24">確認</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- 確認預約服務 -->
-                <div class="tab-pane fade col-10 col-md-8" id="confirm" role="tabpanel" aria-labelledby="confirm-tab">...</div>
+                <div class="tab-pane fade col-10 col-md-8 mb-10 mb-md-20" id="confirm" role="tabpanel" aria-labelledby="confirm-tab">
+                    <ul class="mb-0 list-unstyled d-flex flex-column gap-4 gap-md-6 p-8 border border-black-100 ls-tiny-5">
+                        <li class="fs-16 fs-md-24">預約店家：<p class="fw-bold d-inline-block ps-1 ps-md-3">時光造型廊</p>
+                        </li>
+                        <li class="fs-16 fs-md-24">預約設計師：<p class="d-inline-block ps-1 ps-md-3">指定設計師</p>
+                            <p class="fw-bold d-inline-block ps-2">Olivia</p>
+                        </li>
+                        <li class="fs-16 fs-md-24">預約服務：<p class="d-inline-block ps-1 ps-md-3">剪髮</p>
+                        </li>
+                        <li class="fs-16 fs-md-24">預約時段：<p class="font-noto-serif d-inline-block ps-1 ps-md-3">
+                                2023年11月19日</p>
+                            <p class="font-noto-serif d-inline-block ps-2">10:00</p>
+                        </li>
+                        <li class="fs-16 fs-md-24">
+                            費用：
+                            <div class="border border-black-60 p-3 p-md-5 mt-3 mt-md-6">
+                                <ul class="list-unstyled d-flex flex-column gap-3">
+                                    <li class="fs-16 fs-md-20 d-flex justify-content-between">
+                                        <p>小計：</p>
+                                        <p><span>NT</span>&#36;850</p>
+                                    </li>
+                                    <li class="fs-16 fs-md-20 d-flex justify-content-between">
+                                        <p>折扣：</p>
+                                        <p><span>-</span><span>NT</span>50</p>
+                                    </li>
+                                    <div class="mt-10 mt-md-20">
+                                        <button class="btn text-secondary-main ls-tiny-5 fs-16 fs-md-20 ps-0"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#coupon"
+                                            aria-expanded="false" aria-controls="coupon">
+                                            使用優惠券
+                                        </button>
+                                        <div class="collapse" id="coupon">
+                                            <div class="input-group w-md-50">
+                                                <input type="text" class="form-control" placeholder="請輸入優惠代碼"
+                                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                                <button class="btn btn-outline-black-100" type="button"
+                                                    id="button-addon2">送出</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <li class="fs-16 fs-md-20 d-flex justify-content-between fw-bold">
+                                        <p>合計</p>
+                                        <p><span>NT</span>&#36;800</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="fs-16 fs-md-24">
+                            <p class="fs-16 fs-md-24 mb-3 mb-md-6">選擇付款方式：</p>
+                            <div class="d-flex gap-4 flex-wrap">
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-1" checked autocomplete="off"
+                                        name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-1">信用卡一次付清</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-2" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-2">信用卡分期付款</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-3" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-3">ATM轉帳</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-4" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-4">LINE Pay</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-5" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-5">超商代碼繳費</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-6" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-6">Apple Pay</label>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="col-12 mt-10 mt-md-20 d-flex justify-content-end">
+                            <button type="button"
+                                class="col-4 col-md-3 btn btn-outline-black-100 me-3 me-md-6 py-2 py-md-4 fs-md-24">上一步</button>
+                            <button type="submit" class="col-4 col-md-3 btn btn-black-100 py-2 py-md-4 fs-md-24">確認</button>
+                        </div>
+                    </ul>
+                </div>
                 <!-- 完成預約 -->
-                <div class="tab-pane fade col-10 col-md-8" id="finish" role="tabpanel" aria-labelledby="finish-tab">...</div>
+                <div class="tab-pane fade col-10 col-md-8 mb-10 mb-md-20" id="finish" role="tabpanel" aria-labelledby="finish-tab">
+                    <div class="border border-black-100 py-6 py-md-12">
+                        <div class="circle bg-black-100 rounded-circle position-relative m-auto">
+                            <svg class="position-absolute top-50 start-50 translate-middle" width="60" height="60"
+                                viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.5008 40.5L13.7508 31.75C12.7758 30.775 11.2258 30.775 10.2508 31.75C9.27578 32.725 9.27578 34.275 10.2508 35.25L20.7258 45.725C21.7008 46.7 23.2758 46.7 24.2508 45.725L50.7508 19.25C51.7258 18.275 51.7258 16.725 50.7508 15.75C49.7758 14.775 48.2258 14.775 47.2508 15.75L22.5008 40.5Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <p class="fs-24 fs-md-40 fw-bold ls-tiny-5 text-center mt-4 mt-md-8 mb-3 mb-md-6">感謝您的預約</p>
+                        <p class="fw-medium text-center ls-tiny-5">您可以隨時到 <a href=""
+                                class="d-inline-block text-secondary-main">會員中心</a>，查看您的預約記錄。</p>
+                    </div>
+                </div>
             </div>
 
         </div>
