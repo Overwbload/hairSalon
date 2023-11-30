@@ -4,10 +4,12 @@
     @include button-variant(
         $color: $color-secondary,
         $background: $black-100,
-        $border: $color-secondary,
+        $border: $black-100,
         $hover-color: $color-secondary,
         $hover-background: $color-primary,
+        $hover-border: $color-primary,
         $active-color: $color-primary,
         $active-background: $color-secondary,
+        $active-border: $color-primary,
     );
 }
