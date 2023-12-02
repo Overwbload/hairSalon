@@ -1,0 +1,12 @@
+.collapse-icon {
+    position: relative;
+    &::before {
+        content: url(../../../assets/images/icons/add.svg);
+        position: absolute;
+        right: 16px;
+    }
+
+    &:not(.collapsed)::before {
+        content: url(../../../assets/images/icons/subtract.svg);
+    }
+}
