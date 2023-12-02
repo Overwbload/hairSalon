@@ -30,3 +30,40 @@
     }
   }
 }
+
+.search-panel {
+  &-entry {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &-content {
+    position: absolute;
+    top: 100%;
+    left: -57.5px;
+    padding-top: 28.5px;
+  }
+}
+
+.search {
+  &-region {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 240px;
+    background-color: $primary-main;
+  }
+  &-area {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 240px;
+    background-color: $primary-light;
+  }
+  &-city {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 280px;
+    background-color: $black-0;
+  }
+}
