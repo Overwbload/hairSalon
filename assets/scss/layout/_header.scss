@@ -31,6 +31,37 @@
   }
 }
 
+.nav-search-link {
+  position:relative;
+  padding: 0;
+  display: block;
+  color: $black-100;
+  .en {
+    display: block;
+    @include transition(all .3s ease);
+  }
+  .ch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+    display: block;
+    font-weight: 700;
+    text-wrap: nowrap;
+    color: $secondary-main;
+    opacity: 0;
+    @include transition(all .3s ease);
+  }
+  &:hover {
+    .en {
+      opacity: 0;
+    }
+    .ch {
+      opacity: 1;
+    }
+  }
+}
+
 // 定位search-panel與search-content
 .search-panel {
   &-entry {
@@ -40,11 +71,22 @@
     align-items: flex-start;
   }
 
+
   &-content {
     position: absolute;
     top: 100%;
     left: -57.5px;
     padding-top: 28.5px;
+    &:before {
+      position: absolute;
+      top: 16.5px;
+      left: 72px;
+      display: block;
+      width: 2px;
+      height: 24px;
+      content: "";
+      background-color: $black-100;
+    }
   }
 }
 

@@ -1,13 +1,13 @@
 const searchTaiwan = {
   "northern": ["keelong", "yilan", "taipei", "taoyuan", "hsinchu"],
-  "central": ["taichung"],
-  "southern": [""],
-  "outside-of-mainland": [""]
+  "central": ["miaoli", "taichung"],
+  "southern": ["tainan", "kaohsiung"],
+  "outside-of-mainland": ["penghu", "kinmen"]
 }
 
 let hookedRegion, hookedArea;
 
-$(document).ready(function(){
+$(function(){
   // initialize search panel
   $(".search-panel-content").hide();
   $(".search-area").hide();
@@ -20,10 +20,14 @@ $(document).ready(function(){
   });
 
   // keep search panel opened while hovering
-  $(".search-panel-entry, .search-panel-indicator, .search-panel-content").hover(function() {
+  $(".search-panel-entry, .search-panel-entry .nav-search-link, .search-panel-content").hover(function() {
     $(".search-panel-content").show();
+    $(".search-panel-entry .nav-search-link .en").addClass("opacity-0");
+    $(".search-panel-entry .nav-search-link .ch").addClass("opacity-100");
   }, function() {
     $(".search-panel-content").hide();
+    $(".search-panel-entry .nav-search-link .en").removeClass("opacity-0");
+    $(".search-panel-entry .nav-search-link .ch").removeClass("opacity-100");
   });
 
   // show selected region, area and cities
