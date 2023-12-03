@@ -30,3 +30,103 @@
     }
   }
 }
+
+.nav-search-link {
+  position:relative;
+  padding: 0;
+  display: block;
+  color: $black-100;
+  .en {
+    display: block;
+    @include transition(all .3s ease);
+  }
+  .ch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50%;
+    display: block;
+    font-weight: 700;
+    text-wrap: nowrap;
+    color: $secondary-main;
+    opacity: 0;
+    @include transition(all .3s ease);
+  }
+  &:hover {
+    .en {
+      opacity: 0;
+    }
+    .ch {
+      opacity: 1;
+    }
+  }
+}
+
+// 定位search-panel與search-content
+.search-panel {
+  &-entry {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  &-content {
+    position: absolute;
+    top: 100%;
+    left: -57.5px;
+    padding-top: 28.5px;
+    &:before {
+      position: absolute;
+      top: 16.5px;
+      left: 72px;
+      display: block;
+      width: 2px;
+      height: 24px;
+      content: "";
+      background-color: $black-100;
+    }
+  }
+}
+
+// 加入樣式給region, area, city
+.search {
+  &-region {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 240px;
+    background-color: $primary-main;
+  }
+  &-area {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 240px;
+    background-color: $primary-light;
+  }
+  &-city {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 280px;
+    background-color: $black-0;
+  }
+  &-item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  &-link {
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      color: $secondary-main;
+    }
+  }
+}
