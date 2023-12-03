@@ -31,6 +31,7 @@
   }
 }
 
+// 定位search-panel與search-content
 .search-panel {
   &-entry {
     position: relative;
@@ -47,6 +48,7 @@
   }
 }
 
+// 加入樣式給region, area, city
 .search {
   &-region {
     padding-top: 24px;
@@ -65,5 +67,24 @@
     padding-bottom: 24px;
     width: 280px;
     background-color: $black-0;
+  }
+  &-item {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  &-link {
+    border: none;
+    background-color: transparent;
+
+    &:hover {
+      color: $secondary-main;
+    }
   }
 }
