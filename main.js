@@ -2,5 +2,6 @@ import './assets/scss/all.scss';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './node_modules/jquery/dist/jquery.min.js';
 
-import './assets/js/search-panel';
+import './assets/js/area-search-panel.js';
+import './assets/js/style-search-panel.js';
 console.log("Hello world!");
