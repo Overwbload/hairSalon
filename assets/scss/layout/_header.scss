@@ -36,6 +36,7 @@
   padding: 0;
   display: block;
   color: $black-100;
+  cursor: pointer;
   .en {
     display: block;
     @include transition(all .3s ease);
