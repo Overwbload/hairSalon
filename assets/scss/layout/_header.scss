@@ -31,11 +31,12 @@
   }
 }
 
-.nav-search-link {
+.nav-link-ench {
   position:relative;
   padding: 0;
   display: block;
   color: $black-100;
+  cursor: pointer;
   .en {
     display: block;
     @include transition(all .3s ease);
@@ -62,8 +63,8 @@
   }
 }
 
-// 定位search-panel與search-content
-.search-panel {
+// 定位area-search-panel與area-search-content
+.area-search-panel {
   &-entry {
     position: relative;
     display: flex;
@@ -90,8 +91,39 @@
   }
 }
 
-// 加入樣式給region, area, city
+// 定位area-search-panel與area-search-content
+.style-search-panel {
+  &-entry {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  &-content {
+    position: absolute;
+    top: 100%;
+    left: -57.5px;
+    padding-top: 28.5px;
+    &:before {
+      position: absolute;
+      top: 16.5px;
+      left: 72px;
+      display: block;
+      width: 2px;
+      height: 24px;
+      content: "";
+      background-color: $black-100;
+    }
+  }
+}
+
+// 加入樣式給region, area, city, gender, haircut
 .search {
+  &-category {
+    display: flex;
+  }
   &-region {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -109,6 +141,34 @@
     padding-bottom: 24px;
     width: 280px;
     background-color: $black-0;
+    .search-link {
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        color: $secondary-main;
+      }
+    }
+  }
+  &-gender {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 240px;
+    background-color: $primary-main;
+  }
+  &-haircut {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 240px;
+    background-color: $primary-light;
+    .search-link {
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $black-0;
+      }
+    }
   }
   &-item {
     padding-top: 16px;
@@ -120,13 +180,5 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-  }
-  &-link {
-    border: none;
-    background-color: transparent;
-
-    &:hover {
-      color: $secondary-main;
-    }
   }
 }
