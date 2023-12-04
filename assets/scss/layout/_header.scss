@@ -91,7 +91,35 @@
   }
 }
 
-// 加入樣式給region, area, city
+// 定位area-search-panel與area-search-content
+.style-search-panel {
+  &-entry {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  &-content {
+    position: absolute;
+    top: 100%;
+    left: -57.5px;
+    padding-top: 28.5px;
+    &:before {
+      position: absolute;
+      top: 16.5px;
+      left: 72px;
+      display: block;
+      width: 2px;
+      height: 24px;
+      content: "";
+      background-color: $black-100;
+    }
+  }
+}
+
+// 加入樣式給region, area, city, gender, haircut
 .search {
   &-category {
     display: flex;
@@ -113,6 +141,34 @@
     padding-bottom: 24px;
     width: 280px;
     background-color: $black-0;
+    .search-link {
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        color: $secondary-main;
+      }
+    }
+  }
+  &-gender {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 240px;
+    background-color: $primary-main;
+  }
+  &-haircut {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    width: 240px;
+    background-color: $primary-light;
+    .search-link {
+      border: none;
+      background-color: transparent;
+
+      &:hover {
+        background-color: $black-0;
+      }
+    }
   }
   &-item {
     padding-top: 16px;
@@ -124,13 +180,5 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-  }
-  &-link {
-    border: none;
-    background-color: transparent;
-
-    &:hover {
-      color: $secondary-main;
-    }
   }
 }
