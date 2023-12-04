@@ -68,9 +68,9 @@ function initStyleSearchPanel() {
     let haircuts = "";
     Object.keys(searchStyle[gender]).forEach(haircut => {
       haircuts += `
-        <button type="submit" class="search-item search-link">
+        <a href="./searchHairStyle.html" class="search-item search-link">
           <span class="d-block fw-bold">${getStyleCh(haircut)}</span>
-        </button>
+        </a>
       `;
     });
     elementHaircut.innerHTML += `
@@ -121,9 +121,11 @@ $(function () {
 
       // keep haircut opened while hovering haircut
       $(".search-haircut").hover(function() {
+        $(`.${hookedGender}-gender`).addClass("bg-primary-light");
         $(".search-haircut").show();
         $(`.${hookedGender}-haircut`).show();
       }, function() {
+        $(`.${hookedGender}-gender`).removeClass("bg-primary-light");
         $(".search-haircut").hide();
         $(`.${hookedGender}-haircut`).hide();
       });
