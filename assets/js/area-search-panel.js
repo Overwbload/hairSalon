@@ -1,36 +1,36 @@
-const searchTaiwan = {
+const searchArea = {
   "northern": {
     "keelong": {
       "keelong": {
-        branchNum: 67,
+        salonNum: 67,
         url: "#",
       }
     },
     "yilan": {
       "yilan": {
-        branchNum: 42,
+        salonNum: 42,
         url: "#",
       }
     },
     "taipei": {
       "taipei": {
-        branchNum: 156,
+        salonNum: 156,
         url: "#",
       },
       "newtaipei": {
-        branchNum: 92,
+        salonNum: 92,
         url: "#",
       }
     },
     "taoyuan": {
       "taoyuan": {
-        branchNum: 102,
+        salonNum: 102,
         url: "#",
       }
     },
     "hsinchu": {
       "hsinchu": {
-        branchNum: 95,
+        salonNum: 95,
         url: "#",
       }
     }
@@ -38,13 +38,13 @@ const searchTaiwan = {
   "central": {
     "miaoli": {
       "miaoli": {
-        branchNum: 50,
+        salonNum: 50,
         url: "#",
       }
     },
     "taichung": {
       "taichung": {
-        branchNum: 125,
+        salonNum: 125,
         url: "#",
       }
     }
@@ -52,21 +52,21 @@ const searchTaiwan = {
   "southern": {
     "tainan": {
       "tainan": {
-        branchNum: 105,
+        salonNum: 105,
         url: "#",
       },
       "chiayi": {
-        branchNum: 62,
+        salonNum: 62,
         url: "#",
       }
     },
     "kaohsiung": {
       "kaohsiung": {
-        branchNum: 104,
+        salonNum: 104,
         url: "#",
       },
       "pingtung": {
-        branchNum: 47,
+        salonNum: 47,
         url: "#",
       }
     }
@@ -74,17 +74,17 @@ const searchTaiwan = {
   "outside-of-mainland": {
     "penghu": {
       "penghu": {
-        branchNum: 21,
+        salonNum: 21,
         url: "#",
       }
     },
     "kinmen": {
       "kinmen": {
-        branchNum: 37,
+        salonNum: 37,
         url: "#",
       },
       "matsu": {
-        branchNum: 7,
+        salonNum: 7,
         url: "#",
       }
     }
@@ -113,7 +113,7 @@ const enchTable = {
   "matsu": "馬祖",
 };
 
-function getCh(en) {
+function getAreaCh(en) {
   if(enchTable[en] === undefined)
     return "not found";
   return enchTable[en];
@@ -123,36 +123,36 @@ function initAreaSearchPanel() {
   const elementRegion = document.querySelector(".search-region");
   const elementlArea = document.querySelector(".search-area");
   const elementCity = document.querySelector(".search-city");
-  Object.keys(searchTaiwan).forEach(region => {
+  Object.keys(searchArea).forEach(region => {
     elementRegion.innerHTML += `
       <div class="${region}-region">
         <div class="search-item">
-          <span class="d-block fw-bold">${getCh(region)}</span>
+          <span class="d-block fw-bold">${getAreaCh(region)}</span>
           <img src="../assets/images/icons/arrow.right.svg" alt="">
         </div>
       </div>
     `;
   });
-  Object.keys(searchTaiwan).forEach(region => {
-    Object.keys(searchTaiwan[region]).forEach(area => {
+  Object.keys(searchArea).forEach(region => {
+    Object.keys(searchArea[region]).forEach(area => {
       elementlArea.innerHTML += `
         <div class="${area}-area">
           <div class="search-item">
-            <span class="d-block fw-bold">${getCh(area)}地區</span>
+            <span class="d-block fw-bold">${getAreaCh(area)}地區</span>
             <img src="../assets/images/icons/arrow.right.svg" alt="">
           </div>
         </div>
       `;
     });
   });
-  Object.keys(searchTaiwan).forEach(region => {
-    Object.keys(searchTaiwan[region]).forEach(area => {
+  Object.keys(searchArea).forEach(region => {
+    Object.keys(searchArea[region]).forEach(area => {
       let cities = "";
-      Object.keys(searchTaiwan[region][area]).forEach(city => {
+      Object.keys(searchArea[region][area]).forEach(city => {
         cities += `
           <button type="submit" class="search-item search-link">
-            <span class="d-block fw-bold">${getCh(city)}市</span>
-            <span class="d-block font-prata fs-12">(${searchTaiwan[region][area][city].branchNum})</span>
+            <span class="d-block fw-bold">${getAreaCh(city)}市</span>
+            <span class="d-block font-prata fs-12">(${searchArea[region][area][city].salonNum})</span>
           </button>
         `;
       });
@@ -167,15 +167,17 @@ function initAreaSearchPanel() {
 
 initAreaSearchPanel();
 
-let hookedRegion, hookedArea;
 
 $(function(){
-  // initialize search panel
+
+  let hookedRegion, hookedArea;
+
+  // initialize area search panel
   $(".area-search-panel-content").hide();
   $(".search-area").hide();
   $(".search-city").hide();
-  Object.keys(searchTaiwan).forEach(region => {
-    Object.keys(searchTaiwan[region]).forEach(area => {
+  Object.keys(searchArea).forEach(region => {
+    Object.keys(searchArea[region]).forEach(area => {
       $(`.${area}-area`).hide();
       $(`.${area}-cities`).hide();
     });
@@ -193,7 +195,7 @@ $(function(){
   });
 
   // show selected region, area and cities
-  Object.keys(searchTaiwan).forEach(region => {
+  Object.keys(searchArea).forEach(region => {
     $(`.${region}-region`).hover(function() {
       // store current region
       hookedRegion = region;
@@ -204,7 +206,7 @@ $(function(){
 
       // show incoming area while hovering region
       $(".search-area").show();
-      Object.keys(searchTaiwan[region]).forEach(area => {
+      Object.keys(searchArea[region]).forEach(area => {
         $(`.${area}-area`).show();
         $(`.${area}-area`).hover(function() {
           // store current region
@@ -232,13 +234,13 @@ $(function(){
 
         // keep showing area
         $(".search-area").show();
-        Object.keys(searchTaiwan[hookedRegion]).forEach(area => {
+        Object.keys(searchArea[hookedRegion]).forEach(area => {
           $(`.${area}-area`).show();
         });
       }, function() {
         $(`.${hookedRegion}-region`).removeClass("bg-primary-light");
         $(".search-area").hide();
-        Object.keys(searchTaiwan[hookedRegion]).forEach(area => {
+        Object.keys(searchArea[hookedRegion]).forEach(area => {
           $(`.${area}-area`).hide();
         });
       });
@@ -250,7 +252,7 @@ $(function(){
 
         // keep showing area
         $(".search-area").show();
-        Object.keys(searchTaiwan[hookedRegion]).forEach(area => {
+        Object.keys(searchArea[hookedRegion]).forEach(area => {
           $(`.${area}-area`).show();
         });
 
@@ -264,7 +266,7 @@ $(function(){
         $(`.${hookedRegion}-region`).removeClass("bg-primary-light");
         $(`.${hookedArea}-area`).removeClass("bg-black-0");
         $(".search-area").hide();
-        Object.keys(searchTaiwan[hookedRegion]).forEach(area => {
+        Object.keys(searchArea[hookedRegion]).forEach(area => {
           $(`.${area}-area`).hide();
         });
         $(".search-city").hide();
@@ -274,7 +276,7 @@ $(function(){
     }, function() {
       $(".search-area").hide();
       $(`.${region}-region`).removeClass("bg-primary-light");
-      Object.keys(searchTaiwan[region]).forEach(area => {
+      Object.keys(searchArea[region]).forEach(area => {
         $(`.${area}-area`).hide();
       });
     });
