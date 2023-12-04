@@ -1,7 +1,12 @@
 // 因為"position: fixed"不會佔用空間
 // 所以需要將header下的main元素往上推高
 .fixed-top + main {
-  margin-top: 200px;
+  margin-top: 88px;
+}
+@include media-breakpoint-up(lg) {
+  .fixed-top + main {
+    margin-top: 200px;
+  }
 }
 
 // 在導覽列選單中加入分隔符號

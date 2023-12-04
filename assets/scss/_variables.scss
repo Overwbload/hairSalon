@@ -474,6 +474,7 @@ $tiny-spacers: (
 
 // scss-docs-start position-map
 $position-values: (
+  auto: auto,
   0: 0,
   50: 50%,
   100: 100%
@@ -1245,7 +1246,7 @@ $nav-underline-link-active-color:   var(--#{$prefix}emphasis-color) !default;
 // Navbar
 
 // scss-docs-start navbar-variables
-$navbar-padding-y:                  80px; //$spacer * .5 !default;
+$navbar-padding-y:                  0; //$spacer * .5 !default;
 $navbar-padding-x:                  null !default;
 
 $navbar-nav-link-padding-x:         0; //.5rem !default;
