@@ -93,6 +93,9 @@
 
 // 加入樣式給region, area, city
 .search {
+  &-category {
+    display: flex;
+  }
   &-region {
     padding-top: 24px;
     padding-bottom: 24px;
