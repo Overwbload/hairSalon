@@ -31,7 +31,7 @@
   }
 }
 
-.nav-search-link {
+.nav-link-ench {
   position:relative;
   padding: 0;
   display: block;
@@ -62,8 +62,8 @@
   }
 }
 
-// 定位search-panel與search-content
-.search-panel {
+// 定位area-search-panel與area-search-content
+.area-search-panel {
   &-entry {
     position: relative;
     display: flex;

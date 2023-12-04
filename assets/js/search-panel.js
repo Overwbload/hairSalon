@@ -24,7 +24,7 @@ let hookedRegion, hookedArea;
 
 $(function(){
   // initialize search panel
-  $(".search-panel-content").hide();
+  $(".area-search-panel-content").hide();
   $(".search-area").hide();
   $(".search-city").hide();
   Object.keys(searchTaiwan).forEach(region => {
@@ -35,14 +35,14 @@ $(function(){
   });
 
   // keep search panel opened while hovering
-  $(".search-panel-entry, .search-panel-entry .nav-search-link, .search-panel-content").hover(function() {
-    $(".search-panel-content").show();
-    $(".search-panel-entry .nav-search-link .en").addClass("opacity-0");
-    $(".search-panel-entry .nav-search-link .ch").addClass("opacity-100");
+  $(".area-search-panel-entry, .area-search-panel-entry .nav-link-ench, .area-search-panel-content").hover(function() {
+    $(".area-search-panel-content").show();
+    $(".area-search-panel-entry .nav-link-ench .en").addClass("opacity-0");
+    $(".area-search-panel-entry .nav-link-ench .ch").addClass("opacity-100");
   }, function() {
-    $(".search-panel-content").hide();
-    $(".search-panel-entry .nav-search-link .en").removeClass("opacity-0");
-    $(".search-panel-entry .nav-search-link .ch").removeClass("opacity-100");
+    $(".area-search-panel-content").hide();
+    $(".area-search-panel-entry .nav-link-ench .en").removeClass("opacity-0");
+    $(".area-search-panel-entry .nav-link-ench .ch").removeClass("opacity-100");
   });
 
   // show selected region, area and cities
