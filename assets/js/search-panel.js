@@ -18,7 +18,83 @@ const searchTaiwan = {
     "penghu": ["penghu"],
     "kinmen": ["kinmen", "matsu"]
   }
+};
+
+const enchTable = {
+  "northern": "北部",
+  "central": "中部",
+  "southern": "南部",
+  "outside-of-mainland": "離島",
+  "keelong": "基隆",
+  "yilan": "宜蘭",
+  "taipei": "台北",
+  "taoyuan": "桃園",
+  "hsinchu": "新竹",
+  "miaoli": "苗栗",
+  "taichung": "台中",
+  "tainan": "台南",
+  "kaohsiung": "高雄",
+  "penghu": "澎湖",
+  "kinmen": "基隆",
+  "newtaipei": "新北",
+  "chiayi": "嘉義",
+  "pingtung": "澎湖",
+  "matsu": "馬祖",
+};
+
+function getCh(en) {
+  if(enchTable[en] === undefined)
+    return "not found";
+  return enchTable[en];
 }
+
+function initAreaSearchPanel() {
+  const elementRegion = document.querySelector(".search-region");
+  const elementlArea = document.querySelector(".search-area");
+  const elementCity = document.querySelector(".search-city");
+  Object.keys(searchTaiwan).forEach(region => {
+    elementRegion.innerHTML += `
+      <div class="${region}-region">
+        <div class="search-item">
+          <span class="d-block fw-bold">${getCh(region)}</span>
+          <img src="../assets/images/icons/arrow.right.svg" alt="">
+        </div>
+      </div>
+    `;
+  });
+  Object.keys(searchTaiwan).forEach(region => {
+    Object.keys(searchTaiwan[region]).forEach(area => {
+      elementlArea.innerHTML += `
+        <div class="${area}-area">
+          <div class="search-item">
+            <span class="d-block fw-bold">${getCh(area)}地區</span>
+            <img src="../assets/images/icons/arrow.right.svg" alt="">
+          </div>
+        </div>
+      `;
+    });
+  });
+  Object.keys(searchTaiwan).forEach(region => {
+    Object.keys(searchTaiwan[region]).forEach(area => {
+      let cities = "";
+      searchTaiwan[region][area].forEach(city => {
+        cities += `
+          <button type="submit" class="search-item search-link">
+            <span class="d-block fw-bold">${getCh(city)}市</span>
+            <span class="d-block font-prata fs-12">(777)</span>
+          </button>
+        `;
+      });
+      elementCity.innerHTML += `
+        <div class="${area}-cities">
+          ${cities}
+        </div>
+      `;
+    });
+  });
+}
+
+initAreaSearchPanel();
 
 let hookedRegion, hookedArea;
 
