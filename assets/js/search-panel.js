@@ -1,22 +1,93 @@
 const searchTaiwan = {
   "northern": {
-    "keelong": ["keelong"],
-    "yilan": ["yilan"],
-    "taipei": ["taipei", "newtaipei"],
-    "taoyuan": ["taoyuan"],
-    "hsinchu": ["hsinchu"]
+    "keelong": {
+      "keelong": {
+        branchNum: 67,
+        url: "#",
+      }
+    },
+    "yilan": {
+      "yilan": {
+        branchNum: 42,
+        url: "#",
+      }
+    },
+    "taipei": {
+      "taipei": {
+        branchNum: 156,
+        url: "#",
+      },
+      "newtaipei": {
+        branchNum: 92,
+        url: "#",
+      }
+    },
+    "taoyuan": {
+      "taoyuan": {
+        branchNum: 102,
+        url: "#",
+      }
+    },
+    "hsinchu": {
+      "hsinchu": {
+        branchNum: 95,
+        url: "#",
+      }
+    }
   },
   "central": {
-    "miaoli": ["miaoli"],
-    "taichung": ["taichung"]
+    "miaoli": {
+      "miaoli": {
+        branchNum: 50,
+        url: "#",
+      }
+    },
+    "taichung": {
+      "taichung": {
+        branchNum: 125,
+        url: "#",
+      }
+    }
   },
   "southern": {
-    "tainan": ["tainan", "chiayi"],
-    "kaohsiung": ["kaohsiung", "pingtung"]
+    "tainan": {
+      "tainan": {
+        branchNum: 105,
+        url: "#",
+      },
+      "chiayi": {
+        branchNum: 62,
+        url: "#",
+      }
+    },
+    "kaohsiung": {
+      "kaohsiung": {
+        branchNum: 104,
+        url: "#",
+      },
+      "pingtung": {
+        branchNum: 47,
+        url: "#",
+      }
+    }
   },
   "outside-of-mainland": {
-    "penghu": ["penghu"],
-    "kinmen": ["kinmen", "matsu"]
+    "penghu": {
+      "penghu": {
+        branchNum: 21,
+        url: "#",
+      }
+    },
+    "kinmen": {
+      "kinmen": {
+        branchNum: 37,
+        url: "#",
+      },
+      "matsu": {
+        branchNum: 7,
+        url: "#",
+      }
+    }
   }
 };
 
@@ -77,11 +148,11 @@ function initAreaSearchPanel() {
   Object.keys(searchTaiwan).forEach(region => {
     Object.keys(searchTaiwan[region]).forEach(area => {
       let cities = "";
-      searchTaiwan[region][area].forEach(city => {
+      Object.keys(searchTaiwan[region][area]).forEach(city => {
         cities += `
           <button type="submit" class="search-item search-link">
             <span class="d-block fw-bold">${getCh(city)}市</span>
-            <span class="d-block font-prata fs-12">(777)</span>
+            <span class="d-block font-prata fs-12">(${searchTaiwan[region][area][city].branchNum})</span>
           </button>
         `;
       });
