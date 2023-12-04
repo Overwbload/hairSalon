@@ -68,9 +68,9 @@ function initStyleSearchPanel() {
     let haircuts = "";
     Object.keys(searchStyle[gender]).forEach(haircut => {
       haircuts += `
-        <button type="submit" class="search-item search-link">
+        <a href="./searchHairStyle.html" class="search-item search-link">
           <span class="d-block fw-bold">${getStyleCh(haircut)}</span>
-        </button>
+        </a>
       `;
     });
     elementHaircut.innerHTML += `

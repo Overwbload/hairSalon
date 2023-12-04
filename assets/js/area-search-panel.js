@@ -106,10 +106,10 @@ const enchTable = {
   "tainan": "台南",
   "kaohsiung": "高雄",
   "penghu": "澎湖",
-  "kinmen": "基隆",
+  "kinmen": "金門",
   "newtaipei": "新北",
   "chiayi": "嘉義",
-  "pingtung": "澎湖",
+  "pingtung": "屏東",
   "matsu": "馬祖",
 };
 
@@ -150,10 +150,10 @@ function initAreaSearchPanel() {
       let cities = "";
       Object.keys(searchArea[region][area]).forEach(city => {
         cities += `
-          <button type="submit" class="search-item search-link">
+          <a href="./searchHairSalon.html" class="search-item search-link">
             <span class="d-block fw-bold">${getAreaCh(city)}市</span>
             <span class="d-block font-prata fs-12">(${searchArea[region][area][city].salonNum})</span>
-          </button>
+          </a>
         `;
       });
       elementCity.innerHTML += `
