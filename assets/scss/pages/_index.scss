@@ -167,36 +167,39 @@
   }
 }
 
-// 產生磚塊用於首頁第四部份
-.pathment {
-  .pathment-bricks {
+// 首頁第四部份熱門趨勢
+.hairstyle-trends {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &-swiper-pagination {
+    height: 34px;
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  img {
-    object-fit: cover;
-    object-position: center;
-  }
-  div:nth-child(odd) {
-    img:nth-child(odd) {
-      object-position: top;
-      aspect-ratio: 306/315;
-    }
-    img:nth-child(even) {
-      aspect-ratio: 306/363;
-    }
-  }
-  div:nth-child(even) {
-    img:nth-child(odd) {
-      aspect-ratio: 306/363;
-    }
-    img:nth-child(even) {
-      aspect-ratio: 306/315;
-    }
+    justify-content: center;
+    align-items: center;
   }
 }
+.img-shorter {
+  aspect-ratio: 306/315;
+}
+.img-longer {
+  aspect-ratio: 306/363;
+}
 
+// 首頁第五部分
 @include media-breakpoint-up(md) {
   .h-md-353px {
     height: 353px;
