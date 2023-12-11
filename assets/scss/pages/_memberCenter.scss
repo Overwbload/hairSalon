@@ -10,3 +10,12 @@
       color:$secondary-main !important; 
   }
 }
+
+
+.pageInfo{
+    display: none;
+  }
+
+  .pageSelect  .active{
+    border-bottom: 5px solid $secondary-main;
+  }
