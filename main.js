@@ -4,4 +4,5 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 import './assets/js/area-search-panel.js';
 import './assets/js/style-search-panel.js';
+import './assets/js/preloader';
 console.log("Hello world!");
