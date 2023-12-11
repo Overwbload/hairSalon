@@ -72,7 +72,8 @@
                       <p class="mb-1">全台最多</p>
                       <p>髮型設計預約服務平台</p>
                     </h2>
-                    <p class="fs-default fs-xl-24 ls-tiny-0 ls-tiny-lg-12-5 text-center text-md-start">HairMoments
+                    <p class="font-noto-serif fs-default fs-xl-24 ls-tiny-0 ls-tiny-lg-12-5 text-center text-md-start">
+                      HairMoments
                       的使命是成為顧客與髮型設計師之間的橋樑，提供方便的髮型預約體驗，同時為設計師提供更多曝光的機會。<br><br>我們的平台致力於減少用戶與髮型設計師之間的溝通障礙，用戶可以輕鬆瀏覽不同髮型設計師的作品，並直接預約，無需繁瑣的溝通。
                     </p>
                     <p class="fs-default fs-xl-24 ls-tiny-0 ls-tiny-lg-15 text-center text-md-end">Hair Moments</p>
@@ -178,58 +179,49 @@
         </div>
       </div>
     </div>
-    <div class="bg-primary-light">
+    <div class="hairstyle-trends bg-primary-light">
       <div class="container">
         <div class="py-12 py-md-30">
           <div class="d-flex flex-column gap-6 gap-md-16">
+            <!-- title -->
             <div>
               <h2 class="fs-32 fs-md-40 ls-tiny-10 ls-tiny-md-12-5 text-center mb-md-1">熱門流行趨勢</h2>
               <h3 class="text-center">Hairstyle Trends</h3>
             </div>
-            <div class="d-flex justify-content-center">
-              <div class="row gx-6 gy-6 pathment">
-                <div class="col-6 col-md-3">
-                  <div class="pathment-bricks">
-                    <img src="../assets/images/homepage/person-3-resized.png" alt="">
-                    <img src="../assets/images/homepage/person-4-resized.png" alt="">
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="pathment-bricks">
-                    <img src="../assets/images/homepage/person-5-resized.png" alt="">
-                    <img src="../assets/images/homepage/person-6-resized.png" alt="">
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="pathment-bricks">
-                    <img src="../assets/images/homepage/person-7-resized.png" alt="">
-                    <img src="../assets/images/homepage/person-8-resized.png" alt="">
-                  </div>
-                </div>
-                <div class="col-6 col-md-3">
-                  <div class="pathment-bricks">
-                    <img src="../assets/images/homepage/person-9-resized.png" alt="">
-                    <img src="../assets/images/homepage/person-10-resized.png" alt="">
-                  </div>
+            <!-- swiper -->
+            <div class="swiper hairstyle-trends-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <ul class="list-unstyled">
+                    <li>
+                      <img src="../assets/images/homepage/person-3-resized.png" alt="">
+                    </li>
+                    <li>
+                      <img src="../assets/images/homepage/person-4-resized.png" alt="">
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
             <div class="row">
+              <!-- dot-bar  -->
               <div class="col-3">
                 <div class="position-relative">
-                  <div class="position-absolute top-0 start-0 d-flex flex-column align-items-start gap-8 ms-10">
+                  <div class="position-absolute top-0 start-0 d-flex flex-column align-items-center gap-8 ms-10">
                     <span class="d-none d-md-block p-1 bg-black-100 rounded-circle"></span>
                     <span class="d-none d-md-block py-29 outline outline-1 outline-black-100"></span>
                   </div>
                 </div>
               </div>
+              <!-- pagination -->
               <div class="col-6">
                 <div class="py-4 px-12">
                   <div class="d-flex justify-content-center">
-                    <span class="d-block font-noto-serif fs-28 fw-black ls-tiny-12-5">...</span>
+                    <div class="hairstyle-trends-swiper-pagination"></div>
                   </div>
                 </div>
               </div>
+              <!-- bar -->
               <div class="col-3">
                 <div class="pt-14">
                   <span class="d-none d-md-block outline outline-1 outline-black-100"></span>
@@ -280,6 +272,29 @@
   </main>
   <%- include('./layout/footer'); -%>
   <script type="module" src="../main.js"></script>
+  <script src="../assets/js/hairstyle-trends-swiper.js"></script>
+  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".hairstyle-trends-swiper", {
+      slidesPerView: 2,
+      spaceBetween: 24,
+      freeMode: true,
+      loop: true,
+      pagination: {
+        el: ".hairstyle-trends-swiper-pagination",
+        clickable: true,
+        bulletActiveClass: "swiper-pagination-bullet-active bg-black-100"
+      },
+      keyboard: {
+        enable: true,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 4
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>

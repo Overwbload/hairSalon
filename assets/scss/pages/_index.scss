@@ -153,86 +153,53 @@
 
 // 產生圖片陰影
 .bg-shadow-bottom-right {
-  position: relative;
-  z-index: 0;
-
-  &::before {
-    position: absolute;
-    z-index: -1;
-    display: block;
-    content: "";
-    width: 100%;
-    height: 100%;
-    top: 64px;
-    left: 0;
-    background-color: $primary-main;
-  }
-}
-@include media-breakpoint-up(md) {
-  .bg-shadow-bottom-right {
-    &::before {
-      top: 80px;
-      left: 80px;
-    }
+  box-shadow: 0 64px $primary-main;
+  @include media-breakpoint-up(md) {
+    box-shadow: 80px 80px $primary-main;
   }
 }
 
 // 產生圖片陰影
 .bg-shadow-bottom-left {
-  position: relative;
-  z-index: 0;
+  box-shadow: 0 64px $primary-main;
+  @include media-breakpoint-up(md) {
+    box-shadow: -80px 80px $primary-main;
+  }
+}
 
-  &::before {
-    position: absolute;
-    z-index: -1;
-    display: block;
-    content: "";
+// 首頁第四部份熱門趨勢
+.hairstyle-trends {
+  .swiper {
     width: 100%;
     height: 100%;
-    top: 64px;
-    left: 0;
-    background-color: $primary-main;
   }
-}
-@include media-breakpoint-up(md) {
-  .bg-shadow-bottom-left {
-    &::before {
-      top: 80px;
-      left: -80px;
+  .swiper-slide {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
     }
   }
-}
-
-// 產生磚塊用於首頁第四部份
-.pathment {
-  .pathment-bricks {
+  &-swiper-pagination {
+    height: 34px;
     display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  img {
-    object-fit: cover;
-    object-position: center;
-  }
-  div:nth-child(odd) {
-    img:nth-child(odd) {
-      object-position: top;
-      aspect-ratio: 306/315;
-    }
-    img:nth-child(even) {
-      aspect-ratio: 306/363;
-    }
-  }
-  div:nth-child(even) {
-    img:nth-child(odd) {
-      aspect-ratio: 306/363;
-    }
-    img:nth-child(even) {
-      aspect-ratio: 306/315;
-    }
+    justify-content: center;
+    align-items: center;
   }
 }
+.img-shorter {
+  aspect-ratio: 306/315;
+}
+.img-longer {
+  aspect-ratio: 306/363;
+}
 
+// 首頁第五部分
 @include media-breakpoint-up(md) {
   .h-md-353px {
     height: 353px;

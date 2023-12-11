@@ -1,35 +1,35 @@
 const searchArea = {
   "northern": {
     "keelong": {
-      "keelong": {
+      "keelongCity": {
         salonNum: 67,
         url: "#",
       }
     },
     "yilan": {
-      "yilan": {
+      "yilanCounty": {
         salonNum: 42,
         url: "#",
       }
     },
     "taipei": {
-      "taipei": {
+      "taipeiCity": {
         salonNum: 156,
         url: "#",
       },
-      "newtaipei": {
+      "newTaipeiCity": {
         salonNum: 92,
         url: "#",
       }
     },
     "taoyuan": {
-      "taoyuan": {
+      "taoyuanCity": {
         salonNum: 102,
         url: "#",
       }
     },
     "hsinchu": {
-      "hsinchu": {
+      "hsinchuCity": {
         salonNum: 95,
         url: "#",
       }
@@ -37,13 +37,13 @@ const searchArea = {
   },
   "central": {
     "miaoli": {
-      "miaoli": {
+      "miaoliCounty": {
         salonNum: 50,
         url: "#",
       }
     },
     "taichung": {
-      "taichung": {
+      "taichungCity": {
         salonNum: 125,
         url: "#",
       }
@@ -51,21 +51,21 @@ const searchArea = {
   },
   "southern": {
     "tainan": {
-      "tainan": {
+      "tainanCity": {
         salonNum: 105,
         url: "#",
       },
-      "chiayi": {
+      "chiayiCounty": {
         salonNum: 62,
         url: "#",
       }
     },
     "kaohsiung": {
-      "kaohsiung": {
+      "kaohsiungCity": {
         salonNum: 104,
         url: "#",
       },
-      "pingtung": {
+      "pingtungCounty": {
         salonNum: 47,
         url: "#",
       }
@@ -73,17 +73,17 @@ const searchArea = {
   },
   "outside-of-mainland": {
     "penghu": {
-      "penghu": {
+      "penghuCounty": {
         salonNum: 21,
         url: "#",
       }
     },
     "kinmen": {
-      "kinmen": {
+      "kinmenCounty": {
         salonNum: 37,
         url: "#",
       },
-      "matsu": {
+      "matsuCounty": {
         salonNum: 7,
         url: "#",
       }
@@ -97,20 +97,35 @@ const enchTable = {
   "southern": "南部",
   "outside-of-mainland": "離島",
   "keelong": "基隆",
+  "keelongCity": "基隆市",
   "yilan": "宜蘭",
+  "yilanCounty": "宜蘭縣",
   "taipei": "台北",
+  "taipeiCity": "台北市",
   "taoyuan": "桃園",
+  "taoyuanCity": "桃園市",
   "hsinchu": "新竹",
+  "hsinchuCity": "新竹市",
   "miaoli": "苗栗",
+  "miaoliCounty": "苗栗縣",
   "taichung": "台中",
+  "taichungCity": "台中市",
   "tainan": "台南",
+  "tainanCity": "台南市",
   "kaohsiung": "高雄",
+  "kaohsiungCity": "高雄市",
   "penghu": "澎湖",
+  "penghuCounty": "澎湖縣",
   "kinmen": "金門",
-  "newtaipei": "新北",
+  "kinmenCounty": "金門縣",
+  "newTaipei": "新北",
+  "newTaipeiCity": "新北市",
   "chiayi": "嘉義",
+  "chiayiCounty": "嘉義縣",
   "pingtung": "屏東",
+  "pingtungCounty": "屏東縣",
   "matsu": "馬祖",
+  "matsuCounty": "馬祖縣",
 };
 
 function getAreaCh(en) {
@@ -151,7 +166,7 @@ function initAreaSearchPanel() {
       Object.keys(searchArea[region][area]).forEach(city => {
         cities += `
           <a href="./searchHairSalon.html" class="search-item search-link">
-            <span class="d-block fw-bold">${getAreaCh(city)}市</span>
+            <span class="d-block fw-bold">${getAreaCh(city)}</span>
             <span class="d-block font-prata fs-12">(${searchArea[region][area][city].salonNum})</span>
           </a>
         `;

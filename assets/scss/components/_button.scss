@@ -1,15 +1,26 @@
 .btn-black-100 {
-    $color-primary: $secondary-main;
-    $color-secondary: $black-0;
-    @include button-variant(
-        $color: $color-secondary,
-        $background: $black-100,
-        $border: $black-100,
-        $hover-color: $color-secondary,
-        $hover-background: $color-primary,
-        $hover-border: $color-primary,
-        $active-color: $color-primary,
-        $active-background: $color-secondary,
-        $active-border: $color-primary,
-    );
+  $color-primary: $secondary-main; $color-secondary: $black-0;
+  @include button-variant(
+    $color: $color-secondary,
+    $background: $black-100,
+    $border: $black-100,
+    $hover-color: $color-secondary,
+    $hover-background: $color-primary,
+    $hover-border: $color-primary,
+    $active-color: $color-primary,
+    $active-background: $color-secondary,
+    $active-border: $color-primary,
+  );
+}
+
+.btn-black-0-glow {
+  color: $black-0;
+  span {
+    @include transition(all .3s ease);
+  }
+  &:hover {
+    span {
+      text-shadow: 0 0 20px $black-0;
+    }
+  }
 }
