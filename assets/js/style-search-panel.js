@@ -56,7 +56,7 @@ function initStyleSearchPanel() {
   const elementHaircut = document.querySelector(".search-haircut");
   Object.keys(searchStyle).forEach(gender => {
     elementGender.innerHTML += `
-      <div class="${gender}-gender">
+      <div class="${gender}-style">
         <div class="search-item">
           <span class="d-block fw-bold">${getStyleCh(gender)}</span>
           <img src="../assets/images/icons/arrow.right.svg" alt="">
@@ -107,13 +107,13 @@ $(function () {
 
   // show selected gender, haircut
   Object.keys(searchStyle).forEach(gender => {
-    $(`.${gender}-gender`).hover(function() {
+    $(`.${gender}-style`).hover(function() {
       // store current gender
       hookedGender = gender;
       console.log(hookedGender);
 
       // add style to hovered gender
-      $(`.${gender}-gender`).addClass("bg-primary-light");
+      $(`.${gender}-style`).addClass("bg-primary-light");
 
       // show incoming haircut while hovering gender
       $(".search-haircut").show();
@@ -131,7 +131,7 @@ $(function () {
       });
     }, function() {
       $(".search-haircut").hide();
-      $(`.${gender}-gender`).removeClass("bg-primary-light");
+      $(`.${gender}-style`).removeClass("bg-primary-light");
       $(`.${gender}-haircut`).hide();
     });
   });

@@ -15,6 +15,9 @@
 @import "./utilities";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// Swiper
+@import "../../node_modules/swiper/swiper-bundle.min";
+
 // Base
 @import "./base/base";
 
@@ -27,6 +30,7 @@
 // Layouts
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/preloader";
 
 // Pages
 @import "./pages/index";
@@ -35,6 +39,9 @@
 @import "./pages/searchStyle";
 @import "./pages/searchSalon";
 @import "./pages/searchDesigner";
+@import "./pages/login";
+@import "./pages/signUp";
 @import "./pages/reserve";
 @import "./pages/memberCenter";
 @import "./pages/faq";
+@import "./pages/login";

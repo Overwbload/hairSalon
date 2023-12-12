@@ -4,41 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./layout/meta'); -%>
     <title>登入</title>
-
-    <!-- Fav Icon -->
-<link rel="icon" href="" type="image/x-icon">
-
-<!-- Facebook Metadata Start -->
-<meta property="og:title" content="Hair Moment">
-<meta property="og:description" content="HairMoments 的使命是成為顧客與髮型設計師之間的橋樑，提供方便的髮型預約體驗，同時為設計師提供更多曝光的機會。我們的平台致力於減少用戶與髮型設計師之間的溝通障礙，用戶可以輕鬆瀏覽不同髮型設計師的作品，並直接預約，無需繁瑣的溝通。">
-<meta property="og:image" content="assets/images/">
-
 </head>
 
 <body>
+    <!-- preloader -->
+        
+    <%- include("./layout/preloader") -%>
+
     <!-- header -->
     <%- include("./layout/header") -%>
+
     
     <!-- login -->
     <main class="login">
         <div class="container">
-            <div class="signIn">
-                <h1>歡迎回來</h1>
-                <h2>持續持續為你持續為你提供持續為你提供最專業的美髮服務</h2>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <div class="signIn text-center mt-70 mb-15 ms-xl-40 me-xl-40 pt-12 pb-12 ps-10 pe-10 ">
+                <h1 class="fs-32 fw-bold lh-sm ls-tiny-15">歡迎回來!</h1>
+                <h2 class="fs-32 fw-bold lh-sm ls-tiny-15 mb-12">持續為您提供最專業的美髮服務</h2>
+                <div class="social-icons d-md-flex justify-content-center fs-20 fw-normal lh-sm ls-1 mb-8">
+                    <a href="#" class="l-icon mb-4 mb-sm-0 pt-4 pb-4 ps-12 pe-12 me-sm-6 me-0">Google 登入</a>
+                    <a href="#" class="l-icon pt-4 pb-4 ps-12 pe-12">Facebook  登入</a>
                 </div>
-                <form action="">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <a href="#">忘記密碼？</a>
-                    <button>登入</button>
+                <form action="" class="l-form">
+                    <div class="l-input mb-5">
+                        <input class="pt-4 pb-4 ps-6"  type="email" placeholder="Email">
+                    </div>
+                    <div class="l-input mb-2">    
+                        <input class="pt-4 pb-4 ps-6" type="password" placeholder="Password">
+                    </div>
+                    <a class="text-end mb-8" href="#">忘記密碼？</a>
+                    <input type="button" class="l-btn pt-4 pb-4 mb-9" value="登入">
                 </form>    
-                <div class="goSignUp">
+                <div class="goSignUp fs-16 fw-medium ">
                     <p>註冊/登入即代表您同意我們的網站條款</p>
-                    <p>新朋友嗎?</p><button>加入會員</button>
+                    <div class="newFriend d-flex justify-content-center mt-4">
+                        <p>新朋友嗎?</p><a class="ms-4" href="./SignUp.html">加入會員</a>
+                    </div>    
                 </div>
                 
             </div>

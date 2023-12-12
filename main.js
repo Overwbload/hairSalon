@@ -5,5 +5,5 @@ import './node_modules/jquery/dist/jquery.min.js';
 import './assets/js/area-search-panel.js';
 import './assets/js/style-search-panel.js';
 import './assets/js/salonInfo-addComment.js';
-
+import './assets/js/preloader';
 console.log("Hello world!");
