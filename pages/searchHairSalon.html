@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-8 col-12">
                     <div class="row justify-content-md-end justify-content-start font-noto-serif">
-                        <div class="dropdown col-lg-4 col-6">
+                        <div class="dropdown col-lg-4 col-6 dropdown-search-category">
                             <button type="button"
                                 class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
                                 id="searchOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,10">
@@ -47,7 +47,7 @@
                                 <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">找設計師</a></li>
                             </ul>
                         </div>
-                        <div class="dropdown col-lg-4 col-6">
+                        <div class="dropdown col-lg-4 col-6 dropdown-search-area">
                             <button type="button"
                                 class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
                                 id="searchAreaOffset" data-bs-toggle="dropdown" aria-expanded="false"
@@ -109,7 +109,7 @@
             <!-- search tag -->
             <div class="row mb-10">
                 <div class="col-10">
-                    <ul class="d-flex ps-0 mb-0 gap-4 list-unstyled">
+                    <ul class="d-flex ps-0 mb-0 gap-4 list-unstyled area-tags">
                         <li class="fs-28 ls-tiny-5">#桃園市</li>
                         <li class="fs-28 ls-tiny-5">#桃園區</li>
                     </ul>
@@ -196,6 +196,7 @@
 
     <script type="module" src="../main.js"></script>
     <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/search-hair-salon.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let swiper = new Swiper(".mySwiper", {
