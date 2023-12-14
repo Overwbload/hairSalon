@@ -68,8 +68,8 @@ function initStyleSearchPanel() {
     let haircuts = "";
     Object.keys(searchStyle[gender]).forEach(haircut => {
       haircuts += `
-        <a href="./searchHairStyle.html" class="search-item search-link">
-          <span class="d-block fw-bold">${getStyleCh(haircut)}</span>
+        <a href="./searchHairStyle.html" class="search-item search-link hairTypeLink">
+          <span class="d-block fw-bold searchHairType">${getStyleCh(haircut)}</span>
         </a>
       `;
     });
@@ -83,10 +83,10 @@ function initStyleSearchPanel() {
 
 initStyleSearchPanel();
 
+let hookedGender;
 $(function () {
 
-  let hookedGender;
-
+  //let hookedGender; 原本位置
   // initialize style search panel
   $(".style-search-panel-content").hide();
   $(".search-haircut").hide();
@@ -136,3 +136,18 @@ $(function () {
     });
   });
 });
+
+
+// Jason code
+// initStyleSearchPanel()函式中 增加了class名稱 (hairTypeLink) (searchHairType)
+// 將let hookedGender; 移出函式外 並取用其值
+const hairTypeLinks = document.querySelectorAll('.hairTypeLink')
+
+hairTypeLinks.forEach(aTag =>{
+  aTag.addEventListener('click',e=>{
+    localStorage.setItem('searchGender',hookedGender);
+    localStorage.setItem('searchHairType',aTag.querySelector('.searchHairType').textContent);
+  });
+});
+
+

@@ -107,7 +107,7 @@
                 </div>
             </div>
             <!-- search tag -->
-            <div class="row mb-10">
+            <div class="row mb-10 searchTag">
                 <div class="col-9">
                     <ul class="d-flex ps-0 mb-0 gap-4 list-unstyled">
                         <li class="fs-28 ls-tiny-5">#女生</li>
@@ -119,7 +119,7 @@
                 </div>
             </div>
             <!-- search 髮型結果 -->
-            <ul class="row ps-0 mb-0 list-unstyled">
+            <ul class="row ps-0 mb-0 list-unstyled searchHairResult">
                 <li class="col-6 col-md-4 mb-6">
                     <button type="button" class="hairStyle w-100 btn btn-black-0 p-0 position-relative" data-bs-toggle="modal"
                         data-bs-target="#searchStyle-short1">
@@ -578,8 +578,11 @@
     <%- include("./layout/footer") -%>
 
     
+    
     <script type="module" src="../main.js"></script>
     <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/search-Hair-Style.js"></script>
+    
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             let swiper = new Swiper(".mySwiper-sm-1", {
