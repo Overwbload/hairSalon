@@ -9,6 +9,24 @@
     }
 }
 
+.addCommentModal{
+  a:hover{
+    svg path{
+      fill: #B9A37F; /* 鼠标悬停时的颜色 */
+    }
+  }
+  .starHover{
+    svg path{
+      fill: #B9A37F; /* 鼠标悬停时的颜色 */
+    }
+  }
+  .starActive{
+    svg path{
+      fill: #B9A37F; 
+    }
+  }
+}
+
 .styList {
   a{
     color: $black-100;
@@ -19,5 +37,9 @@
       opacity: 0.8;
     }
   }
+}
+
+.pageInfo{
+  display: none;
 }
 
