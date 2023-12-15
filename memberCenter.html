@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Fav Icon -->
+<link rel="icon" href="/hairSalon/assets/scissors-d07b967e.svg" type="image/x-icon">
+
+<!-- Facebook Metadata Start -->
+<meta property="og:title" content="Hair Moment">
+<meta property="og:description" content="HairMoments 的使命是成為顧客與髮型設計師之間的橋樑，提供方便的髮型預約體驗，同時為設計師提供更多曝光的機會。我們的平台致力於減少用戶與髮型設計師之間的溝通障礙，用戶可以輕鬆瀏覽不同髮型設計師的作品，並直接預約，無需繁瑣的溝通。">
+<meta property="og:image" content="assets/images/icons/brand-logo.svg">	<title>會員中心</title>
+  <script type="module" crossorigin src="/hairSalon/assets/main-8c78767b.js"></script>
+  <link rel="stylesheet" href="/hairSalon/assets/main-a85053a1.css">
+</head>
+
+<body>
+	<!-- perloader -->
+	<div class="loader-wrap">
+    <div class="preloader">
+        <div class="preloader-close">Loading</div>
+        <div id="handle-preloader" class="handle-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+                <div class="txt-loading">
+                    <span data-text-preloader="美" class="letters-loading">
+                        美
+                    </span>
+                    <span data-text-preloader="髮" class="letters-loading">
+                        髮
+                    </span>
+                    <span data-text-preloader="時" class="letters-loading">
+                        時
+                    </span>
+                    <span data-text-preloader="刻" class="letters-loading">
+                        刻
+                    </span>
+                </div>
+            </div>  
+        </div>
+    </div>
+</div>	<!-- header -->
+	<header class="bg-black-0 fixed-top">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg position-relative bg-white py-6 py-lg-20">
+      <a href="./index.html" class="navbar-brand" aria-current="true">
+        <img src="/hairSalon/assets/brand-logo-bf67eee2.svg" alt="">
+      </a>
+      <button type="button" class="navbar-toggler bg-black-100" data-bs-toggle="collapse"
+        data-bs-target="#collapseNavbar" data-bs-theme="dark">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapseNavbar">
+        <ul class="navbar-nav navbar-link-seperator position-lg-absolute top-lg-50 start-lg-50 translate-middle-lg">
+          <li class="nav-item">
+            <div class="area-search-panel-entry">
+              <a class="nav-link-ench">
+                <span class="en">Area</span>
+                <span class="ch">區域</span>
+              </a>
+              <div class="area-search-panel-content">
+                <div class="pt-6 px-8 bg-primary-main">
+                  <span class="d-block fw-bold">請選擇區域</span>
+                </div>
+                <div class="search-category">
+                  <div class="search-region"></div>
+                  <div class="search-area"></div>
+                  <div class="search-city"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="style-search-panel-entry">
+              <a class="nav-link-ench">
+                <span class="en">Style</span>
+                <span class="ch">髮型</span>
+              </a>
+              <div class="style-search-panel-content">
+                <div class="pt-6 px-8 bg-primary-main">
+                  <span class="d-block fw-bold">請選擇類型</span>
+                </div>
+                <div class="search-category">
+                  <div class="search-gender"></div>
+                  <div class="search-haircut"></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link-ench">
+              <span class="en">Ranking</span>
+              <span class="ch">排行榜</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./news.html" class="nav-link-ench">
+              <span class="en">News</span>
+              <span class="ch">最新消息</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./faq.html" class="nav-link-ench">
+              <span class="en">FAQs</span>
+              <span class="ch">常見問題</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav position-lg-absolute top-lg-50 end-lg-0 translate-middle-lg-y">
+          <li class="nav-item">
+            <div class="navbar-login">
+              <a href="./login.html" class="nav-link">
+                <div class="login-btn">
+                  <img src="/hairSalon/assets/user-logout-645de3f7.svg" alt="">
+                  <p class="text-black-100">登入/註冊</p>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>	<main id="to-top">
+		<div class="container bg-black-20">
+			<!-- 標題 -->
+			<div class="d-flex justify-content-center pt-12 mb-15">
+				<h1 class="fs-32 fw-bold text-black-100 ls-tiny-5">會員中心</h1>
+			</div>
+			<!-- 頁籤選擇部分 -->
+			<div class="pageSelect row nav nav-tabs">
+				<ul class="d-flex justify-content-center border-bottom list-unstyled d-grid gap-4">
+					<li class="fs-24 lh-md fw-bold ls-tiny-5 px-25">
+						<a class="pb-4  active" href="#" data-bs-toggle="tab" data-bs-target="#nav-memberInfo">個人資訊</a>
+					</li>
+					<li class="fs-24 lh-md fw-bold ls-tiny-5 px-25"><a class="pb-4" href="#" data-bs-toggle="tab"
+							data-bs-target="#nav-memberReco">預約紀錄</a></li>
+					<li class="fs-24 lh-md fw-bold ls-tiny-5 px-25"><a class="pb-4" href="#" data-bs-toggle="tab"
+							data-bs-target="#nav-memberFavo">我的最愛</a></li>
+					<li class="fs-24 lh-md fw-bold ls-tiny-5 px-25"><a class="pb-4" href="#" data-bs-toggle="tab"
+							data-bs-target="#nav-memberCupon">優惠券</a></li>
+				</ul>
+			</div>
+			<!-- 頁籤內容部分 -->
+			<div class="tab-content pb-10">
+				<!-- 會員中心-個人資訊 -->
+				<div class="memberInfo tab-pane fade show active" id="nav-memberInfo">
+					<div class="d-flex bg-black-0 mt-20 mb-6 mx-auto p-0" style="width: 1076px;">
+						<div class="pt-8 ps-8 row">
+							<span class="fs-20 ls-tiny-5 text-black-100 pb-3">姓名： Mandy</span>
+							<span class="fs-20 ls-tiny-5 text-black-100 py-3">電話： 0955123123</span>
+							<span class="fs-20 ls-tiny-5 text-black-100 py-3">電子信箱： mandy123@gmail.com</span>
+							<span class="fs-20 ls-tiny-5 text-black-100 pt-3 pb-14">生日： 1995/11/20</span>
+						</div>
+					</div>
+					<div class="mx-auto d-flex justify-content-end pb-45" style="width: 1076px;">
+						<button type="button" class="btn btn-dark fs-20 ls-tiny-5 fw-black px-8 py-4 rounded-0">編輯會員資料</button>
+					</div>
+				</div>
+				<!-- 會員中心-預約紀錄 -->
+				<div class="memberReco tab-pane fade" id="nav-memberReco">
+					<div class="d-flex bg-black-0 mt-20 mb-10 mx-auto p-8 pb-10" style="width: 1076px;">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4 ">預約日期</th>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4">店家&設計師資訊</th>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4">服務項目</th>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4">金額</th>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4">預約狀態</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4  pe-2">2023/11/20 <span
+											class="fs-14 ls-tiny-5 text-black-100">10:30</span></td>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4 pe-2 ">時光造型廊 <span
+											class="fs-14 ls-tiny-5 text-secondary-main ps-2">Olivia</span></td>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4">燙髮</td>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4">NT$3050</td>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4">已預約</td>
+								</tr>
+								<tr>
+									<td class="fs-14 ls-tiny-5 text-black-60 py-4  pe-2">2023/11/20 <span
+											class="fs-14 ls-tiny-5 text-black-60">16:30</span></td>
+									<td class="fs-14 ls-tiny-5 text-black-60 py-4 pe-2 ">時光造型廊 <span
+											class="fs-14 ls-tiny-5 text-secondary-main ps-2">Olivia</span></td>
+									<td class="fs-14 ls-tiny-5 text-black-60 py-4">剪髮</td>
+									<td class="fs-14 ls-tiny-5 text-black-60 py-4">NT$850</td>
+									<td class="fs-14 ls-tiny-5 text-black-60 py-4">已取消</td>
+								</tr>
+								<tr>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4  pe-2">2023/11/20 <span
+											class="fs-14 ls-tiny-5 text-black-100">10:30</span></td>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4 pe-2 ">時光造型廊 <span
+											class="fs-14 ls-tiny-5 text-secondary-main ps-2">Olivia</span></td>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4">燙髮</td>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4">NT$3050</td>
+									<td class="fs-14 ls-tiny-5 text-black-100 py-4">已預約</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- 沒有預約紀錄 -->
+					<div class="bg-black-0 mt-20 mb-10 mx-auto p-8 pb-10" style="width: 1076px;">
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4 ">預約日期</th>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4">店家&設計師資訊</th>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4">服務項目</th>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4">金額</th>
+									<th scope="col" class="fw-medium ls-tiny-5 text-black-100 pb-4">預約狀態</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<div class="d-flex justify-content-center pt-4">
+							<p>您目前沒有預約紀錄</p>
+						</div>
+					</div>
+				</div>
+				<!-- 會員中心-我的最愛 -->
+				<div class="memberFavo tab-pane fade" id="nav-memberFavo">
+					<!-- 篩選-髮型 -->
+					<div class="row bg-black-0 my-20 mx-auto p-8" style="width: 1076px;">
+						<div class="mb-8">
+							<ul class="d-flex list-unstyled">
+								<li class="fw-medium ls-tiny-5 py-1 pe-6 border-end border-black-80"><a href="#"
+										class="text-black-100">髮型</a></li>
+								<li class="fw-medium ls-tiny-5 py-1 px-6"><a href="#" class="text-black-60">設計師</a></li>
+							</ul>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 301-a0bfbaf5.png">
+							</a>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 302-a370daef.png">
+							</a>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 303-d4c1927d.png">
+							</a>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 304-a2ee17ba.png">
+							</a>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 305-4c446865.png">
+							</a>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 306-5987cdbf.png">
+							</a>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 307-089c9324.png">
+							</a>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 308-11980201.png">
+							</a>
+						</div>
+					</div>
+					<!-- 篩選-設計師 -->
+					<div class="row bg-black-0 my-20 mx-auto p-8" style="width: 1076px;">
+						<div class="mb-8">
+							<ul class="d-flex list-unstyled">
+								<li class="fw-medium ls-tiny-5 py-1 pe-6 border-end border-black-80"><a href="#"
+										class="text-black-60">髮型</a></li>
+								<li class="fw-medium ls-tiny-5 px-6 py-1 "><a href="#" class="text-black-100  ">設計師</a></li>
+							</ul>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 309-8b3eb95d.png">
+							</a>
+						</div>
+						<div class="col-md-4 mb-3">
+							<a href="#" class="position-relative">
+								<svg class="i5 position-absolute" style="top: 12px; right: 12px;" width="32" height="32"
+									viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M15.9894 25.3281C16.2506 25.3281 16.6323 25.1272 16.9436 24.9263C22.5586 21.3103 26.1546 17.0714 26.1546 12.7824C26.1546 9.07588 23.5932 6.50446 20.389 6.50446C18.3901 6.50446 16.8934 7.60937 15.9894 9.25669C15.1055 7.60937 13.5988 6.50446 11.5999 6.50446C8.3856 6.50446 5.82422 9.07588 5.82422 12.7824C5.82422 17.0714 9.43025 21.3103 15.0352 24.9263C15.3465 25.1272 15.7282 25.3281 15.9894 25.3281Z"
+										fill="#DC3545" />
+								</svg>
+								<img class="" src="/hairSalon/assets/Rectangle 310-0d08dc8f.png">
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- 會員中心-優惠券 可使用-->
+				<div class="memberCupon tab-pane fade" id="nav-memberCupon">
+					<div class="row bg-black-0 my-20 mx-auto p-8" style="width: 1076px;">
+						<div class="mb-8">
+							<ul class="d-flex list-unstyled">
+								<li class="fw-medium ls-tiny-5 py-1 pe-6 border-end border-black-80"><a href="#"
+										class="text-black-100">可使用</a></li>
+								<li class="fw-medium ls-tiny-5 py-1 px-6 "><a href="#" class="text-black-60">已失效</a></li>
+							</ul>
+						</div>
+						<div class="cupon1 row mx-auto mb-5 px-0  border rounded-end-3 rounded-start-3">
+							<div class="d-flex align-items-center justify-content-center bg-secondary-main col-md-3  rounded-start-3">
+								<p class="fs-20 ls-tiny-5 text-black-0 fw-bold">9折優惠券</p>
+							</div>
+							<div class="py-5 ps-6 col-md-9   ">
+								<p class="pb-6 ls-tiny-5 text-black-100">新客-入會禮</p>
+								<p class="fs-14 ls-tiny-5 text-black-80">使用期限2024/11/20截止</p>
+							</div>
+						</div>
+					</div>
+					<!-- 會員中心-優惠券 已失效-->
+					<div class="row bg-black-0 my-20 mx-auto p-8" style="width: 1076px;">
+						<div class="mb-8">
+							<ul class="d-flex list-unstyled">
+								<li class="fw-medium ls-tiny-5 py-1 pe-6 border-end border-black-80"><a href="#"
+										class="text-black-60">可使用</a></li>
+								<li class="fw-medium ls-tiny-5 py-1 px-6 "><a href="#" class="text-black-100">已失效</a></li>
+							</ul>
+						</div>
+						<div class="cupon1 row mx-auto mb-5 px-0  border rounded-end-3 rounded-start-3">
+							<div class="d-flex align-items-center justify-content-center bg-black-60 col-md-3  rounded-start-3">
+								<p class="fs-20 ls-tiny-5 text-black-0 fw-bold">50元折價券</p>
+							</div>
+							<div class="py-5 ps-6 col-md-9   ">
+								<p class="pb-6 ls-tiny-5 text-black-100">每月限定隱藏加碼優惠</p>
+								<p class="fs-14 ls-tiny-5 text-black-80">使用期限2024/10/05截止</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<!-- footer -->
+	<footer class="bg-black-0 position-relative">
+  <div class="position-absolute top-0 top-xl-auto bottom-xl-0 end-0">
+    <div class="p-1 bg-black-100 mt-2 mt-xl-0 mb-xl-20 me-3 me-xl-20">
+      <a href="#to-top" class="d-block">
+        <img src="/hairSalon/assets/arrow-up-5751b8b4.svg" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="pt-xl-8">
+    <div class="container">
+      <div class="py-9 py-xl-20">
+        <div class="d-flex flex-column flex-xl-row justify-content-between align-items-center gap-4 gap-xl-12">
+          <div class="d-flex gap-6">
+            <a href="#" class="d-block">
+              <img src="/hairSalon/assets/facebook-70b1ff6f.svg" alt="">
+            </a>
+            <a href="#" class="d-block">
+              <img src="/hairSalon/assets/twitter-9abb8139.svg" alt="">
+            </a>
+            <a href="#" class="d-block">
+              <img src="/hairSalon/assets/instagram-b4078436.svg" alt="">
+            </a>
+          </div>
+          <div class="flex-grow-1 w-100 w-xl-auto outline outline-1 outline-black-100"></div>
+          <h4 class="font-noto-serif fs-14 fs-sm-20 fs-xl-24 ls-tiny-xl-15 text-center text-xl-start">
+            <p class="mb-xl-2">HairMoments © 2023. All Rights Reserved</p>
+            <p class="text-xl-end">使用者條款與隱私權政策</p>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+	
+</body>
+
+</html>
