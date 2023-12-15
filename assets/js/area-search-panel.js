@@ -13,6 +13,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
+                thumbnail: "salon13.png",
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -44,6 +45,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
+                thumbnail: "salon2.png",
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -99,6 +101,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
+                thumbnail: "salon11.png",
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -130,6 +133,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
+                thumbnail: "salon4.png",
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -161,6 +165,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
+                thumbnail: "salon5.png",
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -192,6 +197,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
+                thumbnail: "salon6.png",
                 reviews: [
                   {
                     clientName: "陳小美A",

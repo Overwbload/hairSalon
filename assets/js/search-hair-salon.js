@@ -27,25 +27,32 @@ function init() {
 }
 function render() {
   let districtLists = "", salonLists = "";
-  areaSearchPanelResult.districts.forEach( district => {
-    districtLists += `
-      <li><button type="button" class="dropdown-item py-2 fs-md-20 fs-16" data-search-district="${district.districtName}">${getAreaCh(district.districtName)}</button></li>
-    `
-    district.salons.forEach(salon => {
-      salonLists += `
-        <li class="col-lg-4 mb-6 overflow-hidden">
-          <a href="./salonInfo.html" class="position-relative">
-            <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-            <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
-            <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
-              <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
-              <p class="text-black-0 ls-tiny-5 font-noto-serif">${salon.salonName}</p>
-            </h3>
-          </a>
-        </li>
-      `
+  if(areaSearchPanelResult.districts === undefined) {
+    salonLists = `
+      <p class="text-center fs-md-32 fs-20">查無資料，請重新搜尋！</p>
+    `;
+  }
+  else {
+    areaSearchPanelResult.districts.forEach( district => {
+      districtLists += `
+        <li><button type="button" class="dropdown-item py-2 fs-md-20 fs-16" data-search-district="${district.districtName}">${getAreaCh(district.districtName)}</button></li>
+      `;
+      district.salons.forEach(salon => {
+        salonLists += `
+          <li class="col-lg-4 mb-6 overflow-hidden">
+            <a href="./salonInfo.html" class="position-relative">
+              <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
+              <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/${salon.thumbnail}" alt="">
+              <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
+                <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
+                <p class="text-black-0 ls-tiny-5 font-noto-serif">${salon.salonName}</p>
+              </h3>
+            </a>
+          </li>
+        `;
+      });
     });
-  });
+  }
 
   // render default result
   areaTags.innerHTML = `
@@ -83,12 +90,45 @@ function render() {
       </svg>
     </button>
     <ul class="dropdown-menu" aria-labelledby="searchAreaOffset">
+      <li><button type="button" class="dropdown-item py-2 fs-md-20 fs-16" data-search-district="allArea">所有區域</button></li>
       ${districtLists}
     </ul>
   `;
   searchResult.innerHTML = salonLists;
 }
 function renderTarget(target) {
+  // show all area if it's "allArea"
+  if(target === "allArea") {
+    if(areaSearchPanelResult.districts === undefined) {
+      return;
+    }
+    // render default result
+    dropdownSearchArea.querySelector("button:first-child span").textContent = "所有區域";
+    areaTags.innerHTML = `
+      <li class="fs-28 ls-tiny-5">#${getAreaCh(areaSearchPanelResult.cityName)}</li>
+    `;
+    let salonLists = "";
+    areaSearchPanelResult.districts.forEach( district => {
+      district.salons.forEach(salon => {
+        salonLists += `
+          <li class="col-lg-4 mb-6 overflow-hidden">
+            <a href="./salonInfo.html" class="position-relative">
+              <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
+              <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/${salon.thumbnail}" alt="">
+              <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
+                <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
+                <p class="text-black-0 ls-tiny-5 font-noto-serif">${salon.salonName}</p>
+              </h3>
+            </a>
+          </li>
+        `;
+      });
+    });
+    searchResult.innerHTML = salonLists;
+    return;
+  }
+
+  // show other areas
   let salonLists = "";
   dropdownSearchArea.querySelector("button:first-child span").textContent = getAreaCh(target);
   areaTags.innerHTML = `
@@ -102,14 +142,14 @@ function renderTarget(target) {
           <li class="col-lg-4 mb-6 overflow-hidden">
             <a href="./salonInfo.html" class="position-relative">
               <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-              <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
+              <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/${salon.thumbnail}" alt="">
               <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
                 <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
                 <p class="text-black-0 ls-tiny-5 font-noto-serif">${salon.salonName}</p>
               </h3>
             </a>
           </li>
-        `
+        `;
       });
     }
   });
