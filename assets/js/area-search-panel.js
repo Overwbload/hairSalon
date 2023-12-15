@@ -2,90 +2,286 @@ const searchArea = {
   "northern": {
     "keelong": {
       "keelongCity": {
+        cityName: "keelongCity",
         salonNum: 67,
-        url: "#",
+        districts: [
+          {
+            districtName: "zhongShanDistrict",
+            salons: [
+              {
+                salonName: "時光造型廊A",
+                location: "桃園市桃園區介壽路1號",
+                phoneNumber: "03-3361235",
+                openTime: "10:00 - 19:30",
+                thumbnail: "salon13.png",
+                reviews: [
+                  {
+                    clientName: "陳小美A",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年10月7日"
+                  },
+                  {
+                    clientName: "陳小美B",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年9月7日"
+                  },
+                  {
+                    clientName: "陳小美C",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然!",
+                    service: "燙髮",
+                    time: "2023年8月7日"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            districtName: "zhongZhengDistrict",
+            salons: [
+              {
+                salonName: "時光造型廊B",
+                location: "桃園市桃園區介壽路1號",
+                phoneNumber: "03-3361235",
+                openTime: "10:00 - 19:30",
+                thumbnail: "salon2.png",
+                reviews: [
+                  {
+                    clientName: "陳小美A",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年10月7日"
+                  },
+                  {
+                    clientName: "陳小美B",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年9月7日"
+                  },
+                  {
+                    clientName: "陳小美C",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然!",
+                    service: "燙髮",
+                    time: "2023年8月7日"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     },
     "yilan": {
       "yilanCounty": {
+        cityName: "yilanCounty",
         salonNum: 42,
-        url: "#",
       }
     },
     "taipei": {
       "taipeiCity": {
+        cityName: "taipeiCity",
         salonNum: 156,
-        url: "#",
       },
       "newTaipeiCity": {
+        cityName: "newTaipeiCity",
         salonNum: 92,
-        url: "#",
       }
     },
     "taoyuan": {
       "taoyuanCity": {
+        cityName: "taoyuanCity",
         salonNum: 102,
-        url: "#",
+        districts: [
+          {
+            districtName: "taoyuanDistrict",
+            salons: [
+              {
+                salonName: "時光造型廊A",
+                location: "桃園市桃園區介壽路1號",
+                phoneNumber: "03-3361235",
+                openTime: "10:00 - 19:30",
+                thumbnail: "salon11.png",
+                reviews: [
+                  {
+                    clientName: "陳小美A",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年10月7日"
+                  },
+                  {
+                    clientName: "陳小美B",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年9月7日"
+                  },
+                  {
+                    clientName: "陳小美C",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然!",
+                    service: "燙髮",
+                    time: "2023年8月7日"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            districtName: "zhongLiDistrict",
+            salons: [
+              {
+                salonName: "時光造型廊B",
+                location: "桃園市桃園區介壽路1號",
+                phoneNumber: "03-3361235",
+                openTime: "10:00 - 19:30",
+                thumbnail: "salon4.png",
+                reviews: [
+                  {
+                    clientName: "陳小美A",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年10月7日"
+                  },
+                  {
+                    clientName: "陳小美B",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年9月7日"
+                  },
+                  {
+                    clientName: "陳小美C",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然!",
+                    service: "燙髮",
+                    time: "2023年8月7日"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            districtName: "pingZhenDistrict",
+            salons: [
+              {
+                salonName: "時光造型廊C",
+                location: "桃園市桃園區介壽路1號",
+                phoneNumber: "03-3361235",
+                openTime: "10:00 - 19:30",
+                thumbnail: "salon5.png",
+                reviews: [
+                  {
+                    clientName: "陳小美A",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年10月7日"
+                  },
+                  {
+                    clientName: "陳小美B",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年9月7日"
+                  },
+                  {
+                    clientName: "陳小美C",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然!",
+                    service: "燙髮",
+                    time: "2023年8月7日"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            districtName: "BadeDistrict",
+            salons: [
+              {
+                salonName: "時光造型廊D",
+                location: "桃園市桃園區介壽路1號",
+                phoneNumber: "03-3361235",
+                openTime: "10:00 - 19:30",
+                thumbnail: "salon6.png",
+                reviews: [
+                  {
+                    clientName: "陳小美A",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年10月7日"
+                  },
+                  {
+                    clientName: "陳小美B",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然，超級喜歡!推推",
+                    service: "燙髮",
+                    time: "2023年9月7日"
+                  },
+                  {
+                    clientName: "陳小美C",
+                    message: "設計師非常細心聆聽我的想法，燙出來的捲髮也非常自然!",
+                    service: "燙髮",
+                    time: "2023年8月7日"
+                  }
+                ]
+              }
+            ]
+          },
+        ]
       }
     },
     "hsinchu": {
       "hsinchuCity": {
+        cityName: "hsinchuCity",
         salonNum: 95,
-        url: "#",
       }
     }
   },
   "central": {
     "miaoli": {
       "miaoliCounty": {
+        cityName: "miaoliCounty",
         salonNum: 50,
-        url: "#",
       }
     },
     "taichung": {
       "taichungCity": {
+        cityName: "taichungCity",
         salonNum: 125,
-        url: "#",
       }
     }
   },
   "southern": {
     "tainan": {
       "tainanCity": {
+        cityName: "tainanCity",
         salonNum: 105,
-        url: "#",
       },
       "chiayiCounty": {
+        cityName: "chiayiCounty",
         salonNum: 62,
-        url: "#",
       }
     },
     "kaohsiung": {
       "kaohsiungCity": {
+        cityName: "kaohsiungCity",
         salonNum: 104,
-        url: "#",
       },
       "pingtungCounty": {
+        cityName: "pingtungCounty",
         salonNum: 47,
-        url: "#",
       }
     }
   },
   "outside-of-mainland": {
     "penghu": {
       "penghuCounty": {
+        cityName: "penghuCounty",
         salonNum: 21,
-        url: "#",
       }
     },
     "kinmen": {
       "kinmenCounty": {
+        cityName: "kinmenCounty",
         salonNum: 37,
-        url: "#",
       },
       "matsuCounty": {
+        cityName: "matsuCounty",
         salonNum: 7,
-        url: "#",
       }
     }
   }
@@ -98,12 +294,18 @@ const enchTable = {
   "outside-of-mainland": "離島",
   "keelong": "基隆",
   "keelongCity": "基隆市",
+  "zhongShanDistrict": "中山區",
+  "zhongZhengDistrict": "中正區",
   "yilan": "宜蘭",
   "yilanCounty": "宜蘭縣",
   "taipei": "台北",
   "taipeiCity": "台北市",
   "taoyuan": "桃園",
   "taoyuanCity": "桃園市",
+  "taoyuanDistrict": "桃園區",
+  "zhongLiDistrict": "中壢區",
+  "pingZhenDistrict": "平鎮區",
+  "BadeDistrict": "八德區",
   "hsinchu": "新竹",
   "hsinchuCity": "新竹市",
   "miaoli": "苗栗",
@@ -165,7 +367,7 @@ function initAreaSearchPanel() {
       let cities = "";
       Object.keys(searchArea[region][area]).forEach(city => {
         cities += `
-          <a href="./searchHairSalon.html" class="search-item search-link">
+          <a href="./searchHairSalon.html" class="search-item search-link" data-search-area="${city}">
             <span class="d-block fw-bold">${getAreaCh(city)}</span>
             <span class="d-block font-prata fs-12">(${searchArea[region][area][city].salonNum})</span>
           </a>
@@ -178,6 +380,23 @@ function initAreaSearchPanel() {
       `;
     });
   });
+}
+
+function getSearchCity(searchResult) {
+  let result;
+  Object.keys(searchArea).forEach(region => {
+    Object.keys(searchArea[region]).forEach(area => {
+      Object.keys(searchArea[region][area]).forEach(city => {
+        if(searchResult === city) {
+          result = searchArea[region][area][city];
+          return;
+        }
+      });
+      return;
+    });
+    return;
+  });
+  return result;
 }
 
 initAreaSearchPanel();
@@ -214,7 +433,6 @@ $(function(){
     $(`.${region}-region`).hover(function() {
       // store current region
       hookedRegion = region;
-      console.log(hookedRegion);
 
       // add style to hovered region
       $(`.${region}-region`).addClass("bg-primary-light");
@@ -226,7 +444,6 @@ $(function(){
         $(`.${area}-area`).hover(function() {
           // store current region
           hookedArea = area;
-          console.log(hookedArea);
 
           // add style to hovered area
           $(`.${area}-area`).addClass("bg-black-0");
@@ -295,5 +512,16 @@ $(function(){
         $(`.${area}-area`).hide();
       });
     });
+  });
+});
+
+// navigation
+const searchAreaBtns = document.querySelectorAll(".search-link");
+searchAreaBtns.forEach(btn => {
+  btn.addEventListener("click", event => {
+    event.preventDefault();
+    localStorage.setItem("areaEnCh", JSON.stringify(enchTable));
+    localStorage.setItem("areaSearchPanelResult", JSON.stringify(getSearchCity(btn.getAttribute("data-search-area"))));
+    window.location.href = "./searchHairSalon.html";
   });
 });
