@@ -1,0 +1,43 @@
+.searchBanner {
+    height: 280px;
+    @include media-breakpoint-up(md) {
+        height: 100%;
+    }
+}
+
+.fullMask {
+    background: #f5e5de;
+}
+
+.searchSalon {
+    li {
+        &:hover .searchInfo {
+            bottom: 0;
+        }
+
+        img {
+            height: 250px;
+            @include media-breakpoint-up(lg) {
+                height: 100%;
+            }
+        }
+    }
+
+    .searchInfo {
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+
+.searchInfo {
+    bottom: 0;
+
+    @include media-breakpoint-up(md) {
+        backdrop-filter: blur(8px);
+        bottom: -100%;
+        transition: .3s ease-in-out;
+    }
+
+}

@@ -1,0 +1,169 @@
+.nav-link {
+    color: $black-40;
+
+    &:hover {
+        color: $black-60;
+    }
+    
+}
+
+.nav-pills {
+    & .nav-link.active {
+        background: $black-0;
+        color: $black-100;
+    }
+
+    & .nav-link.reserve-tab-finish {
+        color: $black-80;
+        background-color: $black-20;
+    }
+}
+
+.form-check-input {
+    border-color: $black-100;
+    &:checked {
+        background-color: $black-100;
+    }
+}
+
+// Calendar
+
+.calendar {
+    padding: 2rem;
+    user-select: none;
+    color: $black-100;
+    line-height: 1.2;
+
+    
+
+    &__header {
+        text-align: center;
+        font-size: 1.25rem;
+        position: relative;
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        display: block;
+        height: 20px;
+        padding: 0;
+        width: 20px;
+        // text-indent: -9999px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        overflow: hidden;
+        
+            &:before {
+                content: "";
+                position: absolute;
+                top: 6px;
+                display: block;
+                height: 12px;
+                width: 12px;
+                border-left: 1.5px solid $black-100;
+                border-top: 1.5px solid $black-100;
+                transform-origin: center;
+            }
+            
+            &_prev {
+            left: 32px;
+        
+                &:before {
+                    left: 12px;
+                    transform: rotate(-45deg);
+                }
+            }
+        
+            &_next {
+            right: 32px;
+        
+                &:before {
+                    right: 12px;
+                    transform: rotate(135deg);
+                }
+            }
+            
+            &_disabled {
+            pointer-events: none;
+            
+                &:before {
+                    border-color: $black-40;
+                }
+            }
+            
+            &:hover {
+                &:before {
+                    border-color: $secondary-main;
+                }
+            }
+        }
+
+        &__table {
+            width: 100%;
+        }
+
+        &__table-col-header {
+            text-align: center;
+            padding: 16px 0;
+            font-size: 1rem;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+                padding: 32px 0;
+            }
+        }
+
+        &__table-body {
+            font-size: 1rem;
+            text-align: center;
+
+            @include media-breakpoint-up(md) {
+                font-size: 1.25rem;
+            }
+        }
+
+        &__table-cell {
+            padding: 12px 0;
+            cursor: pointer;
+
+            @include media-breakpoint-up(md) {
+                padding: 16px 0;
+            }
+
+            &_disabled {
+                color: $black-40;
+                pointer-events: none;
+            }
+
+            &_selected, &:hover {
+            color: $secondary-main;
+            }
+        }
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+
+    svg {
+        width: 30px;
+        height: 30px;
+
+        @include media-breakpoint-up(md) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        width: 80px;
+        height: 80px;
+    }
+}

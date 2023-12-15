@@ -1,66 +1,38 @@
-
-h1,h2,h3,h4,h5,h6{
-    font-family: 'Noto Sans TC', sans-serif;
-}
-
-
-
 .banner{
-    background:url(../images/news-banner.png);
     background-repeat: no-repeat;  /*不重複圖片*/
     background-size: cover; /*失真圖片  使其剛好符合投放區SIZE*/
     background-position: 50%; /*圖片置中 故50%*/
-    height: 435px;
-    margin-bottom: 0px;
-    position: relative;
-}
-
-.newsTitle{
-    width: 341px;
-    height: 83px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    h1{
-        font-size: 40px;
-        line-height: 48px;
-        letter-spacing: 5%;
-        margin-top: 80px;
-    }
-    hr{
-        border: 2px solid;
-        margin-bottom: 19px;
-        color: $black-100;
-    }
 }
 
 .newsCard{
-    // display: flex;
-    h2,h5{
-        color: $black-100;
-        font-weight: 700;
+    a:hover{
+        color:$secondary-main;
+        img{
+            opacity: 0.8;
+        }
     }
-    a{
-        color:$black-80;
-    }
+}
 
-    .card-text p{
-        font-size:  map-get($font-sizes, 14);
-        color: $black-80;
-        font-weight: 400;
+.pageNav {
+    a{
+        color: $black-100;
     }
-    .card1{
-        img{
-            height: 775px;
-            width: 636px;
-        }
+    a:hover{
+        color:$secondary-main;
     }
-    .card4{
-        // display: flex;
-        // flex-wrap: wrap;
-        
-        img{
-            width: 306px;
-            height: 320px;
-        }
+    .active > .page-link{
+        background-color: $black-80;
+        color:$secondary-main;
+        border-color: $black-80;
+    }
+}
+
+// newsContent.html
+.bottom{
+    a{
+        color: $black-100;
+    }
+    a:hover{
+        color:$secondary-main;
     }
 }

@@ -3,7 +3,7 @@
 @import url(https://db.onlinewebfonts.com/c/97214b891985329956fb70b2337a54d4?family=MRazor+HK+Xbold);
 
 // Icons
-
+@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
 // Bootstrap configuration
 @import "../../node_modules/bootstrap/scss/functions";
@@ -15,6 +15,9 @@
 @import "./utilities";
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
+// Swiper
+@import "../../node_modules/swiper/swiper-bundle.min";
+
 // Base
 @import "./base/base";
 
@@ -22,11 +25,23 @@
 @import "./utils/helpers";
 
 // Components
+@import "./components/button";
 
 // Layouts
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/preloader";
 
 // Pages
 @import "./pages/index";
 @import "./pages/news";
+@import "./pages/salonInfo";
+@import "./pages/searchStyle";
+@import "./pages/searchSalon";
+@import "./pages/searchDesigner";
+@import "./pages/login";
+@import "./pages/signUp";
+@import "./pages/reserve";
+@import "./pages/memberCenter";
+@import "./pages/faq";
+@import "./pages/login";

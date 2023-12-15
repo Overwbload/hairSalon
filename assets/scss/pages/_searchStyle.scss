@@ -1,0 +1,69 @@
+.line {
+    height: 2px;
+    background: $black-100;
+}
+
+.hairStyle {
+    height: 250px;
+    @include media-breakpoint-up(lg) {
+        height: 416px;
+    }
+}
+
+.btn-close {
+    right: 0;
+    top: -24px;
+}
+
+.salon-logo {
+    width: 40px;
+    height: 40px;
+    @include media-breakpoint-up(md) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.icon-heart {
+    right: 8px;
+    top: 8px;
+    @include media-breakpoint-up(md) {
+        right: 16px;
+        top: 16px;
+    }
+}
+
+.search-hairdesigner {
+    @include media-breakpoint-up(lg) {
+        height: 220px;
+    }
+}
+
+// swiper
+.swiper-sm-img .swiper-slide {
+    opacity: 0.4;
+}
+
+.swiper-sm-img .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-lg-img .swiper-slide {
+    height: 360px;
+    @include media-breakpoint-up(lg) {
+        height: 520px;
+    }
+    img {
+        object-position: center;
+    }
+}
+
+.swiper-sm-img .swiper-slide {
+    height: 100px;
+    @include media-breakpoint-up(lg) {
+        height: 125px;
+    }
+    img {
+        object-position: center;
+    }
+}

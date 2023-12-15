@@ -42,7 +42,9 @@ $utilities: map-merge(
       property: opacity,
       values: (
         0: 0,
+        20: .2,
         25: .25,
+        40: .4,
         50: .5,
         75: .75,
         100: 1,
@@ -51,14 +53,17 @@ $utilities: map-merge(
     // scss-docs-end utils-opacity
     // scss-docs-start utils-overflow
     "overflow": (
+      responsive: true,
       property: overflow,
       values: auto hidden visible scroll,
     ),
     "overflow-x": (
+      responsive: true,
       property: overflow-x,
       values: auto hidden visible scroll,
     ),
     "overflow-y": (
+      responsive: true,
       property: overflow-y,
       values: auto hidden visible scroll,
     ),
@@ -94,31 +99,38 @@ $utilities: map-merge(
     // scss-docs-end utils-focus-ring
     // scss-docs-start utils-position
     "position": (
+      responsive: true,
       property: position,
       values: static relative absolute fixed sticky
     ),
     "top": (
+      responsive: true,
       property: top,
       values: $position-values
     ),
     "bottom": (
+      responsive: true,
       property: bottom,
       values: $position-values
     ),
     "start": (
+      responsive: true,
       property: left,
       class: start,
       values: $position-values
     ),
     "end": (
+      responsive: true,
       property: right,
       class: end,
       values: $position-values
     ),
     "translate-middle": (
+      responsive: true,
       property: transform,
       class: translate-middle,
       values: (
+        0: translate(0),
         null: translate(-50%, -50%),
         x: translateX(-50%),
         y: translateY(-50%),
@@ -204,6 +216,7 @@ $utilities: map-merge(
     // Sizing utilities
     // scss-docs-start utils-sizing
     "width": (
+      responsive: true,
       property: width,
       class: w,
       values: (
@@ -211,6 +224,8 @@ $utilities: map-merge(
         50: 50%,
         75: 75%,
         100: 100%,
+        150: 150%,
+        200: 200%,
         auto: auto
       )
     ),
@@ -220,9 +235,13 @@ $utilities: map-merge(
       values: (100: 100%)
     ),
     "viewport-width": (
+      responsive: true,
       property: width,
       class: vw,
-      values: (100: 100vw)
+      values: (
+        auto: auto,
+        100: 100vw
+      )
     ),
     "min-viewport-width": (
       property: min-width,
@@ -517,6 +536,7 @@ $utilities: map-merge(
       )
     ),
     "font-size": (
+      responsive: true,
       rfs: true,
       property: font-size,
       class: fs,
@@ -537,6 +557,7 @@ $utilities: map-merge(
         medium: $font-weight-medium,
         semibold: $font-weight-semibold,
         bold: $font-weight-bold,
+        black: $font-weight-black,
         bolder: $font-weight-bolder
       )
     ),
@@ -548,6 +569,7 @@ $utilities: map-merge(
         sm: $line-height-sm,
         base: $line-height-base,
         lg: $line-height-lg,
+        md: $line-height-md,
       )
     ),
     "text-align": (
@@ -672,6 +694,7 @@ $utilities: map-merge(
     // scss-docs-end utils-links
     // scss-docs-start utils-bg-color
     "background-color": (
+      responsive: true,
       property: background-color,
       class: bg,
       local-vars: (
@@ -691,6 +714,7 @@ $utilities: map-merge(
       class: bg-opacity,
       values: (
         10: .1,
+        20: .2,
         25: .25,
         50: .5,
         75: .75,
