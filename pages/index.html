@@ -276,8 +276,10 @@
   </main>
   <%- include('./layout/footer'); -%>
   <script type="module" src="../main.js"></script>
-  <script src="../assets/js/hairstyle-trends-swiper.js"></script>
-  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+  <script type="module" src="../assets/js/hairstyle-trends-swiper.js"></script>
+  <!-- <script type="module" src="../node_modules/swiper/swiper-bundle.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
   <script>
     var swiper = new Swiper(".hairstyle-trends-swiper", {
       slidesPerView: 2,
