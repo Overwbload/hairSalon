@@ -121,11 +121,11 @@ $(function () {
 
       // keep haircut opened while hovering haircut
       $(".search-haircut").hover(function() {
-        $(`.${hookedGender}-gender`).addClass("bg-primary-light");
+        $(`.${hookedGender}-style`).addClass("bg-primary-light");
         $(".search-haircut").show();
         $(`.${hookedGender}-haircut`).show();
       }, function() {
-        $(`.${hookedGender}-gender`).removeClass("bg-primary-light");
+        $(`.${hookedGender}-style`).removeClass("bg-primary-light");
         $(".search-haircut").hide();
         $(`.${hookedGender}-haircut`).hide();
       });

@@ -19,14 +19,14 @@ trendingModels.forEach((imgColumn, imgColumnIndex) => {
     if((imgColumnIndex % 2) ^ imgIndex) {
       imgHtml += `
         <li>
-          <img src="../assets/images/homepage/${img}" alt="trending image" class="img-longer">
+          <img src="./${img}" alt="trending image" class="img-longer">
         </li>
       `
     }
     else {
       imgHtml += `
         <li>
-          <img src="../assets/images/homepage/${img}" alt="trending image" class="img-shorter">
+          <img src="./${img}" alt="trending image" class="img-shorter">
         </li>
       `
     }
