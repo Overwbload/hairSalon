@@ -32,7 +32,7 @@ aTags.forEach((aTag, index) => {
 
 let commentData = [
   {
-    imgSrc: "../assets/images/salonInfopage/Rectangle 146.png",
+    imgSrc: "../assets/images/searchStylepage/hairStyle-long-1-1.jpg",
     userName: "蔡1玲",
     starNum: 5,
     comment: "設計師非常細心聆聽我的想法",
@@ -40,7 +40,7 @@ let commentData = [
     serviceDate: "2023年05月10日",
   },
   {
-    imgSrc: "../assets/images/salonInfopage/Rectangle 146.png",
+    imgSrc: "../assets/images/searchStylepage/hairStyle-man-short-1-1.jpg",
     userName: "盧廣眾",
     starNum: 4,
     comment: "設計師超讚",
@@ -48,7 +48,7 @@ let commentData = [
     serviceDate: "2022年04月25日",
   },
   {
-    imgSrc: "../assets/images/salonInfopage/Rectangle 146.png",
+    imgSrc: "../assets/images/searchStylepage/hairStyle-man-short-3-1.jpg",
     userName: "劉得滑",
     starNum: 2,
     comment: "太貴了",
@@ -78,7 +78,7 @@ function renderCommentData() {
     <div class="pb-6">
       <div class="d-flex justify-content-between ">
         <div class="d-flex">
-          <img src="${item.imgSrc}">
+          <img class="customer-img rounded-circle object-fit-cover" src="${item.imgSrc}">
           <p class=" lh-md ls-tiny-5 text-black-100 fw-medium ms-2">${item.userName}</p>
         </div>
         <!-- 星星顯示顆數 -->
