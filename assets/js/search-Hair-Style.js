@@ -303,6 +303,7 @@ const searchTag = document.querySelector('.searchTag');
 const searchHairResult = document.querySelector('.searchHairResult');
 // 搜尋結果資料渲染
 function renderHairData() {
+  let tagGender;
   if (localStorage.getItem('searchGender') == 'lady') {
     tagGender = "女生";
   } else {
