@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 const searchArea = {
   "northern": {
     "keelong": {

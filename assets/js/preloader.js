@@ -1,4 +1,6 @@
-(function($) {
+import $ from 'jquery';
+
+$(function() {
 	
 	"use strict";
 	
@@ -19,7 +21,7 @@
 	
 	
 	/* ==========================================================================
-   When document is loaded, do
+    When document is loaded, do
    ========================================================================== */
 	
 	$(window).on('load', function() {
@@ -28,4 +30,4 @@
 
 	
 
-})(window.jQuery);
+});

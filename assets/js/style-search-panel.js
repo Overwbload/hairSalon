@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 const searchStyle = {
   "lady": {
     "longhair": {
