@@ -6,7 +6,7 @@ const searchArea = {
         salonNum: 67,
         districts: [
           {
-            districtName: "zhongShanDistrict",
+            districtName: "zhongshanDistrict",
             salons: [
               {
                 salonName: "時光造型廊A",
@@ -38,7 +38,7 @@ const searchArea = {
             ]
           },
           {
-            districtName: "zhongZhengDistrict",
+            districtName: "zhongzhengDistrict",
             salons: [
               {
                 salonName: "時光造型廊B",
@@ -83,8 +83,8 @@ const searchArea = {
         cityName: "taipeiCity",
         salonNum: 156,
       },
-      "newTaipeiCity": {
-        cityName: "newTaipeiCity",
+      "newtaipeiCity": {
+        cityName: "newtaipeiCity",
         salonNum: 92,
       }
     },
@@ -158,7 +158,7 @@ const searchArea = {
             ]
           },
           {
-            districtName: "pingZhenDistrict",
+            districtName: "pingzhenDistrict",
             salons: [
               {
                 salonName: "時光造型廊C",
@@ -267,7 +267,7 @@ const searchArea = {
       }
     }
   },
-  "outside-of-mainland": {
+  "outsideOfMainland": {
     "penghu": {
       "penghuCounty": {
         cityName: "penghuCounty",
@@ -291,11 +291,11 @@ const enchTable = {
   "northern": "北部",
   "central": "中部",
   "southern": "南部",
-  "outside-of-mainland": "離島",
+  "outsideOfMainland": "離島",
   "keelong": "基隆",
   "keelongCity": "基隆市",
-  "zhongShanDistrict": "中山區",
-  "zhongZhengDistrict": "中正區",
+  "zhongshanDistrict": "中山區",
+  "zhongzhengDistrict": "中正區",
   "yilan": "宜蘭",
   "yilanCounty": "宜蘭縣",
   "taipei": "台北",
@@ -304,7 +304,7 @@ const enchTable = {
   "taoyuanCity": "桃園市",
   "taoyuanDistrict": "桃園區",
   "zhongLiDistrict": "中壢區",
-  "pingZhenDistrict": "平鎮區",
+  "pingzhenDistrict": "平鎮區",
   "BadeDistrict": "八德區",
   "hsinchu": "新竹",
   "hsinchuCity": "新竹市",
@@ -320,8 +320,8 @@ const enchTable = {
   "penghuCounty": "澎湖縣",
   "kinmen": "金門",
   "kinmenCounty": "金門縣",
-  "newTaipei": "新北",
-  "newTaipeiCity": "新北市",
+  "newtaipei": "新北",
+  "newtaipeiCity": "新北市",
   "chiayi": "嘉義",
   "chiayiCounty": "嘉義縣",
   "pingtung": "屏東",
