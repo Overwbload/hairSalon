@@ -312,30 +312,8 @@
 	<!-- footer -->
 	<%- include('./layout/footer'); -%>
 	
-	
 	<script type="module" src="../main.js"></script>
-	<script src="../assets/js/salonInfo-addComment.js"></script>
-	<!-- 切換頁籤的JS -->
-	<script>
-		const pageSelect = document.querySelector('.pageSelect');
-		const pageChoose = document.querySelectorAll('.pageChoose');
-		const pageInfo = document.querySelectorAll('.pageInfo');
-		pageSelect.addEventListener('click', e => {
-			e.preventDefault();
-			if (e.target.classList.contains('pageChoose')) {
-				pageChoose.forEach((item) => {
-					item.classList.remove('border-bottom', 'border-5', 'border-secondary-main');
-				});
-				pageInfo.forEach((item) => {
-					item.classList.remove('d-block');
-					if (item.getAttribute('data-value') == e.target.textContent) {
-						item.classList.add('d-block');
-						e.target.classList.add('border-bottom', 'border-5', 'border-secondary-main');
-					}
-				});
-			}
-		});
-	</script>
+	<script type="module" src="../assets/js/salonInfo-addComment.js"></script>
 </body>
 
 </html>

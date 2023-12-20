@@ -7,7 +7,7 @@ const demoUser = {
 // 會員avater選單
 const demoPattern = `
   <button type="button" class="avater-btn" data-bs-toggle="collapse" data-bs-target="#collapseAvaterMenu" aria-expanded="false">
-    <img src="../assets/images/homepage/person-3.jpg" alt="">
+    <img src="${getURL("/assets/images/homepage/person-3.jpg")}" alt="">
     <span>Jason</span>
   </button>
   <div class="avater-menu collapse" id="collapseAvaterMenu">

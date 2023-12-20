@@ -1,4 +1,8 @@
+// import jQuery
 import $ from 'jquery';
+
+// import getURL to get resolved URL from vite
+import getURL from '@js/components/getURL.js';
 
 const searchStyle = {
   "lady": {
@@ -61,7 +65,7 @@ function initStyleSearchPanel() {
       <div class="${gender}-style">
         <div class="search-item">
           <span class="d-block fw-bold">${getStyleCh(gender)}</span>
-          <img src="../assets/images/icons/arrow.right.svg" alt="">
+          <img src="${getURL("/assets/images/icons/arrow.right.svg")}" alt="">
         </div>
       </div>
     `;
@@ -112,7 +116,6 @@ $(function () {
     $(`.${gender}-style`).hover(function() {
       // store current gender
       hookedGender = gender;
-      console.log(hookedGender);
 
       // add style to hovered gender
       $(`.${gender}-style`).addClass("bg-primary-light");

@@ -193,29 +193,8 @@
     </main>
     <%- include("./layout/footer") -%>
 
-
     <script type="module" src="../main.js"></script>
-    <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
-    <script src="../assets/js/search-hair-salon.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let swiper = new Swiper(".mySwiper", {
-                loop: true,
-                spaceBetween: 5,
-                slidesPerView: 3,
-                freeMode: true,
-                watchSlidesProgress: true,
-            });
-
-            let swiper2 = new Swiper(".mySwiper2", {
-                loop: true,
-                spaceBetween: 5,
-                thumbs: {
-                    swiper: swiper,
-                },
-            });
-        });
-    </script>
+    <script type="module" src="../assets/js/search-hair-salon.js"></script>
 </body>
 
 </html>

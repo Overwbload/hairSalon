@@ -1,3 +1,4 @@
+// import jQuery
 import $ from 'jquery';
 
 $(function() {

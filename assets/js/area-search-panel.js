@@ -1,4 +1,8 @@
+// import jQuery
 import $ from "jquery";
+
+// import getURL to get resolved URL from vite
+import getURL from "@js/components/getURL.js";
 
 const searchArea = {
   "northern": {
@@ -15,7 +19,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon13.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon13.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -47,7 +51,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon2.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon2.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -103,7 +107,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon11.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon11.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -135,7 +139,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon4.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon4.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -167,7 +171,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon5.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon5.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -199,7 +203,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon6.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon6.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -347,7 +351,7 @@ function initAreaSearchPanel() {
       <div class="${region}-region">
         <div class="search-item">
           <span class="d-block fw-bold">${getAreaCh(region)}</span>
-          <img src="../assets/images/icons/arrow.right.svg" alt="">
+          <img src="${getURL("/assets/images/icons/arrow.right.svg")}" alt="">
         </div>
       </div>
     `;
@@ -358,7 +362,7 @@ function initAreaSearchPanel() {
         <div class="${area}-area">
           <div class="search-item">
             <span class="d-block fw-bold">${getAreaCh(area)}地區</span>
-            <img src="../assets/images/icons/arrow.right.svg" alt="">
+            <img src="${getURL("/assets/images/icons/arrow.right.svg")}" alt="">
           </div>
         </div>
       `;
