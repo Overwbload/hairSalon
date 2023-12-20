@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- import swiper css with cdn -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-<!-- Fav Icon -->
+    <!-- Fav Icon -->
 <link rel="icon" href="/hairSalon/assets/scissors-d07b967e.svg" type="image/x-icon">
 
 <!-- Facebook Metadata Start -->
 <meta property="og:title" content="Hair Moment">
 <meta property="og:description" content="HairMoments 的使命是成為顧客與髮型設計師之間的橋樑，提供方便的髮型預約體驗，同時為設計師提供更多曝光的機會。我們的平台致力於減少用戶與髮型設計師之間的溝通障礙，用戶可以輕鬆瀏覽不同髮型設計師的作品，並直接預約，無需繁瑣的溝通。">
 <meta property="og:image" content="assets/images/icons/brand-logo.svg">    <title>HairSalon - search | HairDesigner</title>
-  <script type="module" crossorigin src="/hairSalon/assets/main-fc620cef.js"></script>
-  <link rel="stylesheet" href="/hairSalon/assets/main-56d34fde.css">
+  <script type="module" crossorigin src="/hairSalon/assets/searchHairDesigner-28c8b71e.js"></script>
+  <link rel="modulepreload" crossorigin href="/hairSalon/assets/main-6296f0c4.js">
+  <link rel="modulepreload" crossorigin href="/hairSalon/assets/swiper-bundle-136d2510.js">
+  <link rel="stylesheet" href="/hairSalon/assets/main-8c0fcf32.css">
+  <link rel="stylesheet" href="/hairSalon/assets/swiper-bundle-b7bf2630.css">
 </head>
 
 <body>
@@ -129,7 +129,8 @@
         <!-- banner -->
         <div class="container-fluid p-0 mb-md-20 mb-10 position-relative">
             <div class="w-100 opacity-40 bg-black-0 position-absolute order-1 h-100"></div>
-            <img class="w-100 object-fit-cover searchBanner" src="/hairSalon/assets/search-banner-45d78721.png" alt="搜尋髮型">
+            <img class="w-100 object-fit-cover searchBanner" src="/hairSalon/assets/search-banner-45d78721.png"
+                alt="搜尋髮型">
         </div>
 
         <div class="container">
@@ -163,7 +164,7 @@
                             <button type="button"
                                 class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
                                 id="searchAreaOffset" data-bs-toggle="dropdown" aria-expanded="false"
-                                data-bs-offset="0,10" data-bs-auto-close="outside" >
+                                data-bs-offset="0,10" data-bs-auto-close="outside">
                                 請選擇區域
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -180,13 +181,17 @@
                                             id="searchTaipeiOffset" data-bs-toggle="dropdown" aria-expanded="false"
                                             data-bs-offset="0,4" data-bs-auto-close="inside">
                                             台北市
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z" fill="#1C1C1E"/>
-                                                </svg>
-                                                
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z"
+                                                    fill="#1C1C1E" />
+                                            </svg>
+
                                         </button>
-                                        
-                                        <ul class="submenu dropdown-menu p-0" data-popper-placement="right-start" aria-labelledby="searchTaipeiOffset">
+
+                                        <ul class="submenu dropdown-menu p-0" data-popper-placement="right-start"
+                                            aria-labelledby="searchTaipeiOffset">
                                             <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">大安區</a></li>
                                             <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">士林區</a></li>
                                             <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">信義區</a></li>
@@ -200,13 +205,17 @@
                                             id="searchTaoyuanOffset" data-bs-toggle="dropdown" aria-expanded="false"
                                             data-bs-offset="0,4" data-bs-auto-close="inside">
                                             桃園市
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z" fill="#1C1C1E"/>
-                                                </svg>
-                                                
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z"
+                                                    fill="#1C1C1E" />
+                                            </svg>
+
                                         </button>
-                                        
-                                        <ul  class="dropdown-menu p-0" data-popper-placement="right-start" aria-labelledby="searchTaoyuanOffset">
+
+                                        <ul class="dropdown-menu p-0" data-popper-placement="right-start"
+                                            aria-labelledby="searchTaoyuanOffset">
                                             <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">桃園區</a></li>
                                             <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">八德區</a></li>
                                             <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">中壢區</a></li>
@@ -231,7 +240,8 @@
                 <li class="col-lg-4 col-6 mb-6 overflow-hidden">
                     <a href="" class="position-relative">
                         <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-                        <img class="w-100 object-fit-cover" src="/hairSalon/assets/designer-1-e20e9f90.png" alt="">
+                        <img class="w-100 object-fit-cover" src="/hairSalon/assets/designer-1-e20e9f90.png"
+                            alt="">
                         <h3
                             class="searchInfo d-flex justify-content-between align-items-center py-2 px-md-4 px-3 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
                             <p class="text-black-0 ls-tiny-5">Grace</p>
@@ -242,7 +252,8 @@
                 <li class="col-lg-4 col-6 mb-6 overflow-hidden">
                     <a href="" class="position-relative">
                         <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-                        <img class="w-100 object-fit-cover" src="/hairSalon/assets/designer-1-e20e9f90.png" alt="">
+                        <img class="w-100 object-fit-cover" src="/hairSalon/assets/designer-1-e20e9f90.png"
+                            alt="">
                         <h3
                             class="searchInfo d-flex justify-content-between align-items-center py-2 px-md-4 px-3 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
                             <p class="text-black-0 ls-tiny-5">Grace</p>
@@ -253,7 +264,8 @@
                 <li class="col-lg-4 col-6 mb-6 overflow-hidden">
                     <a href="" class="position-relative">
                         <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-                        <img class="w-100 object-fit-cover" src="/hairSalon/assets/designer-1-e20e9f90.png" alt="">
+                        <img class="w-100 object-fit-cover" src="/hairSalon/assets/designer-1-e20e9f90.png"
+                            alt="">
                         <h3
                             class="searchInfo d-flex justify-content-between align-items-center py-2 px-md-4 px-3 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
                             <p class="text-black-0 ls-tiny-5">Grace</p>
@@ -264,7 +276,8 @@
                 <li class="col-lg-4 col-6 mb-6 overflow-hidden">
                     <a href="" class="position-relative">
                         <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-                        <img class="w-100 object-fit-cover" src="/hairSalon/assets/designer-1-e20e9f90.png" alt="">
+                        <img class="w-100 object-fit-cover" src="/hairSalon/assets/designer-1-e20e9f90.png"
+                            alt="">
                         <h3
                             class="searchInfo d-flex justify-content-between align-items-center py-2 px-md-4 px-3 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
                             <p class="text-black-0 ls-tiny-5">Grace</p>
@@ -337,30 +350,8 @@
     </div>
   </div>
 </footer>
-
     
-    <!-- <script type="module" src="../node_modules/swiper/swiper-bundle.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let swiper = new Swiper(".mySwiper", {
-                loop: true,
-                spaceBetween: 5,
-                slidesPerView: 3,
-                freeMode: true,
-                watchSlidesProgress: true,
-            });
-
-            let swiper2 = new Swiper(".mySwiper2", {
-                loop: true,
-                spaceBetween: 5,
-                thumbs: {
-                    swiper: swiper,
-                },
-            });
-        });
-    </script>
+    
 </body>
 
 </html>

@@ -1,0 +1,1 @@
+import"./main-6296f0c4.js";import{S as e}from"./swiper-bundle-136d2510.js";document.addEventListener("DOMContentLoaded",function(){let r=new e(".mySwiper",{loop:!0,spaceBetween:5,slidesPerView:3,freeMode:!0,watchSlidesProgress:!0});new e(".mySwiper2",{loop:!0,spaceBetween:5,thumbs:{swiper:r}})});

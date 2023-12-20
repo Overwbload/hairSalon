@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('./layout/meta'); -%>
+    <!-- flatpickr套件 -->
+    <title>HairSalon - reserve | 選擇服務項目</title>
+</head>
+
+<body>
+    <!-- preloader -->
+    <%- include('./layout/preloader'); -%>
+    <!-- header -->
+    <%- include("./layout/header") -%>
+    <main>
+
+
+        <div class="container">
+            <!-- title -->
+            <h2 class="text-center ls-tiny-5 fw-bold fs-24 fs-md-32 my-6 mt-md-12 mb-md-15">線上預約</h2>
+            <!-- nav -->
+            <ul class="nav nav-pills nav-justified gap-3 gap-md-6 border-bottom border-black-40 mb-10 mb-md-20" id="myTab"
+                role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link py-6 active reserve-tab-finish" id="serve-tab" data-bs-toggle="tab"
+                        data-bs-target="#serve" type="button" role="tab" aria-controls="serve"
+                        aria-selected="true"><span class="fs-20 fs-md-32 ls-tiny-5">01</span>
+                        <p class="fs-14 fs-md-16 fs-md-20 mt-2 ls-tiny-5">選擇服務項目</p>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link py-6" id="reserveDate-tab" data-bs-toggle="tab"
+                        data-bs-target="#reserveDate" type="button" role="tab" aria-controls="reserveDate"
+                        aria-selected="false"><span class="fs-20 fs-md-32 ls-tiny-5">02</span>
+                        <p class="fs-14 fs-md-16 fs-md-20 mt-2 ls-tiny-5">預約日期</p>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link py-6" id="confirm-tab" data-bs-toggle="tab" data-bs-target="#confirm"
+                        type="button" role="tab" aria-controls="confirm" aria-selected="false"><span
+                            class="fs-20 fs-md-32 ls-tiny-5">03</span>
+                        <p class="fs-14 fs-md-16 fs-md-20 mt-2 ls-tiny-5">確認預約服務</p>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link py-6" id="finish-tab" data-bs-toggle="tab" data-bs-target="#finish"
+                        type="button" role="tab" aria-controls="finish" aria-selected="false"><span
+                            class="fs-20 fs-md-32 ls-tiny-5">04</span>
+                        <p class="fs-14 fs-md-16 fs-md-20 mt-2 ls-tiny-5">完成預約</p>
+                    </button>
+                </li>
+            </ul>
+
+            <!-- reserve content -->
+            <div class="tab-content d-flex justify-content-center" id="myTabContent">
+                <!-- 選擇服務項目 -->
+                <div class="tab-pane fade show active col-10 col-md-8 mb-10 mb-md-20" id="serve" role="tabpanel"
+                    aria-labelledby="serve-tab">
+                    <ul class="mb-0 list-unstyled d-flex flex-column gap-3 gap-md-6 p-8 border border-black-100 ls-tiny-5">
+                        <li class="fs-16 fs-md-24">預約店家：<p class="fw-bold d-inline-block ps-1 ps-md-3">時光造型廊</p>
+                        </li>
+                        <li class="fs-16 fs-md-24 d-flex flex-wrap align-items-center">預約設計師：
+                            <div class="d-flex flex-wrap align-items-center gap-1 gap-md-3 flex-grow-1 mt-3 mt-md-0">
+                                <div class="form-check ps-8">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault" checked>
+                                    <label class="form-check-label" for="flexRadioDefault">
+                                        不指定設計師
+                                    </label>
+                                </div>
+                                <div class="d-flex align-items-center gap-3 flex-grow-1 ps-md-3">
+                                    <div class="form-check ps-8">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault1">
+                                        <label class="form-check-label text-nowrap" for="flexRadioDefault1">
+                                            指定設計師
+                                        </label>
+                                    </div>
+                                    <select class="form-select border border-black-100 fs-16 fs-md-20 p-2"
+                                        aria-label="Default select example">
+                                        <option selected>請選擇設計師</option>
+                                        <option value="1">設計師名稱1</option>
+                                        <option value="2">設計師名稱2</option>
+                                        <option value="3">設計師名稱3</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                        </li>
+                        <li class="fs-16 fs-md-24 d-flex flex-column gap-6">預約服務：
+                            <div class="d-flex gap-2 gap-md-4 flex-wrap">
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="checkbox" class="btn-check" id="btn-check-1" checked
+                                        autocomplete="off">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-check-1">剪髮</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-check-2">洗髮</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-check-3">護髮</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-check-4">染髮</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-check-5">燙髮</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-check-6">接髮</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-check-7">燙瀏海</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="checkbox" class="btn-check" id="btn-check-8" autocomplete="off">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-check-8">頭皮保養</label>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="col-12 mt-10 mt-md-20 d-flex justify-content-end">
+                            <button type="submit" class="col-4 col-md-3 btn btn-black-100 py-2 py-md-4 fs-md-24">確認</button>
+                        </div>
+                    </ul>
+                </div>
+                <!-- 預約日期 -->
+                <div class="tab-pane fade col-10 col-md-8 border border-black-100 mb-10 mb-md-20" id="reserveDate" role="tabpanel"
+                    aria-labelledby="reserveDate-tab">
+                    <div id="calendar"></div>
+                    <div class="mt-md-12 mt-6">
+                        <div class="p-8 pt-0">
+                            <p class="fs-16 fs-md-24 mb-3 mb-md-6">預約時段：</p>
+                            <div class="d-flex gap-2 gap-md-4 flex-wrap">
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-1" checked autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-1">10:00</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-2" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-2">10:30</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-3" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-3">11:00</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-4" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-4">11:30</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-5" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-5">12:00</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-6" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-6">12:30</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-7" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-7">13:00</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-8" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-8">13:30</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-9" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-9">14:00</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-10" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-10">14:30</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-11" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-11">15:00</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-12" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-12">15:30</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-13" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-13">16:00</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-14" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-14">16:30</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-15" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-15">17:00</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-time-16" autocomplete="off"
+                                        name="times">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-time-16">17:30</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-10 mt-md-20 d-flex justify-content-end">
+                                <button type="button"
+                                    class="col-4 col-md-3 btn btn-outline-black-100 me-3 me-md-6 py-2 py-md-4 fs-md-24">上一步</button>
+                                <button type="submit" class="col-4 col-md-3 btn btn-black-100 py-2 py-md-4 fs-md-24">確認</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 確認預約服務 -->
+                <div class="tab-pane fade col-10 col-md-8 mb-10 mb-md-20" id="confirm" role="tabpanel" aria-labelledby="confirm-tab">
+                    <ul class="mb-0 list-unstyled d-flex flex-column gap-4 gap-md-6 p-8 border border-black-100 ls-tiny-5">
+                        <li class="fs-16 fs-md-24">預約店家：<p class="fw-bold d-inline-block ps-1 ps-md-3">時光造型廊</p>
+                        </li>
+                        <li class="fs-16 fs-md-24">預約設計師：<p class="d-inline-block ps-1 ps-md-3">指定設計師</p>
+                            <p class="fw-bold d-inline-block ps-2">Olivia</p>
+                        </li>
+                        <li class="fs-16 fs-md-24">預約服務：<p class="d-inline-block ps-1 ps-md-3">剪髮</p>
+                        </li>
+                        <li class="fs-16 fs-md-24">預約時段：<p class="font-noto-serif d-inline-block ps-1 ps-md-3">
+                                2023年11月19日</p>
+                            <p class="font-noto-serif d-inline-block ps-2">10:00</p>
+                        </li>
+                        <li class="fs-16 fs-md-24">
+                            費用：
+                            <div class="border border-black-60 p-3 p-md-5 mt-3 mt-md-6">
+                                <ul class="list-unstyled d-flex flex-column gap-3">
+                                    <li class="fs-16 fs-md-20 d-flex justify-content-between">
+                                        <p>小計：</p>
+                                        <p><span>NT</span>&#36;850</p>
+                                    </li>
+                                    <li class="fs-16 fs-md-20 d-flex justify-content-between">
+                                        <p>折扣：</p>
+                                        <p><span>-</span><span>NT</span>50</p>
+                                    </li>
+                                    <div class="mt-10 mt-md-20">
+                                        <button class="btn text-secondary-main ls-tiny-5 fs-16 fs-md-20 ps-0"
+                                            type="button" data-bs-toggle="collapse" data-bs-target="#coupon"
+                                            aria-expanded="false" aria-controls="coupon">
+                                            使用優惠券
+                                        </button>
+                                        <div class="collapse" id="coupon">
+                                            <div class="input-group w-md-50">
+                                                <input type="text" class="form-control" placeholder="請輸入優惠代碼"
+                                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                                <button class="btn btn-outline-black-100" type="button"
+                                                    id="button-addon2">送出</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <li class="fs-16 fs-md-20 d-flex justify-content-between fw-bold">
+                                        <p>合計</p>
+                                        <p><span>NT</span>&#36;800</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="fs-16 fs-md-24">
+                            <p class="fs-16 fs-md-24 mb-3 mb-md-6">選擇付款方式：</p>
+                            <div class="d-flex gap-4 flex-wrap">
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-1" checked autocomplete="off"
+                                        name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-1">信用卡一次付清</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-2" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-2">信用卡分期付款</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-3" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-3">ATM轉帳</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-4" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-4">LINE Pay</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-5" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-5">超商代碼繳費</label>
+                                </div>
+                                <div class="form-check form-check-inline m-0 p-0">
+                                    <input type="radio" class="btn-check" id="btn-pay-6" autocomplete="off" name="pay">
+                                    <label class="btn btn-outline-black-100 py-2 px-3 px-md-6 fs-16 fs-md-20"
+                                        for="btn-pay-6">Apple Pay</label>
+                                </div>
+                            </div>
+                        </li>
+                        <div class="col-12 mt-10 mt-md-20 d-flex justify-content-end">
+                            <button type="button"
+                                class="col-4 col-md-3 btn btn-outline-black-100 me-3 me-md-6 py-2 py-md-4 fs-md-24">上一步</button>
+                            <button type="submit" class="col-4 col-md-3 btn btn-black-100 py-2 py-md-4 fs-md-24">確認</button>
+                        </div>
+                    </ul>
+                </div>
+                <!-- 完成預約 -->
+                <div class="tab-pane fade col-10 col-md-8 mb-10 mb-md-20" id="finish" role="tabpanel" aria-labelledby="finish-tab">
+                    <div class="border border-black-100 py-6 py-md-12">
+                        <div class="circle bg-black-100 rounded-circle position-relative m-auto">
+                            <svg class="position-absolute top-50 start-50 translate-middle" width="60" height="60"
+                                viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M22.5008 40.5L13.7508 31.75C12.7758 30.775 11.2258 30.775 10.2508 31.75C9.27578 32.725 9.27578 34.275 10.2508 35.25L20.7258 45.725C21.7008 46.7 23.2758 46.7 24.2508 45.725L50.7508 19.25C51.7258 18.275 51.7258 16.725 50.7508 15.75C49.7758 14.775 48.2258 14.775 47.2508 15.75L22.5008 40.5Z"
+                                    fill="white" />
+                            </svg>
+                        </div>
+                        <p class="fs-24 fs-md-40 fw-bold ls-tiny-5 text-center mt-4 mt-md-8 mb-3 mb-md-6">感謝您的預約</p>
+                        <p class="fw-medium text-center ls-tiny-5">您可以隨時到 <a href=""
+                                class="d-inline-block text-secondary-main">會員中心</a>，查看您的預約記錄。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    <%- include("./layout/footer") -%>
+
+
+    <script type="module" src="../main.js"></script>
+    <script>
+        /*
+ * Default month names
+ */
+        const MonthNames = [
+            'January',
+            'February',
+            'March',
+            'April',
+            'May',
+            'June',
+            'July',
+            'August',
+            'September',
+            'October',
+            'November',
+            'December',
+        ];
+
+        /*
+         * Default weekday names
+         */
+        const DayNames = [
+            'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'
+        ];
+
+        /*
+         * Add your locale here (if the first weekday isn't Sunday)
+         */
+        const StartOfWeek = {
+            'ar-BH': 6,
+            'ar-DZ': 6,
+            'ar-JO': 6,
+            'ar-KW': 6,
+            'ar-LB': 6,
+            'ar-LY': 6,
+            'ar-MA': 6,
+            'ar-OM': 6,
+            'ar-QA': 6,
+            'ar-SA': 6,
+            'ar-SD': 6,
+            'ar-SY': 6,
+            'ar-TN': 6,
+            'ar-AE': 6,
+            'ar-YE': 6,
+            'ca-ES': 1,
+            'ca': 1,
+            'cs-CZ': 1,
+            'cs': 1,
+            'da_DK': 1,
+            'da': 1,
+            'de-AT': 1,
+            'de-DE': 1,
+            'de-LU': 1,
+            'de-CH': 1,
+            'de': 1,
+            'el-GR': 1,
+            'el': 1,
+            'en_GB': 1,
+            'en-IE': 1,
+            'es-AR': 1,
+            'es-BO': 1,
+            'es-CL': 1,
+            'es-CO': 1,
+            'es-CR': 1,
+            'es-DO': 1,
+            'es-EC': 1,
+            'es-SV': 1,
+            'es-GT': 1,
+            'es-HN': 1,
+            'es-MX': 1,
+            'es-NI': 1,
+            'es-PA': 1,
+            'es-PY': 1,
+            'es-PE': 1,
+            'es-PR': 1,
+            'es-ES': 1,
+            'es-UY': 1,
+            'es-VE': 1,
+            'et-EE': 1,
+            'et': 1,
+            'fi-FI': 1,
+            'fi': 1,
+            'fr-BE': 1,
+            'fr-KM': 1,
+            'fr-FR': 1,
+            'fr-GN': 1,
+            'fr-LU': 1,
+            'fr-MC': 1,
+            'fr-CH': 1,
+            'fr': 1,
+            'hr-HR': 1,
+            'hr': 1,
+            'hu-HU': 1,
+            'hu': 1,
+            'id-ID': 1,
+            'is-IS': 1,
+            'is': 1,
+            'it-IT': 1,
+            'it-CH': 1,
+            'it': 1,
+            'lt-LT': 1,
+            'lt': 1,
+            'nl-BE': 1,
+            'nl-NL': 1,
+            'nl': 1,
+            'nb-NO': 1,
+            'nb': 1,
+            'nn-NO': 1,
+            'nn': 1,
+            'pl-PL': 1,
+            'pl': 1,
+            'pt-MZ': 1,
+            'pt-PT': 1,
+            'pt': 1,
+            'ro-MD': 1,
+            'ro-RO': 1,
+            'ro': 1,
+            'sq-AL': 6,
+            'ru-MD': 1,
+            'ru-RU': 1,
+            'ru-UA': 1,
+            'ru': 1,
+            'sk-SK': 1,
+            'sk': 1,
+            'sl-SI': 1,
+            'sl': 1,
+            'sr-Cyrl': 1,
+            'sr-Cyrl-BA': 1,
+            'sr-Cyrl-ME': 1,
+            'sr-Cyrl-RS': 1,
+            'sr-Latn': 1,
+            'sr-Latn-BA': 1,
+            'sr-Latn-ME': 1,
+            'sr-Latn-RS': 1,
+            'sr': 1,
+            'sr-BA': 1,
+            'sr-ME': 1,
+            'sr-RS': 1,
+            'sv-FI': 1,
+            'sv-SE': 1,
+            'sv': 1,
+            'tr-TR': 1,
+            'tr': 1,
+            'uk-UA': 1,
+            'uk': 1,
+        };
+
+        /*
+         * Constants
+         */
+
+        const Events = {
+            DATE_SELECTED: 'dateSelected',
+        };
+
+        const ClassNames = {
+            BTN: 'calendar__btn',
+            BTN_DISABLED: 'calendar__btn_disabled',
+            BTN_PREV: 'calendar__btn_prev',
+            BTN_NEXT: 'calendar__btn_next',
+            HEADER: 'calendar__header',
+            MONTH: 'calendar__month',
+            ROOT: 'calendar',
+            TABLE: 'calendar__table',
+            TABLE_BODY: 'calendar__table-body',
+            TABLE_CELL: 'calendar__table-cell',
+            TABLE_CELL_DISABLED: 'calendar__table-cell_disabled',
+            TABLE_CELL_SELECTED: 'calendar__table-cell_selected',
+            TABLE_COL_HEADER: 'calendar__table-col-header',
+            TABLE_HEAD: 'calendar__table-head',
+            TABLE_ROW: 'calendar__table-row',
+            YEAR: 'calendar__year',
+        };
+
+        /*
+         * Default options
+         */
+        const Defaults = {
+            minDate: new Date(-8640000000000000),
+            maxDate: new Date(8640000000000000),
+        };
+
+        class Calendar {
+            constructor(root, { minDate, maxDate, selectedDate }) {
+                this._root = root;
+
+                this._minDate = minDate || Defaults.minDate;
+                this._maxDate = maxDate || Defaults.maxDate;
+
+                this._localize();
+
+                this._createUi();
+
+                this.setDate(selectedDate || new Date());
+            }
+
+            /*
+             * Public
+             */
+
+            setDate(date) {
+                if (date.getTime() < this._minDate.getTime()) {
+                    return;
+                }
+
+                if (date.getTime() > this._maxDate.getTime()) {
+                    return;
+                }
+
+                this._selectedDate = date;
+
+                this.reset();
+            }
+
+            reset() {
+                this._month = this._selectedDate.getMonth();
+                this._year = this._selectedDate.getFullYear();
+
+                this._updateUi();
+            }
+
+            prevMonth() {
+                if (this._isMinMonth()) {
+                    return;
+                }
+
+                if (--this._month < 0) {
+                    this._month += 12;
+                    this._year--;
+                }
+
+                this._updateUi();
+            }
+
+            nextMonth() {
+                if (this._isMaxMonth()) {
+                    return;
+                }
+
+                if (++this._month >= 12) {
+                    this._month -= 12;
+                    this._year++;
+                }
+
+                this._updateUi();
+            }
+
+            /*
+             * Private
+             */
+
+            _localize(locale) {
+                locale = locale ||
+                    (navigator.languages && navigator.languages[0]) ||
+                    navigator.language ||
+                    navigator.userLanguage;
+
+                const date = new Date();
+                date.setDate(date.getDate() - date.getDay());
+
+                this._dayNames = DayNames.map((defaultDay, i) => {
+                    const date = new Date();
+                    date.setDate(date.getDate() - date.getDay() + i);
+                    return date.toLocaleString(locale, { weekday: 'short' }) || defaultDay;
+                });
+
+                this._monthNames = MonthNames.map((defaultMonth, i) => {
+                    const date = new Date();
+                    date.setMonth(i);
+                    return date.toLocaleString(locale, { month: 'long' }) || defaultMonth;
+                });
+
+                this._startOfWeek = StartOfWeek[locale] || 0;
+            }
+
+            _createUi() {
+                this._root.classList.add(ClassNames.ROOT);
+
+                const header = document.createElement('div');
+                header.className = ClassNames.HEADER;
+
+                this._monthElem = document.createElement('span');
+                this._monthElem.className = ClassNames.MONTH;
+                header.appendChild(this._monthElem);
+
+                header.appendChild(document.createTextNode(' '));
+
+                this._yearElem = document.createElement('span');
+                this._yearElem.className = ClassNames.YEAR;
+                header.appendChild(this._yearElem);
+
+                this._prevBtn = document.createElement('button');
+                this._prevBtn.classList.add(
+                    ClassNames.BTN,
+                    ClassNames.BTN_PREV
+                );
+                this._prevBtn.addEventListener('click', () => {
+                    this.prevMonth();
+                });
+                header.appendChild(this._prevBtn);
+
+                this._nextBtn = document.createElement('button');
+                this._nextBtn.classList.add(
+                    ClassNames.BTN,
+                    ClassNames.BTN_NEXT
+                );
+                this._nextBtn.addEventListener('click', () => {
+                    this.nextMonth();
+                });
+                header.appendChild(this._nextBtn);
+
+                this._root.appendChild(header);
+
+                const table = document.createElement('table');
+                table.className = ClassNames.TABLE;
+
+                const tableHead = document.createElement('thead');
+                tableHead.className = ClassNames.TABLE_HEAD;
+
+                const tableHeadRow = document.createElement('tr');
+                tableHeadRow.className = ClassNames.TABLE_ROW;
+
+                for (let i = 0; i < 7; i++) {
+                    const day = this._dayNames[(i + this._startOfWeek) % 7];
+                    const colHeader = document.createElement('th');
+                    colHeader.scope = 'col';
+                    colHeader.className = ClassNames.TABLE_COL_HEADER;
+                    colHeader.textContent = day;
+                    tableHeadRow.appendChild(colHeader);
+                }
+
+                tableHead.appendChild(tableHeadRow);
+
+                table.appendChild(tableHead);
+
+                this._tableBody = document.createElement('tbody');
+                this._tableBody.className = ClassNames.TABLE_BODY;
+                this._tableBody.addEventListener('click', (event) => {
+                    const target = event.target;
+
+                    if (
+                        target.classList.contains(ClassNames.TABLE_CELL) &&
+                        target.dataset.date
+                    ) {
+                        const event = new CustomEvent(Events.DATE_SELECTED, {
+                            detail: {
+                                date: new Date(
+                                    this._year,
+                                    this._month,
+                                    target.dataset.date,
+                                ),
+                            },
+                        });
+
+                        this._root.dispatchEvent(event);
+                    }
+                });
+                table.appendChild(this._tableBody);
+
+                this._root.appendChild(table);
+            }
+
+            _updateUi() {
+                this._monthElem.textContent = this._monthNames[this._month];
+                this._yearElem.textContent = this._year;
+
+                if (this._isMinMonth()) {
+                    this._prevBtn.classList.add(ClassNames.BTN_DISABLED);
+                } else {
+                    this._prevBtn.classList.remove(ClassNames.BTN_DISABLED);
+                }
+
+                if (this._isMaxMonth()) {
+                    this._nextBtn.classList.add(ClassNames.BTN_DISABLED);
+                } else {
+                    this._nextBtn.classList.remove(ClassNames.BTN_DISABLED);
+                }
+
+                this._tableBody.innerHTML = '';
+
+                const date = new Date(this._year, this._month, 1);
+                date.setDate(1 - (date.getDay() + 7 - this._startOfWeek) % 7);
+
+                do {
+                    const row = document.createElement('tr');
+
+                    for (let i = 0; i < 7; i++) {
+                        const cell = document.createElement('td');
+                        cell.classList.add(ClassNames.TABLE_CELL);
+
+                        if (date.getMonth() == this._month) {
+                            cell.textContent = date.getDate();
+
+                            if (
+                                (this._minDate.getTime() <= date.getTime()) &&
+                                (this._maxDate.getTime() >= date.getTime())
+                            ) {
+                                cell.dataset.date = date.getDate();
+                                if (date.getTime() == new Date(
+                                    this._selectedDate.getFullYear(),
+                                    this._selectedDate.getMonth(),
+                                    this._selectedDate.getDate()
+                                ).getTime()) {
+                                    cell.classList.add(ClassNames.TABLE_CELL_SELECTED);
+                                }
+                            } else {
+                                cell.classList.add(ClassNames.TABLE_CELL_DISABLED);
+                            }
+                        }
+
+                        row.appendChild(cell);
+
+                        date.setDate(date.getDate() + 1);
+                    }
+
+                    this._tableBody.appendChild(row);
+                } while (date.getMonth() == this._month);
+            }
+
+            _isMinMonth() {
+                return (
+                    (this._month == this._minDate.getMonth()) &&
+                    (this._year == this._minDate.getFullYear())
+                );
+            }
+
+            _isMaxMonth() {
+                return (
+                    (this._month == this._maxDate.getMonth()) &&
+                    (this._year == this._maxDate.getFullYear())
+                );
+            }
+        }
+
+        const calendarElem = document.getElementById('calendar');
+        if (calendarElem != null) {
+            const today = new Date();
+
+            const calendar = new Calendar(calendarElem, {
+                minDate: new Date(
+                    today.getFullYear(),
+                    today.getMonth(),
+                    today.getDate()
+                ),
+                maxDate: new Date(
+                    today.getFullYear() + 1,
+                    today.getMonth(),
+                    today.getDate()
+                ),
+            });
+
+            calendarElem.addEventListener(Events.DATE_SELECTED, (event) => {
+                calendar.setDate(event.detail.date);
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

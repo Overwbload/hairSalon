@@ -4,19 +4,16 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- import swiper css with cdn -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-<!-- Fav Icon -->
+	<!-- Fav Icon -->
 <link rel="icon" href="/hairSalon/assets/scissors-d07b967e.svg" type="image/x-icon">
 
 <!-- Facebook Metadata Start -->
 <meta property="og:title" content="Hair Moment">
 <meta property="og:description" content="HairMoments 的使命是成為顧客與髮型設計師之間的橋樑，提供方便的髮型預約體驗，同時為設計師提供更多曝光的機會。我們的平台致力於減少用戶與髮型設計師之間的溝通障礙，用戶可以輕鬆瀏覽不同髮型設計師的作品，並直接預約，無需繁瑣的溝通。">
 <meta property="og:image" content="assets/images/icons/brand-logo.svg">	<title>店家資訊</title>
-  <script type="module" crossorigin src="/hairSalon/assets/salonInfo-3799ae32.js"></script>
-  <link rel="modulepreload" crossorigin href="/hairSalon/assets/main-fc620cef.js">
-  <link rel="stylesheet" href="/hairSalon/assets/main-56d34fde.css">
+  <script type="module" crossorigin src="/hairSalon/assets/salonInfo-b68bebc6.js"></script>
+  <link rel="modulepreload" crossorigin href="/hairSalon/assets/main-6296f0c4.js">
+  <link rel="stylesheet" href="/hairSalon/assets/main-8c0fcf32.css">
 </head>
 
 <body>
@@ -458,29 +455,6 @@
 </footer>	
 	
 	
-	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-	
-	<!-- 切換頁籤的JS -->
-	<script>
-		const pageSelect = document.querySelector('.pageSelect');
-		const pageChoose = document.querySelectorAll('.pageChoose');
-		const pageInfo = document.querySelectorAll('.pageInfo');
-		pageSelect.addEventListener('click', e => {
-			e.preventDefault();
-			if (e.target.classList.contains('pageChoose')) {
-				pageChoose.forEach((item) => {
-					item.classList.remove('border-bottom', 'border-5', 'border-secondary-main');
-				});
-				pageInfo.forEach((item) => {
-					item.classList.remove('d-block');
-					if (item.getAttribute('data-value') == e.target.textContent) {
-						item.classList.add('d-block');
-						e.target.classList.add('border-bottom', 'border-5', 'border-secondary-main');
-					}
-				});
-			}
-		});
-	</script>
 </body>
 
 </html>

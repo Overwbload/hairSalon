@@ -1,0 +1,225 @@
+// 剪刀圖像
+.icon-scissors {
+  display: block;
+  width: 48px;
+  height: 56px;
+  background-image: url('../images/icons/scissors.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@include media-breakpoint-up(xl) {
+  .icon-scissors {
+    width: 61px;
+    height: 74px;
+  }
+} 
+
+// 首頁hero-banner
+.index-img-1 {
+  background: url('../../assets/images/homepage/view-1.jpg'), lightgray -17.209px -181.411px / 114.51% 190.82%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // aspect-ratio: 375/302;
+}
+@include media-breakpoint-up(md) {
+  .index-img-1 {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.40) 100%), url('../../assets/images/homepage/view-1.jpg'), lightgray -9px -218.605px / 100.937% 161.579%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // aspect-ratio: 1920/710;
+  }
+}
+
+// 首頁第二部分圖片
+.index-img-2 {
+  background: url('../../assets/images/homepage/person-1-resized.png'), lightgray -5.058px 29.61px / 111.451% 100%;
+  background-size: cover;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+  aspect-ratio: 263/228;
+  height: 228px;
+}
+@include media-breakpoint-up(md) {
+  .index-img-2 {
+    background: url('../../assets/images/homepage/person-1-resized.png'), lightgray -4.428px 239px / 107.453% 78.117%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 838/890;
+    width: 838px;
+    height: auto;
+  }
+}
+
+// 首頁第三部分第一張圖片
+.index-img-3 {
+  background: url('../../assets/images/homepage/person-2.jpg'), lightgray 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // aspect-ratio: 375/240;
+  height: 240px;
+}
+@include media-breakpoint-up(md) {
+  .index-img-3 {
+    background: linear-gradient(0deg, rgba(245, 229, 222, 0.20) 0%, rgba(245, 229, 222, 0.20) 100%), url('../../assets/images/homepage/person-2.jpg'), lightgray 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scalex(-1);
+    aspect-ratio: 966/560;
+    height: auto;
+  }
+}
+
+// 首頁第三部分第二張圖片
+.index-img-4 {
+  background: url('../../assets/images/homepage/view-2.jpg'), lightgray 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // aspect-ratio: 375/240;
+  height: 240px;
+}
+@include media-breakpoint-up(md) {
+  .index-img-4 {
+    background: linear-gradient(0deg, rgba(245, 229, 222, 0.20) 0%, rgba(245, 229, 222, 0.20) 100%), url('../../assets/images/homepage/view-2.jpg'), lightgray 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 966/560;
+    height: auto;
+  }
+}
+
+.index-img-11 {
+  margin-left: auto;
+  margin-right: auto;
+  background: url('../../assets/images/homepage/person-11-resized.png'), lightgray 50%;
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  // aspect-ratio: 351/344;
+  height: 344px;
+}
+@include media-breakpoint-up(md) {
+  .index-img-11 {
+    // background: url('../../assets/images/homepage/person-11-resized.png'), lightgray 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 526/516;
+    max-height: 516px;
+    height: auto;
+  }
+}
+
+// 位移元素但保持空間佔有
+.translate-t-16 {
+  translate: 0 64px;
+}
+@include media-breakpoint-up(xl) {
+  .translate-t-xl-40 {
+    translate: 0 160px;
+  }
+}
+
+// 產生方框陰影
+@include media-breakpoint-up(xl) {
+  .outline-shadow {
+    padding-right: 40px;
+    padding-bottom: 40px;
+    z-index: 1;
+
+    & > div {
+      position: relative;
+    }
+    & > div::before {
+      position: absolute;
+      z-index: -1;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 40px;
+      left: 40px;
+      outline: 2px solid black;
+    }
+  }
+}
+
+// 產生圖片陰影
+.bg-shadow-bottom-right {
+  box-shadow: 0 64px $primary-main;
+  @include media-breakpoint-up(md) {
+    box-shadow: 80px 80px $primary-main;
+  }
+}
+
+// 產生圖片陰影
+.bg-shadow-bottom-left {
+  box-shadow: 0 64px $primary-main;
+  @include media-breakpoint-up(md) {
+    box-shadow: -80px 80px $primary-main;
+  }
+}
+
+// 首頁第四部份熱門趨勢
+.hairstyle-trends {
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+.img-shorter {
+  aspect-ratio: 306/315;
+}
+.img-longer {
+  aspect-ratio: 306/363;
+}
+
+// 首頁第五部分
+@include media-breakpoint-up(md) {
+  .h-md-353px {
+    height: 353px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .h-lg-465px {
+    height: 465px;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .h-xl-549px {
+    height: 549px;
+  }
+}
+@include media-breakpoint-up(xxl) {
+  .h-xxl-622px {
+    height: 622px;
+  }
+}
+
+.list-tiny-dot {
+  li {
+    padding-left: 18px;
+  }
+  li::marker {
+    content: '·';
+  }
+}
