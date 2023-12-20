@@ -33,7 +33,16 @@ export default defineConfig({
   ],
   server: {
     // 啟動 server 時預設開啟的頁面
-    open: 'pages/index.html',
+    open: process.env.NODE_ENV === 'production' ? '/hairSalon/' : 'pages/index.html',
+  },
+  // 設定別名增加程式碼易讀性，可用於 import、URL()
+  resolve: {
+    alias: {
+      "@node_modules": path.resolve(__dirname, "./node_modules"),
+      "@assets": path.resolve(__dirname, "./assets"),
+      "@scss": path.resolve(__dirname, "./assets/scss"),
+      "@js": path.resolve(__dirname, "./assets/js")
+    }
   },
   build: {
     rollupOptions: {

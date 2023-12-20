@@ -1,4 +1,6 @@
-// const searchArea = JSON.parse(localStorage.getItem("searchArea"));
+// import getURL to get resolved URL from vite
+import getURL from '@js/components/getURL.js';
+
 const areaEnCh = JSON.parse(localStorage.getItem("areaEnCh"));
 const areaSearchPanelResult = JSON.parse(localStorage.getItem("areaSearchPanelResult"));
 const areaTags = document.querySelector(".area-tags");
@@ -42,9 +44,9 @@ function render() {
           <li class="col-lg-4 mb-6 overflow-hidden">
             <a href="./salonInfo.html" class="position-relative">
               <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-              <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/${salon.thumbnail}" alt="">
+              <img class="object-fit-cover w-100" src="${salon.thumbnail}" alt="">
               <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
-                <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
+                <img class="rounded-circle object-fit-cover" src="${getURL("/assets/images/searchSalonpage/salon-logo-01.png")}" alt="">
                 <p class="text-black-0 ls-tiny-5 font-noto-serif">${salon.salonName}</p>
               </h3>
             </a>
@@ -114,9 +116,9 @@ function renderTarget(target) {
           <li class="col-lg-4 mb-6 overflow-hidden">
             <a href="./salonInfo.html" class="position-relative">
               <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-              <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/${salon.thumbnail}" alt="">
+              <img class="object-fit-cover w-100" src="${salon.thumbnail}" alt="">
               <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
-                <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
+                <img class="rounded-circle object-fit-cover" src="${getURL("/assets/images/searchSalonpage/salon-logo-01.png")}" alt="">
                 <p class="text-black-0 ls-tiny-5 font-noto-serif">${salon.salonName}</p>
               </h3>
             </a>
@@ -142,9 +144,9 @@ function renderTarget(target) {
           <li class="col-lg-4 mb-6 overflow-hidden">
             <a href="./salonInfo.html" class="position-relative">
               <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-              <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/${salon.thumbnail}" alt="">
+              <img class="object-fit-cover w-100" src="${salon.thumbnail}" alt="">
               <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
-                <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
+                <img class="rounded-circle object-fit-cover" src="${getURL("/assets/images/searchSalonpage/salon-logo-01.png")}" alt="">
                 <p class="text-black-0 ls-tiny-5 font-noto-serif">${salon.salonName}</p>
               </h3>
             </a>

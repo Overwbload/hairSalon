@@ -3,20 +3,17 @@
 @import url(https://db.onlinewebfonts.com/c/97214b891985329956fb70b2337a54d4?family=MRazor+HK+Xbold);
 
 // Icons
-@import "../../node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
+@import "@node_modules/bootstrap-icons/font/bootstrap-icons.min.css";
 
 // Bootstrap configuration
-@import "../../node_modules/bootstrap/scss/functions";
+@import "@node_modules/bootstrap/scss/functions";
 @import "./variables";
 @import "./utils/extra-variables"; // Customized Colors
-@import "../../node_modules/bootstrap/scss/variables-dark";
-@import "../../node_modules/bootstrap/scss/maps";
-@import "../../node_modules/bootstrap/scss/mixins";
+@import "@node_modules/bootstrap/scss/variables-dark";
+@import "@node_modules/bootstrap/scss/maps";
+@import "@node_modules/bootstrap/scss/mixins";
 @import "./utilities";
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
-// Swiper
-@import "../../node_modules/swiper/swiper-bundle.min";
+@import "@node_modules/bootstrap/scss/bootstrap";
 
 // Base
 @import "./base/base";

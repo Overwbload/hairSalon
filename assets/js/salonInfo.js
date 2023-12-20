@@ -1,3 +1,6 @@
+// import getURL to get resolved URL from vite
+import getURL from '@js/components/getURL.js';
+
 const addCommentModal = document.querySelector('.addCommentModal');
 const aTags = document.querySelectorAll('a[star-num]');
 
@@ -32,7 +35,7 @@ aTags.forEach((aTag, index) => {
 
 let commentData = [
   {
-    imgSrc: "../assets/images/searchStylepage/hairStyle-long-1-1.jpg",
+    imgSrc: `${getURL("/assets/images/searchStylepage/hairStyle-long-1-1.jpg")}`,
     userName: "蔡1玲",
     starNum: 5,
     comment: "設計師非常細心聆聽我的想法",
@@ -40,7 +43,7 @@ let commentData = [
     serviceDate: "2023年05月10日",
   },
   {
-    imgSrc: "../assets/images/searchStylepage/hairStyle-man-short-1-1.jpg",
+    imgSrc: `${getURL("/assets/images/searchStylepage/hairStyle-man-short-1-1.jpg")}`,
     userName: "盧廣眾",
     starNum: 4,
     comment: "設計師超讚",
@@ -48,7 +51,7 @@ let commentData = [
     serviceDate: "2022年04月25日",
   },
   {
-    imgSrc: "../assets/images/searchStylepage/hairStyle-man-short-3-1.jpg",
+    imgSrc: `${getURL("/assets/images/searchStylepage/hairStyle-man-short-3-1.jpg")}`,
     userName: "劉得滑",
     starNum: 2,
     comment: "太貴了",
@@ -98,15 +101,22 @@ function renderCommentData() {
 }
 renderCommentData();
 
-// 撰寫評論-
-// addCommentModal.addEventListener('click', e => {
-//   e.preventDefault();
-//   // if (e.target.getAttribute('class') == 'save') {
-//   //   let obj = {};
-//   //   obj.content = txt.value;
-//   //   data.push(obj);
-//   //   renderDate();
-//   // }
-// });
-
-
+// 切換頁籤的JS
+const pageSelect = document.querySelector('.pageSelect');
+const pageChoose = document.querySelectorAll('.pageChoose');
+const pageInfo = document.querySelectorAll('.pageInfo');
+pageSelect.addEventListener('click', e => {
+  e.preventDefault();
+  if (e.target.classList.contains('pageChoose')) {
+    pageChoose.forEach((item) => {
+      item.classList.remove('border-bottom', 'border-5', 'border-secondary-main');
+    });
+    pageInfo.forEach((item) => {
+      item.classList.remove('d-block');
+      if (item.getAttribute('data-value') == e.target.textContent) {
+        item.classList.add('d-block');
+        e.target.classList.add('border-bottom', 'border-5', 'border-secondary-main');
+      }
+    });
+  }
+});

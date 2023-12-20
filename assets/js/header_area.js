@@ -1,3 +1,9 @@
+// import jQuery
+import $ from "jquery";
+
+// import getURL to get resolved URL from vite
+import getURL from "@js/components/getURL.js";
+
 const searchArea = {
   "northern": {
     "keelong": {
@@ -6,14 +12,14 @@ const searchArea = {
         salonNum: 67,
         districts: [
           {
-            districtName: "zhongShanDistrict",
+            districtName: "zhongshanDistrict",
             salons: [
               {
                 salonName: "時光造型廊A",
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon13.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon13.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -38,14 +44,14 @@ const searchArea = {
             ]
           },
           {
-            districtName: "zhongZhengDistrict",
+            districtName: "zhongzhengDistrict",
             salons: [
               {
                 salonName: "時光造型廊B",
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon2.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon2.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -83,8 +89,8 @@ const searchArea = {
         cityName: "taipeiCity",
         salonNum: 156,
       },
-      "newTaipeiCity": {
-        cityName: "newTaipeiCity",
+      "newtaipeiCity": {
+        cityName: "newtaipeiCity",
         salonNum: 92,
       }
     },
@@ -101,7 +107,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon11.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon11.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -133,7 +139,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon4.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon4.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -158,14 +164,14 @@ const searchArea = {
             ]
           },
           {
-            districtName: "pingZhenDistrict",
+            districtName: "pingzhenDistrict",
             salons: [
               {
                 salonName: "時光造型廊C",
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon5.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon5.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -197,7 +203,7 @@ const searchArea = {
                 location: "桃園市桃園區介壽路1號",
                 phoneNumber: "03-3361235",
                 openTime: "10:00 - 19:30",
-                thumbnail: "salon6.png",
+                thumbnail: `${getURL("/assets/images/searchSalonpage/salon6.png")}`,
                 reviews: [
                   {
                     clientName: "陳小美A",
@@ -267,7 +273,7 @@ const searchArea = {
       }
     }
   },
-  "outside-of-mainland": {
+  "outsideOfMainland": {
     "penghu": {
       "penghuCounty": {
         cityName: "penghuCounty",
@@ -291,11 +297,11 @@ const enchTable = {
   "northern": "北部",
   "central": "中部",
   "southern": "南部",
-  "outside-of-mainland": "離島",
+  "outsideOfMainland": "離島",
   "keelong": "基隆",
   "keelongCity": "基隆市",
-  "zhongShanDistrict": "中山區",
-  "zhongZhengDistrict": "中正區",
+  "zhongshanDistrict": "中山區",
+  "zhongzhengDistrict": "中正區",
   "yilan": "宜蘭",
   "yilanCounty": "宜蘭縣",
   "taipei": "台北",
@@ -304,7 +310,7 @@ const enchTable = {
   "taoyuanCity": "桃園市",
   "taoyuanDistrict": "桃園區",
   "zhongLiDistrict": "中壢區",
-  "pingZhenDistrict": "平鎮區",
+  "pingzhenDistrict": "平鎮區",
   "BadeDistrict": "八德區",
   "hsinchu": "新竹",
   "hsinchuCity": "新竹市",
@@ -320,8 +326,8 @@ const enchTable = {
   "penghuCounty": "澎湖縣",
   "kinmen": "金門",
   "kinmenCounty": "金門縣",
-  "newTaipei": "新北",
-  "newTaipeiCity": "新北市",
+  "newtaipei": "新北",
+  "newtaipeiCity": "新北市",
   "chiayi": "嘉義",
   "chiayiCounty": "嘉義縣",
   "pingtung": "屏東",
@@ -345,7 +351,7 @@ function initAreaSearchPanel() {
       <div class="${region}-region">
         <div class="search-item">
           <span class="d-block fw-bold">${getAreaCh(region)}</span>
-          <img src="../assets/images/icons/arrow.right.svg" alt="">
+          <img src="${getURL("/assets/images/icons/arrow.right.svg")}" alt="">
         </div>
       </div>
     `;
@@ -356,7 +362,7 @@ function initAreaSearchPanel() {
         <div class="${area}-area">
           <div class="search-item">
             <span class="d-block fw-bold">${getAreaCh(area)}地區</span>
-            <img src="../assets/images/icons/arrow.right.svg" alt="">
+            <img src="${getURL("/assets/images/icons/arrow.right.svg")}" alt="">
           </div>
         </div>
       `;
