@@ -1,8 +1,8 @@
-import './assets/scss/all.scss';
-import 'bootstrap/dist/js/bootstrap.min.js';
-import './node_modules/jquery/dist/jquery.min.js';
+import '@scss/all.scss';
+import '@node_modules/bootstrap/dist/js/bootstrap.min.js';
 
-import './assets/js/area-search-panel.js';
-import './assets/js/style-search-panel.js';
-import './assets/js/preloader';
+import '@js/area-search-panel.js';
+import '@js/style-search-panel.js';
+import '@js/preloader';
+
 console.log("Hello world!");
