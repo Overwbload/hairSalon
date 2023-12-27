@@ -1,5 +1,5 @@
-import "./firbaseConfig";
-import { initializeApp } from "firebase/app";
+import "./firbaseConfig"
+import { initializeApp } from "firebase/app"
 import { 
     getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc, query, where, orderBy, serverTimestamp 
 } from "firebase/firestore"
