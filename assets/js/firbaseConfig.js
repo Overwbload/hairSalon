@@ -1,8 +1,8 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyD39n48j8Qon0Bd10QtG83mZFZfaZ1wor8",
-    authDomain: "hairsalon-18a70.firebaseapp.com",
-    projectId: "hairsalon-18a70",
-    storageBucket: "hairsalon-18a70.appspot.com",
-    messagingSenderId: "648480886492",
-    appId: "1:648480886492:web:b110b92a424a425e296e19"
+    apiKey: "AIzaSyDK4oyUymNza1CROMlzGTrmSvT25FiZdQU",
+    authDomain: "hairsalon-64629.firebaseapp.com",
+    projectId: "hairsalon-64629",
+    storageBucket: "hairsalon-64629.appspot.com",
+    messagingSenderId: "557131081488",
+    appId: "1:557131081488:web:a6b5cac76c899863136795"
   };
