@@ -2,165 +2,178 @@
 <html lang="zh">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%- include('./layout/meta'); -%>
-    <title>HairSalon - search | HairSalon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('./layout/meta'); -%>
+  <title>HairSalon - search | HairSalon</title>
 </head>
 
 <body>
-    <!-- preloader -->
-    <%- include('./layout/preloader'); -%>
-    <!-- header -->
-    <%- include("./layout/header") -%>
-    <main>
-        <!-- banner -->
-        <div class="container-fluid p-0 mb-20 position-relative">
-            <div class="w-100 opacity-40 bg-black-0 position-absolute order-1 h-100"></div>
-            <img class="w-100 object-fit-cover searchBanner" src="../assets/images/searchStylepage/search-banner.png" alt="搜尋髮型">
+  <!-- preloader -->
+  <%- include('./layout/preloader'); -%>
+  <!-- header -->
+  <%- include("./layout/header") -%>
+  <main>
+    <!-- banner -->
+    <div class="container-fluid p-0 mb-20 position-relative">
+      <div class="w-100 opacity-40 bg-black-0 position-absolute order-1 h-100"></div>
+      <img class="w-100 object-fit-cover searchBanner" src="../assets/images/searchStylepage/search-banner.png"
+        alt="搜尋髮型">
+    </div>
+
+    <div class="container">
+      <!-- title & form -->
+      <div class="row justify-content-md-between mb-md-16 mb-10 flex-column flex-md-row gap-6 gap-md-0">
+        <div class="col-4 col-lg-3">
+          <h2 class="font-noto-serif fs-md-40 ls-tiny-5 fs-24">找店家</h2>
+          <span class="w-100 line d-block mt-md-4 mt-2"></span>
         </div>
-
-        <div class="container">
-            <!-- title & form -->
-            <div class="row justify-content-md-between mb-md-16 mb-10 flex-column flex-md-row gap-6 gap-md-0">
-                <div class="col-4 col-lg-3">
-                    <h2 class="font-noto-serif fs-md-40 ls-tiny-5 fs-24">找店家</h2>
-                    <span class="w-100 line d-block mt-md-4 mt-2"></span>
-                </div>
-                <div class="col-md-8 col-12">
-                    <div class="row justify-content-md-end justify-content-start font-noto-serif">
-                        <div class="dropdown col-lg-4 col-6 dropdown-search-category">
-                            <button type="button"
-                                class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
-                                id="searchOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,10">
-                                找店家
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.2963 16.844C12.56 16.8365 12.786 16.7386 12.9894 16.5352L18.7224 10.6741C18.8881 10.5008 18.9785 10.2974 18.9785 10.0488C18.9785 9.54408 18.5868 9.15234 18.082 9.15234C17.841 9.15234 17.615 9.25028 17.4417 9.42355L12.2963 14.697L7.15095 9.42355C6.97768 9.25028 6.75921 9.15234 6.5106 9.15234C6.00586 9.15234 5.61412 9.54408 5.61412 10.0488C5.61412 10.2899 5.70452 10.5008 5.87026 10.6741L11.6108 16.5352C11.8066 16.7461 12.0326 16.844 12.2963 16.844Z"
-                                        fill="#1C1C1E" />
-                                </svg>
-                            </button>
-                            <ul class="dropdown-menu" aria-labelledby="searchOffset">
-                                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">找髮型</a></li>
-                                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">找店家</a></li>
-                                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">找設計師</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown col-lg-4 col-6 dropdown-search-area">
-                            <button type="button"
-                                class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
-                                id="searchAreaOffset" data-bs-toggle="dropdown" aria-expanded="false"
-                                data-bs-offset="0,10" data-bs-auto-close="outside" >
-                                請選擇區域
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M12.2963 16.844C12.56 16.8365 12.786 16.7386 12.9894 16.5352L18.7224 10.6741C18.8881 10.5008 18.9785 10.2974 18.9785 10.0488C18.9785 9.54408 18.5868 9.15234 18.082 9.15234C17.841 9.15234 17.615 9.25028 17.4417 9.42355L12.2963 14.697L7.15095 9.42355C6.97768 9.25028 6.75921 9.15234 6.5106 9.15234C6.00586 9.15234 5.61412 9.54408 5.61412 10.0488C5.61412 10.2899 5.70452 10.5008 5.87026 10.6741L11.6108 16.5352C11.8066 16.7461 12.0326 16.844 12.2963 16.844Z"
-                                        fill="#1C1C1E" />
-                                </svg>
-                            </button>
-                            <ul class="dropdown-menu p-0" aria-labelledby="searchAreaOffset">
-                                <li>
-                                    <div class="btn-group dropend w-100">
-                                        <button type="button"
-                                            class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-2 fs-md-20 fs-16 w-100 text-start"
-                                            id="searchTaipeiOffset" data-bs-toggle="dropdown" aria-expanded="false"
-                                            data-bs-offset="0,4" data-bs-auto-close="inside">
-                                            台北市
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z" fill="#1C1C1E"/>
-                                                </svg>
-                                                
-                                        </button>
-                                        
-                                        <ul class="submenu dropdown-menu p-0" data-popper-placement="right-start" aria-labelledby="searchTaipeiOffset">
-                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">大安區</a></li>
-                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">士林區</a></li>
-                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">信義區</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="btn-group dropend w-100">
-                                        <button type="button"
-                                            class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-2 fs-md-20 fs-16 w-100 text-start"
-                                            id="searchTaoyuanOffset" data-bs-toggle="dropdown" aria-expanded="false"
-                                            data-bs-offset="0,4" data-bs-auto-close="inside">
-                                            桃園市
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z" fill="#1C1C1E"/>
-                                                </svg>
-                                                
-                                        </button>
-                                        
-                                        <ul  class="dropdown-menu p-0" data-popper-placement="right-start" aria-labelledby="searchTaoyuanOffset">
-                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">桃園區</a></li>
-                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">八德區</a></li>
-                                            <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">中壢區</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-8 col-12">
+          <div class="row justify-content-md-end justify-content-start font-noto-serif">
+            <div class="dropdown col-lg-4 col-6 dropdown-search-category">
+              <button type="button"
+                class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
+                id="searchOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,10">
+                找店家
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.2963 16.844C12.56 16.8365 12.786 16.7386 12.9894 16.5352L18.7224 10.6741C18.8881 10.5008 18.9785 10.2974 18.9785 10.0488C18.9785 9.54408 18.5868 9.15234 18.082 9.15234C17.841 9.15234 17.615 9.25028 17.4417 9.42355L12.2963 14.697L7.15095 9.42355C6.97768 9.25028 6.75921 9.15234 6.5106 9.15234C6.00586 9.15234 5.61412 9.54408 5.61412 10.0488C5.61412 10.2899 5.70452 10.5008 5.87026 10.6741L11.6108 16.5352C11.8066 16.7461 12.0326 16.844 12.2963 16.844Z"
+                    fill="#1C1C1E" />
+                </svg>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="searchOffset">
+                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="./searchHairStyle.html">找髮型</a></li>
+                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="./searchHairSalon.html">找店家</a></li>
+                <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="./searchHairDesigner.html">找設計師</a></li>
+              </ul>
             </div>
-            <!-- search tag -->
-            <div class="row mb-10">
-                <div class="col-10">
-                    <ul class="d-flex ps-0 mb-0 gap-4 list-unstyled area-tags">
-                        <li class="fs-28 ls-tiny-5">#桃園市</li>
-                        <li class="fs-28 ls-tiny-5">#桃園區</li>
+            <div class="dropdown col-lg-4 col-6 dropdown-area-filter">
+              <button type="button"
+                class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-3 border-black-100 fs-md-20 fs-16 w-100 text-start"
+                id="searchAreaOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,10"
+                data-bs-auto-close="outside">
+                <span class="d-block">請選擇區域</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.2963 16.844C12.56 16.8365 12.786 16.7386 12.9894 16.5352L18.7224 10.6741C18.8881 10.5008 18.9785 10.2974 18.9785 10.0488C18.9785 9.54408 18.5868 9.15234 18.082 9.15234C17.841 9.15234 17.615 9.25028 17.4417 9.42355L12.2963 14.697L7.15095 9.42355C6.97768 9.25028 6.75921 9.15234 6.5106 9.15234C6.00586 9.15234 5.61412 9.54408 5.61412 10.0488C5.61412 10.2899 5.70452 10.5008 5.87026 10.6741L11.6108 16.5352C11.8066 16.7461 12.0326 16.844 12.2963 16.844Z"
+                    fill="#1C1C1E" />
+                </svg>
+              </button>
+              <ul class="dropdown-menu p-0" aria-labelledby="searchAreaOffset">
+                <li>
+                  <div class="btn-group dropend w-100">
+                    <button type="button"
+                      class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-2 fs-md-20 fs-16 w-100 text-start"
+                      id="searchTaipeiOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,4"
+                      data-bs-auto-close="inside">
+                      台北市
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z"
+                          fill="#1C1C1E" />
+                      </svg>
+
+                    </button>
+
+                    <ul class="submenu dropdown-menu p-0" data-popper-placement="right-start"
+                      aria-labelledby="searchTaipeiOffset">
+                      <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">大安區</a></li>
+                      <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">士林區</a></li>
+                      <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">信義區</a></li>
                     </ul>
-                </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="btn-group dropend w-100">
+                    <button type="button"
+                      class="d-flex justify-content-between align-items-center btn btn-black-0 dropdown-toggle py-2 fs-md-20 fs-16 w-100 text-start"
+                      id="searchTaoyuanOffset" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,4"
+                      data-bs-auto-close="inside">
+                      桃園市
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16.844 11.7037C16.8365 11.44 16.7386 11.214 16.5352 11.0106L10.6741 5.27762C10.5008 5.11189 10.2974 5.02148 10.0488 5.02148C9.54408 5.02148 9.15234 5.41323 9.15234 5.91797C9.15234 6.15904 9.25028 6.38504 9.42355 6.55831L14.697 11.7037L9.42355 16.8491C9.25028 17.0223 9.15234 17.2408 9.15234 17.4894C9.15234 17.9941 9.54408 18.3859 10.0488 18.3859C10.2899 18.3859 10.5008 18.2955 10.6741 18.1297L16.5352 12.3892C16.7461 12.1934 16.844 11.9674 16.844 11.7037Z"
+                          fill="#1C1C1E" />
+                      </svg>
+
+                    </button>
+
+                    <ul class="dropdown-menu p-0" data-popper-placement="right-start"
+                      aria-labelledby="searchTaoyuanOffset">
+                      <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">桃園區</a></li>
+                      <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">八德區</a></li>
+                      <li><a class="dropdown-item py-2 fs-md-20 fs-16" href="#">中壢區</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <!-- search 沙龍結果 -->
-            <ul class="row ps-0 mb-0 list-unstyled searchSalon">
-                <li class="col-lg-4 mb-6 overflow-hidden">
-                    <a href="" class="position-relative">
-                        <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-                        <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
-                        <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
-                            <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
-                            <p class="text-black-0 ls-tiny-5 font-noto-serif">Time Styling</p>
-                        </h3>
-                    </a>
-                </li>
-                <li class="col-lg-4 mb-6 overflow-hidden">
-                    <a href="" class="position-relative">
-                        <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-                        <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
-                        <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
-                            <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
-                            <p class="text-black-0 ls-tiny-5 font-noto-serif">Time Styling</p>
-                        </h3>
-                    </a>
-                </li>
-                <li class="col-lg-4 mb-6 overflow-hidden">
-                    <a href="" class="position-relative">
-                        <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-                        <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
-                        <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
-                            <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
-                            <p class="text-black-0 ls-tiny-5 font-noto-serif">Time Styling</p>
-                        </h3>
-                    </a>
-                </li>
-                <li class="col-lg-4 mb-6 overflow-hidden">
-                    <a href="" class="position-relative">
-                        <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
-                        <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
-                        <h3 class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
-                            <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png" alt="">
-                            <p class="text-black-0 ls-tiny-5 font-noto-serif">Time Styling</p>
-                        </h3>
-                    </a>
-                </li>
+          </div>
+        </div>
+      </div>
+      <!-- search tag -->
+      <div class="row mb-10">
+        <div class="col-10">
+          <ul class="d-flex ps-0 mb-0 gap-4 list-unstyled filter-tags">
+            <li class="fs-28 ls-tiny-5">#桃園市</li>
+            <li class="fs-28 ls-tiny-5">#桃園區</li>
+          </ul>
+        </div>
+      </div>
+      <!-- search 沙龍結果 -->
+      <ul class="row ps-0 mb-0 list-unstyled searchSalon salon-list">
+        <li class="col-lg-4 mb-6 overflow-hidden">
+          <a href="" class="position-relative">
+            <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
+            <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
+            <h3
+              class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
+              <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png"
+                alt="">
+              <p class="text-black-0 ls-tiny-5 font-noto-serif">Time Styling</p>
+            </h3>
+          </a>
+        </li>
+        <li class="col-lg-4 mb-6 overflow-hidden">
+          <a href="" class="position-relative">
+            <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
+            <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
+            <h3
+              class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
+              <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png"
+                alt="">
+              <p class="text-black-0 ls-tiny-5 font-noto-serif">Time Styling</p>
+            </h3>
+          </a>
+        </li>
+        <li class="col-lg-4 mb-6 overflow-hidden">
+          <a href="" class="position-relative">
+            <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
+            <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
+            <h3
+              class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
+              <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png"
+                alt="">
+              <p class="text-black-0 ls-tiny-5 font-noto-serif">Time Styling</p>
+            </h3>
+          </a>
+        </li>
+        <li class="col-lg-4 mb-6 overflow-hidden">
+          <a href="" class="position-relative">
+            <div class="position-absolute top-0 start-0 opacity-20 w-100 h-100 fullMask"></div>
+            <img class="object-fit-cover w-100" src="../assets/images/searchSalonpage/salon1.png" alt="">
+            <h3
+              class="searchInfo d-flex gap-2 align-items-center py-2 px-4 position-absolute start-0 bg-black-60 bg-opacity-50 w-100">
+              <img class="rounded-circle object-fit-cover" src="../assets/images/searchSalonpage/salon-logo-01.png"
+                alt="">
+              <p class="text-black-0 ls-tiny-5 font-noto-serif">Time Styling</p>
+            </h3>
+          </a>
+        </li>
 
 
-            </ul>
-            <!-- <nav aria-label="Page navigation example">
+      </ul>
+      <!-- <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center align-items-center pt-18 pb-30">
                     <li class="page-item">
                         <a class="page-link disabled" href="#" aria-label="Previous">
@@ -188,13 +201,13 @@
                     </li>
                 </ul>
             </nav> -->
-        </div>
+    </div>
 
-    </main>
-    <%- include("./layout/footer") -%>
+  </main>
+  <%- include("./layout/footer") -%>
 
-    <script type="module" src="../main.js"></script>
-    <script type="module" src="../assets/js/searchHairSalon.js"></script>
+  <script type="module" src="../main.js"></script>
+  <script type="module" src="../assets/js/searchHairSalon.js"></script>
 </body>
 
 </html>

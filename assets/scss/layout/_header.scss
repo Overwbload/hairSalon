@@ -36,17 +36,17 @@
   }
 }
 
-.nav-link-ench {
+.lang {
   position:relative;
   padding: 0;
   display: block;
   color: $black-100;
   cursor: pointer;
-  .en {
+  .en-us {
     display: block;
     @include transition(all .3s ease);
   }
-  .ch {
+  .zh-tw {
     position: absolute;
     top: 0;
     left: 50%;
@@ -59,44 +59,15 @@
     @include transition(all .3s ease);
   }
   &:hover {
-    .en {
+    .en-us {
       opacity: 0;
     }
-    .ch {
+    .zh-tw {
       opacity: 1;
     }
   }
 }
 
-// 定位area-search-panel與area-search-content
-.area-search-panel {
-  &-entry {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-
-  &-content {
-    position: absolute;
-    top: 100%;
-    left: -57.5px;
-    padding-top: 28.5px;
-    &:before {
-      position: absolute;
-      top: 16.5px;
-      left: 72px;
-      display: block;
-      width: 2px;
-      height: 24px;
-      content: "";
-      background-color: $black-100;
-    }
-  }
-}
-
-// 定位area-search-panel與area-search-content
 .style-search-panel {
   &-entry {
     position: relative;
@@ -124,38 +95,11 @@
   }
 }
 
-// 加入樣式給region, area, city, gender, haircut
 .search {
   &-category {
     display: flex;
   }
-  &-region {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    width: 240px;
-    background-color: $primary-main;
-  }
-  &-area {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    width: 240px;
-    background-color: $primary-light;
-  }
-  &-city {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    width: 280px;
-    background-color: $black-0;
-    .search-link {
-      border: none;
-      background-color: transparent;
-      color: $black-100;
 
-      &:hover {
-        color: $secondary-main;
-      }
-    }
-  }
   &-gender {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -190,6 +134,7 @@
   }
 }
 
+// 登入
 .navbar-login {
   direction: rtl;
   position: relative;
@@ -202,6 +147,7 @@
   }
 }
 
+// 會員頭像
 .avater {
   &-btn {
     border: none;
@@ -238,4 +184,134 @@
       gap: 4px;
     }
   }
+}
+
+// 三層選單
+.area-menu, .style-menu {
+  position: relative;
+
+  .menu-open-btn {
+    position: relative;
+    color: $black-100;
+    cursor: pointer;
+
+    * {
+      pointer-events: none;
+    }
+    .en-us {
+      display: block;
+      @include transition(all .3s ease);
+    }
+    .zh-tw {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      translate: -50%;
+      display: block;
+      font-weight: 700;
+      text-wrap: nowrap;
+      color: $secondary-main;
+      opacity: 0;
+      @include transition(all .3s ease);
+    }
+  }
+
+  &:hover {
+    .menu-open-btn::before {
+      content: "";
+      position: absolute;
+      top: calc(100% + 16.5px);
+      left: 50%;
+      display: block;
+      width: 2px;
+      height: 24px;
+      background-color: $black-100;
+      z-index: 1;
+    }
+    .en-us {
+      opacity: 0;
+    }
+    .zh-tw {
+      opacity: 1;
+    }
+  }
+
+  .menu-body {
+    position: absolute;
+    top: 100%;
+    left: -57.5px;
+    padding-top: 28.5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu-guide {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 24px;
+    display: none;
+    background-color: $primary-main;
+  }
+
+  .layer-wrapper {
+    display: flex;
+    background-color: $primary-main;
+  }
+
+  .layer-1 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: none;
+    width: 240px;
+  }
+  .layer-2 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: none;
+    width: 240px;
+    background-color: $primary-light;
+  }
+  .layer-3 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: none;
+    width: 280px;
+    background-color: $black-0;
+  }
+
+  .menu-item {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 48px;
+    padding-right: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: $black-100;
+    @include transition(all .3s ease);
+
+    * {
+      pointer-events: none;
+    }
+  }
+
+  .layer-1 .menu-item-hover {
+    background-color: $primary-light;
+  }
+  .layer-2 .menu-item-hover {
+    background-color: $black-0;
+  }
+  .layer-3 .menu-item:hover {
+    color: $secondary-main;
+  }
+}
+
+.icon-arrow-right {
+  background-image: url("@assets/images/icons/arrow.right.svg");
+  display: block;
+  width: 24px;
+  height: 24px;
 }

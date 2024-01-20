@@ -11,56 +11,51 @@
       <div class="collapse navbar-collapse" id="collapseNavbar">
         <ul class="navbar-nav navbar-link-seperator position-lg-absolute top-lg-50 start-lg-50 translate-middle-lg">
           <li class="nav-item">
-            <div class="area-search-panel-entry">
-              <a class="nav-link-ench">
-                <span class="en">Area</span>
-                <span class="ch">區域</span>
+            <!-- multi layer menu -->
+            <div class="area-menu">
+              <!-- menu open -->
+              <a class="menu-open-btn" data-menu-type="open" data-menu-next-layer="1">
+                <span class="en-us">Area</span>
+                <span class="zh-tw">區域</span>
               </a>
-              <div class="area-search-panel-content">
-                <div class="pt-6 px-8 bg-primary-main">
-                  <span class="d-block fw-bold">請選擇區域</span>
+              <!-- menu body -->
+              <div class="menu-body">
+                <div class="menu-guide">
+                  <p class="fw-bold">請選擇區域</p>
                 </div>
-                <div class="search-category">
-                  <div class="search-region"></div>
-                  <div class="search-area"></div>
-                  <div class="search-city"></div>
+                <div class="layer-wrapper">
+                  <!-- layer1 -->
+                  <div class="layer-1" data-menu-type="layer" data-menu-layer="1"></div>
+                  <!-- layer2 -->
+                  <div class="layer-2" data-menu-type="layer" data-menu-layer="2"></div>
+                  <!-- layer3 -->
+                  <div class="layer-3" data-menu-type="layer" data-menu-layer="3"></div>
                 </div>
               </div>
             </div>
           </li>
           <li class="nav-item">
-            <div class="style-search-panel-entry">
-              <a class="nav-link-ench">
-                <span class="en">Style</span>
-                <span class="ch">髮型</span>
-              </a>
-              <div class="style-search-panel-content">
-                <div class="pt-6 px-8 bg-primary-main">
-                  <span class="d-block fw-bold">請選擇類型</span>
-                </div>
-                <div class="search-category">
-                  <div class="search-gender"></div>
-                  <div class="search-haircut"></div>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link-ench">
-              <span class="en">Ranking</span>
-              <span class="ch">排行榜</span>
+            <a class="lang">
+              <span class="en-us">Style</span>
+              <span class="zh-tw">髮型</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="./news.html" class="nav-link-ench">
-              <span class="en">News</span>
-              <span class="ch">最新消息</span>
+            <a class="lang">
+              <span class="en-us">Ranking</span>
+              <span class="zh-tw">排行榜</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="./faq.html" class="nav-link-ench">
-              <span class="en">FAQs</span>
-              <span class="ch">常見問題</span>
+            <a href="./news.html" class="lang">
+              <span class="en-us">News</span>
+              <span class="zh-tw">最新消息</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./faq.html" class="lang">
+              <span class="en-us">FAQs</span>
+              <span class="zh-tw">常見問題</span>
             </a>
           </li>
         </ul>
